@@ -1,0 +1,641 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in function
+#: numbat/comments.php:75
+msgid ""
+msgstr ""
+
+#. Text in function
+#: numbat/inc/custom-comments.php:32
+msgid "%1$s at %2$s "
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "&#171;"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "&#187;"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "404 Not Found"
+msgstr ""
+
+#. Text in echo
+#: numbat/404.php:16
+msgid "404 Page not found"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/custom-comments.php:30
+msgid "<div class=\"author_name col-md-5\">%s</div>"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Add a review"
+msgstr ""
+
+#. Text in echo
+#: numbat/woocommerce/add-to-wishlist.php:21
+msgid "Added!"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/add-to-wishlist.php:29
+msgid "Already Added"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Average"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Be the first to review"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Before footer #1"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Before footer #2"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Before footer #3"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Before footer #4"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/add-to-wishlist.php:23
+msgid "Browse Wishlist"
+msgstr ""
+
+#. Text in function
+#: numbat/redux-framework/numbat-config.php:170
+msgid "By %s"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "Cancel reply"
+msgstr ""
+
+#. Text in function
+#: numbat/category.php:32
+msgid "Category: "
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "Comment"
+msgstr ""
+
+#. Text in echo
+#: numbat/comments.php:60
+msgid "Comment navigation"
+msgstr ""
+
+#. Text in echo
+#: numbat/comments.php:72
+msgid "Comments are closed."
+msgstr ""
+
+#. Text in function
+#: numbat/content-search.php:64
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#. Text in echo
+#: numbat/footer.php:101
+msgid "Copyright 2017 by ModelTheme. All Rights Reserved."
+msgstr ""
+
+#. Text in echo
+#: numbat/redux-framework/numbat-config.php:158
+#: numbat/redux-framework/numbat-config.php:161
+msgid "Current theme preview"
+msgstr ""
+
+#. Text in function
+#: numbat/redux-framework/numbat-config.php:1
+msgid "Customize &#8220;%s&#8221;"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Dismiss this notice"
+msgstr ""
+
+#. Text in function
+#: numbat/content-page.php:22
+#: numbat/inc/custom-comments.php:32
+msgid "Edit"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Edit Your Profile"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Email"
+msgstr ""
+
+#. Text in echo
+#: numbat/templates/header-template2.php:85
+#: numbat/templates/header-template3.php:85
+#: numbat/templates/header-template6.php:63
+#: numbat/templates/header-template7.php:63
+msgid "Enter your search term..."
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Footer "
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Footer sidebar"
+msgstr ""
+
+#. Text in function
+#: numbat/index.php:42
+msgid "From the Blog"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Good"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Home"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Install Plugins"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Install Required Plugins"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. Text in function
+#: numbat/content-none.php:31
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "Leave a comment"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "Leave a reply to %s"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Log"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Log in"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Login"
+msgstr ""
+
+#. Text in echo
+#: numbat/templates/header-template1.php:38
+#: numbat/templates/header-template2.php:39
+#: numbat/templates/header-template3.php:39
+#: numbat/templates/header-template4.php:39
+msgid "My account"
+msgstr ""
+
+#. Text in echo
+#: numbat/templates/header-template1.php:40
+#: numbat/templates/header-template2.php:42
+#: numbat/templates/header-template3.php:42
+msgid "My bag"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Name"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:62
+msgid "Newer Comments"
+msgstr ""
+
+#. Text in function
+#: numbat/content-single.php:214
+msgid "Next Post"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Not that bad"
+msgstr ""
+
+#. Text in function
+#: numbat/content-none.php:25
+msgid "Nothing Found"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:61
+msgid "Older Comments"
+msgstr ""
+
+#. Text in echo
+#: numbat/woocommerce/single-product-reviews.php:95
+msgid "Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Page"
+msgstr ""
+
+#. Text in echo
+#: numbat/404.php:41
+msgid "Page Not Found !"
+msgstr ""
+
+#. Text in function
+#: numbat/content-page.php:13
+#: numbat/content-search.php:64
+#: numbat/content-single.php:127
+#: numbat/content.php:185
+msgid "Pages:"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Perfect"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:49
+msgid "Pingbacks & Tracebacks"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Plugin activated successfully."
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "Post comment"
+msgstr ""
+
+#. Text in function
+#: numbat/content-single.php:204
+msgid "Previous Post"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Primary Menu"
+msgstr ""
+
+#. Text in function
+#: numbat/templates/header-template1.php:104
+msgid "Primary navigation menu is missing. Add one from \"Appearance\" -> \"Menus\""
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Quick View"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Rate&hellip;"
+msgstr ""
+
+#. Text in function
+#: numbat/content.php:185
+msgid "Read more &rarr;"
+msgstr ""
+
+#. Text in function
+#: numbat/content-none.php:15
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#. Text in echo
+#: numbat/content-single.php:135
+msgid "Related Posts"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Return to the Dashboard"
+msgstr ""
+
+#. Text in echo
+#: numbat/woocommerce/single-product-reviews.php:22
+msgid "Reviews"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product/sale-flash.php:20
+msgid "Sale!"
+msgstr ""
+
+#. Text in function
+#: numbat/search.php:29
+msgid "Search Results for: %s"
+msgstr ""
+
+#. Text in echo
+#: numbat/templates/header-template1.php:91
+msgid "Search products..."
+msgstr ""
+
+#. Text in function
+#: numbat/templates/header-template1.php:71
+msgid "Select category"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Shop"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Sidebar"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Sidebar 1"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Site Admin"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. Text in echo
+#: numbat/404.php:33
+msgid "Sorry, this page does not exist"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Submit"
+msgstr ""
+
+#. Text in function
+#: numbat/tag.php:30
+msgid "Tag Archives: "
+msgstr ""
+
+#. Text in function
+#: numbat/redux-framework/numbat-config.php:172
+msgid "Tags"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#. Text in echo
+#: numbat/404.php:34
+msgid "The link you clicked might be corrupted, or the page may have been removed."
+msgstr ""
+
+#. Text in echo
+#: numbat/woocommerce/single-product-reviews.php:47
+msgid "There are no reviews yet."
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#. Text in function
+#: numbat/redux-framework/numbat-config.php:175
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#. Text in function
+#: numbat/content-none.php:26
+msgid "Try to search for posts via the form above"
+msgstr ""
+
+#. Text in function
+#: numbat/content-none.php:21
+msgid "Try to search using another term via the form above"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Update Required"
+msgstr ""
+
+#. Text in function
+#: numbat/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Used above the footer #1"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Used above the footer #2"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Used above the footer #3"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Used above the footer #4"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Used on WooCommerce pages"
+msgstr ""
+
+#. Text in function
+#: numbat/redux-framework/numbat-config.php:171
+msgid "Version %s"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Very Poor"
+msgstr ""
+
+#. Text in echo
+#: numbat/functions.php:404
+msgid "View your shopping cart"
+msgstr ""
+
+#. Text in echo
+#: numbat/templates/header-template1.php:37
+#: numbat/templates/header-template2.php:38
+#: numbat/templates/header-template3.php:38
+#: numbat/templates/header-template4.php:38
+msgid "Wishlist"
+msgstr ""
+
+#. Text in function
+#: numbat/functions.php:405
+msgid "Woocommerce sidebar"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "You must be "
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Your Rating"
+msgstr ""
+
+#. Text in function
+#: numbat/woocommerce/single-product-reviews.php:56
+msgid "Your Review"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "Your comment"
+msgstr ""
+
+#. Text in echo
+#: numbat/inc/custom-comments.php:25
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "Your email"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "Your name"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "Your website"
+msgstr ""
+
+#. Text in function
+#: numbat/content-search.php:52
+#: numbat/content.php:165
+msgid "by "
+msgstr ""
+
+#. Text in function
+#: numbat/redux-framework/numbat-config.php:175
+msgid "http://codex.wordpress.org/Child_Themes"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "logged in"
+msgstr ""
+
+#. Text in function
+#: numbat/comments.php:75
+msgid "to post a comment."
+msgstr ""
