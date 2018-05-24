@@ -1,4 +1,4 @@
-# Copyright (C) 2017 Parallax Backgrounds for VC
+# Copyright (C) 2016 Parallax Backgrounds for VC
 # This file is distributed under the same license as the Parallax Backgrounds for VC package.
 msgid ""
 msgstr ""
@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "X-Poedit-Basepath: ..\n"
@@ -17,38 +17,8 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 "Language: en_US\n"
-
-#: class-background-gradient.php:65
-msgid "Gradient BG Color"
-msgstr "Gradient BG Color"
-
-#: class-background-gradient.php:68
-msgid "Add a gradient background color instead of the usual row color."
-msgstr "Add a gradient background color instead of the usual row color."
-
-#: class-background-gradient.php:69, class-background-row.php:61,
-#: class-color-cycle-bg.php:79, class-fullheight-row.php:61,
-#: class-fullwidth-row.php:63, class-hover-row.php:61,
-#: class-parallax-row.php:61, class-video-row.php:69
-msgid "Row Adjustments"
-msgstr "Row Adjustments"
-
-#: class-background-gradient.php:73
-msgid "Start Color"
-msgstr "Start Color"
-
-#: class-background-gradient.php:81
-msgid "End Color"
-msgstr "End Color"
-
-#: class-background-gradient.php:89
-msgid "Gradient Angle"
-msgstr "Gradient Angle"
-
-#: class-background-gradient.php:92
-msgid "Angle of the gradient in degrees."
-msgstr "Angle of the gradient in degrees."
 
 #: class-background-row.php:57
 msgid "Row Background"
@@ -57,6 +27,12 @@ msgstr "Row Background"
 #: class-background-row.php:60
 msgid "Add a background image or color to your row."
 msgstr "Add a background image or color to your row."
+
+#: class-background-row.php:61, class-color-cycle-bg.php:79,
+#: class-fullheight-row.php:61, class-fullwidth-row.php:63,
+#: class-hover-row.php:61, class-parallax-row.php:61, class-video-row.php:69
+msgid "Row Adjustments"
+msgstr "Row Adjustments"
 
 #: class-background-row.php:66, class-hover-row.php:66,
 #: class-parallax-row.php:66
@@ -147,49 +123,6 @@ msgstr "No Repeat"
 #: class-background-row.php:106
 msgid "Repeat"
 msgstr "Repeat"
-
-#: class-background-row.php:111, class-color-cycle-bg.php:153,
-#: class-fullheight-row.php:76, class-fullwidth-row.php:74,
-#: class-hover-row.php:106, class-parallax-row.php:138,
-#: class-video-row.php:111
-msgid "Custom ID"
-msgstr "Custom ID"
-
-#: class-background-row.php:114, class-color-cycle-bg.php:156,
-#: class-fullheight-row.php:79, class-fullwidth-row.php:77,
-#: class-hover-row.php:109, class-parallax-row.php:141,
-#: class-video-row.php:114
-msgid "Add a custom id for the element here. Only one ID can be defined."
-msgstr "Add a custom id for the element here. Only one ID can be defined."
-
-#: class-background-row.php:115, class-background-row.php:123,
-#: class-color-cycle-bg.php:157, class-color-cycle-bg.php:165,
-#: class-fullheight-row.php:80, class-fullheight-row.php:88,
-#: class-fullwidth-row.php:78, class-fullwidth-row.php:86,
-#: class-hover-row.php:110, class-hover-row.php:118,
-#: class-parallax-row.php:142, class-parallax-row.php:150,
-#: class-parallax-row.php:158, class-video-row.php:115,
-#: class-video-row.php:123
-msgid "Advanced"
-msgstr "Advanced"
-
-#: class-background-row.php:119, class-color-cycle-bg.php:161,
-#: class-fullheight-row.php:84, class-fullwidth-row.php:82,
-#: class-hover-row.php:114, class-parallax-row.php:154,
-#: class-video-row.php:119
-msgid "Custom Class"
-msgstr "Custom Class"
-
-#: class-background-row.php:122, class-color-cycle-bg.php:164,
-#: class-fullheight-row.php:87, class-fullwidth-row.php:85,
-#: class-hover-row.php:117, class-parallax-row.php:157,
-#: class-video-row.php:122
-msgid ""
-"Add a custom class name for the element here. If defining multiple classes, "
-"separate them by lines and define them like you would in HTML code."
-msgstr ""
-"Add a custom class name for the element here. If defining multiple classes, "
-"separate them by lines and define them like you would in HTML code."
 
 #: class-color-cycle-bg.php:75
 msgid "Color Cycle BG"
@@ -512,14 +445,6 @@ msgstr ""
 "Parallax effects would most probably cause slowdowns when your site is "
 "viewed in mobile devices. If the device width is less than 980 pixels, then "
 "it is assumed that the site is being viewed in a mobile device."
-
-#: class-parallax-row.php:146
-msgid "Parallax ID"
-msgstr "Parallax ID"
-
-#: class-parallax-row.php:149
-msgid "Assign an ID for the actual parallax row here."
-msgstr "Assign an ID for the actual parallax row here."
 
 #: class-plugin.php:64
 msgid "Automatic Updates"

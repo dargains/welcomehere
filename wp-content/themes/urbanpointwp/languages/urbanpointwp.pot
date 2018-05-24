@@ -1,0 +1,519 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in function
+#: urbanpointwp/content-housesearch.php:173
+msgid ""
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid " For Sale"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-housesearch.php:73
+#: urbanpointwp/content-single-house.php:258
+msgid " Per Day"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid " Per month"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:44
+msgid " Photos"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-housesearch.php:89
+msgid " for Sale"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:61
+msgid "&larr; Older Comments"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "404 Not Found"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Add comment"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Balconies: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Bathrooms: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Bedrooms: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Cancel reply"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Car Parking: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/custom-functions.php:1
+msgid "Category: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Comment"
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/comments.php:60
+msgid "Comment navigation"
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/comments.php:72
+msgid "Comments are closed."
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Construction year: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-search.php:47
+msgid "Continue reading "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Dismiss this notice"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-page.php:20
+#: urbanpointwp/inc/custom-comments.php:37
+msgid "Edit"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "Enter search term..."
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:209
+msgid "Features"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "Footer Row 1 - Sidebar "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "Footer Row 2 - Sidebar "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "Footer Row 3 - Sidebar "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/custom-functions.php:1
+msgid "From the Blog"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Garages: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "Home"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Install Plugins"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Install Required Plugins"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Insurance: "
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/content-none.php:31
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Kitchens: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Leave a comment"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Leave a reply to %s"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Living rooms: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Log out of this account"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Log out?"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Logged in as "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "Main Theme Sidebar"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:62
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/404.php:26
+#: urbanpointwp/404.php:33
+msgid "Not Found"
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/content-none.php:25
+msgid "Nothing Found"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "Page"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-left.php:260
+#: urbanpointwp/content-page.php:12
+#: urbanpointwp/content-right.php:187
+#: urbanpointwp/content-right.php:257
+#: urbanpointwp/content-search.php:47
+#: urbanpointwp/content-single-house.php:350
+#: urbanpointwp/content-single.php:175
+#: urbanpointwp/content.php:93
+msgid "Pages:"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/custom-functions.php:1
+msgid "Pin on Pinterest"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Plugin activated successfully."
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Pools: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "Primary menu"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content.php:93
+msgid "READ MORE"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-left.php:260
+#: urbanpointwp/content-right.php:187
+#: urbanpointwp/content-right.php:257
+msgid "Read More <i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-none.php:15
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/content-single-house.php:355
+msgid "Related Houses & Apartments"
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/content-single.php:182
+msgid "Related Posts"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Return to the Dashboard"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/custom-functions.php:1
+msgid "Search Results for: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/custom-functions.php:1
+msgid "Share on Facebook"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/custom-functions.php:1
+msgid "Share on G+"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/custom-functions.php:1
+msgid "Share on LinkedIn"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/custom-functions.php:1
+msgid "Share on Reddit"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/custom-functions.php:1
+msgid "Share on Tumblr"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "Shop"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "Sidebar"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/functions.php:1
+msgid "Sidebar "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/404.php:27
+#: urbanpointwp/404.php:34
+msgid "Sorry, this page does not exist"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:148
+msgid "Specifications"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Square Areas: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/custom-functions.php:1
+msgid "Tag Archives: "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:236
+#: urbanpointwp/content-single.php:92
+msgid "Tags:"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/404.php:28
+#: urbanpointwp/404.php:35
+msgid "The link you clicked might be corrupted, or the page may have been removed."
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:258
+msgid "Total Floors: "
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/content-none.php:26
+msgid "Try to search for posts via the form above"
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/content-none.php:21
+msgid "Try to search using another term via the form above"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/custom-functions.php:1
+msgid "Tweet on Twitter"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Update Required"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/inc/tgm/class-tgm-plugin-activation.php:1
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:42
+msgid "View Gallery - "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single-house.php:218
+msgid "Virtual Tour"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-single.php:124
+msgid "Written by"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "You must be "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Your comment"
+msgstr ""
+
+#. Text in echo
+#: urbanpointwp/inc/custom-comments.php:25
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Your email"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Your name"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "Your website"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/content-search.php:35
+msgid "by "
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "logged in"
+msgstr ""
+
+#. Text in function
+#: urbanpointwp/comments.php:75
+msgid "to post a comment."
+msgstr ""

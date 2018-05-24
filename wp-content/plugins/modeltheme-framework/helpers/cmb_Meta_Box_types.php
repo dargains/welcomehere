@@ -247,7 +247,7 @@ class cmb_Meta_Box_types {
 			</tbody>
 		</table>
 		<p class="add-row">
-			<a data-selector="<?php echo $table_id; ?>" class="add-row-button button" href="#"><?php _e( 'Add Row' ); ?></a>
+			<a data-selector="<?php echo $table_id; ?>" class="add-row-button button" href="#"><?php _e( 'Add Row', 'modeltheme' ); ?></a>
 		</p>
 
 		<?php
@@ -303,7 +303,7 @@ class cmb_Meta_Box_types {
 				<?php $this->_render(); ?>
 			</td>
 			<td class="remove-row">
-				<a class="button remove-row-button" href="#"><?php _e( 'Remove'); ?></a>
+				<a class="button remove-row-button" href="#"><?php _e( 'Remove', 'modeltheme'); ?></a>
 			</td>
 		</tr>
 

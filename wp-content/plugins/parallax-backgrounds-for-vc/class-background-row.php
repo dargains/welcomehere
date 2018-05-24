@@ -106,22 +106,6 @@ if ( ! class_exists( 'GambitVCBackgroundRow' ) ) {
 						__( 'Repeat', GAMBIT_VC_PARALLAX_BG ) => 'repeat',
 					),
 				),
-				array(
-					'type' => 'textfield',
-					'heading' => __( 'Custom ID', GAMBIT_VC_PARALLAX_BG ),
-					'param_name' => 'id',
-					'value' => '',
-					'description' => __( 'Add a custom id for the element here. Only one ID can be defined.', GAMBIT_VC_PARALLAX_BG ),
-					'group' => __( 'Advanced', GAMBIT_VC_PARALLAX_BG ),
-				),
-				array(
-					'type' => 'textfield',
-					'heading' => __( 'Custom Class', GAMBIT_VC_PARALLAX_BG ),
-					'param_name' => 'class',
-					'value' => '',
-					'description' => __( 'Add a custom class name for the element here. If defining multiple classes, separate them by lines and define them like you would in HTML code.', GAMBIT_VC_PARALLAX_BG ),
-					'group' => __( 'Advanced', GAMBIT_VC_PARALLAX_BG ),
-				),
 				),
 			) );
 		}
@@ -137,12 +121,10 @@ if ( ! class_exists( 'GambitVCBackgroundRow' ) ) {
 		 */
 		public function create_shortcode( $atts, $content = null ) {
 			$defaults = array(
-				'image' => '',
-				'color' => '',
-				'background_size' => 'cover',
-				'background_position' => 'center',
-				'class' => '',
-				'id' => '',
+			'image' => '',
+			'color' => '',
+			'background_size' => 'cover',
+			'background_position' => 'center',
 			);
 			if ( empty( $atts ) ) {
 				$atts = array();
@@ -154,29 +136,23 @@ if ( ! class_exists( 'GambitVCBackgroundRow' ) ) {
 			}
 
 			wp_enqueue_script( 'gambit_parallax', plugins_url( 'parallax/js/min/script-min.js', __FILE__ ), array( 'jquery' ), VERSION_GAMBIT_VC_PARALLAX_BG, true );
-			wp_enqueue_style( 'gambit_parallax', plugins_url( 'parallax/css/style.css', __FILE__ ), array(), VERSION_GAMBIT_VC_PARALLAX_BG );
 
-			$attachment_image = wp_get_attachment_image_src( $atts['image'], 'full' );
-			$image_url = '';
-			if ( ! empty( $attachment_image ) ) {
-				$image_url = $attachment_image[0];
+			$attachmentImage = wp_get_attachment_image_src( $atts['image'], 'full' );
+			$imageURL = '';
+			if ( ! empty( $attachmentImage ) ) {
+				$imageURL = $attachmentImage[0];
 			}
 
 			$style = 'display: none;';
-			$id = '';
-			$class = '';
 			$style = '';
-			if ( ! empty( $image_url ) ) {
-				$style .= 'background-image: url(' . esc_url( $image_url ) . ');';
+			if ( ! empty( $imageURL ) ) {
+				$style .= 'background-image: url(' . esc_url( $imageURL ) . ');';
 			}
 			if ( ! empty( $atts['color'] ) ) {
 				$style .= 'background-color: ' . esc_attr( $atts['color'] ) . ';';
 			}
 			if ( ! empty( $atts['background_size'] ) ) {
 				if ( in_array( $atts['background_size'], array( 'cover', 'contain' ) ) ) {
-					if ( $atts['background_size'] == 'contain' ) {
-						$style .= 'background-repeat: no-repeat;';
-					}
 					$style .= 'background-size: ' . esc_attr( $atts['background_size'] ) . ';';
 				} else {
 					$style .= 'background-repeat: ' . esc_attr( $atts['background_size'] ) . ';';
@@ -186,19 +162,7 @@ if ( ! class_exists( 'GambitVCBackgroundRow' ) ) {
 				$style .= 'background-position: ' . esc_attr( $atts['background_position'] ) . ';';
 			}
 
-			// See if classes and IDs are defined.
-			if ( ! empty( $atts['class'] ) ) {
-				$class = ' ' . esc_attr( $atts['class'] );
-			} else {
-				$class = '';
-			}
-			if ( ! empty( $atts['id'] ) ) {
-				$id = "id='" . esc_attr( $atts['id'] ) . "' ";
-			} else {
-				$id = '';
-			}
-
-			return  '<div ' . $id . "class='gambit_background_row" . $class . "' style='{$style}'></div>";
+			return  "<div class='gambit_background_row' style='{$style}'></div>";
 		}
 	}
 

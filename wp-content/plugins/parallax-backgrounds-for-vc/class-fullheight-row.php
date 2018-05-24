@@ -71,22 +71,6 @@ if ( ! class_exists( 'GambitVCParallaxFullheightRow' ) ) {
 					),
 					'description' => __( 'When your row height gets stretched, your content can be smaller than your row height. Choose the location here.<br><br><em>Please remove your row&apos;s top and bottom margins to make this work correctly.</em>', GAMBIT_VC_PARALLAX_BG ),
 				),
-				array(
-					'type' => 'textfield',
-					'heading' => __( 'Custom ID', GAMBIT_VC_PARALLAX_BG ),
-					'param_name' => 'id',
-					'value' => '',
-					'description' => __( 'Add a custom id for the element here. Only one ID can be defined.', GAMBIT_VC_PARALLAX_BG ),
-					'group' => __( 'Advanced', GAMBIT_VC_PARALLAX_BG ),
-				),
-				array(
-					'type' => 'textfield',
-					'heading' => __( 'Custom Class', GAMBIT_VC_PARALLAX_BG ),
-					'param_name' => 'class',
-					'value' => '',
-					'description' => __( 'Add a custom class name for the element here. If defining multiple classes, separate them by lines and define them like you would in HTML code.', GAMBIT_VC_PARALLAX_BG ),
-					'group' => __( 'Advanced', GAMBIT_VC_PARALLAX_BG ),
-				),
 				),
 			) );
 		}
@@ -102,34 +86,18 @@ if ( ! class_exists( 'GambitVCParallaxFullheightRow' ) ) {
 		 */
 		public function create_shortcode( $atts, $content = null ) {
 			$defaults = array(
-				'content_location' => 'center',
-				'class' => '',
-				'id' => '',
+			'content_location' => 'center',
 			);
 			if ( empty( $atts ) ) {
 				$atts = array();
 			}
 			$atts = array_merge( $defaults, $atts );
-			$id = '';
-			$class = '';
-
-			// See if classes and IDs are defined.
-			if ( ! empty( $atts['class'] ) ) {
-				$class = ' ' . esc_attr( $atts['class'] );
-			} else {
-				$class = '';
-			}
-			if ( ! empty( $atts['id'] ) ) {
-				$id = 'id="' . esc_attr( $atts['id'] ) . '" ';
-			} else {
-				$id = '';
-			}
 
 			wp_enqueue_script( 'gambit_parallax', plugins_url( 'parallax/js/min/script-min.js', __FILE__ ), array( 'jquery' ), VERSION_GAMBIT_VC_PARALLAX_BG, true );
 			wp_enqueue_style( 'gambit_parallax', plugins_url( 'parallax/css/style.css', __FILE__ ), array(), VERSION_GAMBIT_VC_PARALLAX_BG );
 
 			// We just add a placeholder for this.
-			return '<div ' . $id . 'class="gambit_fullheight_row' . $class . '" data-content-location="' . esc_attr( $atts['content_location'] ) . '" style="display: none"></div>';
+			return '<div class="gambit_fullheight_row" data-content-location="' . esc_attr( $atts['content_location'] ) . '" style="display: none"></div>';
 		}
 	}
 

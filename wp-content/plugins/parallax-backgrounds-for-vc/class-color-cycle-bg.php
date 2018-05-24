@@ -16,9 +16,9 @@ if ( ! class_exists( 'GambitColorCycleBG' ) ) {
 		/**
 		 * Uniquely identifies rendered bg.
 		 *
-		 * @var string $element_id - The ID used.
+		 * @var string $elementID - The ID used.
 		 */
-		public static $element_id = 1;
+		public static $elementID = 1;
 
 		/**
 		 * Hook into WordPress.
@@ -148,22 +148,6 @@ if ( ! class_exists( 'GambitColorCycleBG' ) ) {
 					'value' => array( __( 'Check this box to suppress background color cycling, and instead render it with the extra selectors. Handy for special designs.', GAMBIT_VC_PARALLAX_BG ) => 'true' ),
 					'description' => '',
 				),
-				array(
-					'type' => 'textfield',
-					'heading' => __( 'Custom ID', GAMBIT_VC_PARALLAX_BG ),
-					'param_name' => 'id',
-					'value' => '',
-					'description' => __( 'Add a custom id for the element here. Only one ID can be defined.', GAMBIT_VC_PARALLAX_BG ),
-					'group' => __( 'Advanced', GAMBIT_VC_PARALLAX_BG ),
-				),
-				array(
-					'type' => 'textfield',
-					'heading' => __( 'Custom Class', GAMBIT_VC_PARALLAX_BG ),
-					'param_name' => 'class',
-					'value' => '',
-					'description' => __( 'Add a custom class name for the element here. If defining multiple classes, separate them by lines and define them like you would in HTML code.', GAMBIT_VC_PARALLAX_BG ),
-					'group' => __( 'Advanced', GAMBIT_VC_PARALLAX_BG ),
-				),
 				),
 			) );
 		}
@@ -192,8 +176,6 @@ if ( ! class_exists( 'GambitColorCycleBG' ) ) {
 				'classes' => '',
 				'classes_color' => '',
 				'nobg' => 'false',
-				'class' => '',
-				'id' => '',
 			);
 
 			if ( empty( $atts ) ) {
@@ -201,20 +183,6 @@ if ( ! class_exists( 'GambitColorCycleBG' ) ) {
 			}
 
 			$atts = array_merge( $defaults, $atts );
-			$id = '';
-			$class = '';
-
-			// See if classes and IDs are defined.
-			if ( ! empty( $atts['class'] ) ) {
-				$class = ' ' . esc_attr( $atts['class'] );
-			} else {
-				$class = '';
-			}
-			if ( ! empty( $atts['id'] ) ) {
-				$id = "id='" . esc_attr( $atts['id'] ) . "' ";
-			} else {
-				$id = '';
-			}
 
 			// Identify the colors and assign them.
 			if ( ! empty( $atts['color1'] ) ) {
@@ -237,19 +205,19 @@ if ( ! class_exists( 'GambitColorCycleBG' ) ) {
 
 			// Prepare prefixes and classes.
 			$prefix = array( '-webkit-', '-moz-', '-ms-', '-o-', '' );
-			$classes = ( empty( $atts['nobg'] ) || 'false' == $atts['nobg'] ? array( '.gambit_colorcycle_vc_row_' . self::$element_id ) : array() ) ;
-			$extra_classes = array();
-			$extra_classes_color = array();
+			$classes = ( empty( $atts['nobg'] ) || 'false' == $atts['nobg'] ? array( '.gambit_colorcycle_vc_row_' . self::$elementID ) : array() ) ;
+			$extraClasses = array();
+			$extraClassesColor = array();
 
 			if ( ! empty( $atts['classes'] ) ) {
-				$extra_classes = explode( ',', $atts['classes'] );
+				$extraClasses = explode( ',', $atts['classes'] );
 			}
 
 			if ( ! empty( $atts['classes_color'] ) ) {
-				$extra_classes_color = explode( ',', $atts['classes_color'] );
+				$extraClassesColor = explode( ',', $atts['classes_color'] );
 			}
 
-			$classes = array_merge( $classes, $extra_classes );
+			$classes = array_merge( $classes, $extraClasses );
 
 			wp_enqueue_script( 'gambit_parallax', plugins_url( 'parallax/js/min/script-min.js', __FILE__ ), array( 'jquery' ), VERSION_GAMBIT_VC_PARALLAX_BG, true );
 			wp_enqueue_style( 'gambit_parallax', plugins_url( 'parallax/css/style.css', __FILE__ ), array(), VERSION_GAMBIT_VC_PARALLAX_BG );
@@ -261,21 +229,21 @@ if ( ! class_exists( 'GambitColorCycleBG' ) ) {
 			$output .= '<style>';
 
 			$output .= implode( ',', $classes ) . ' {';
-			foreach ( $prefix as $the_prefix ) {
-				$output .= $the_prefix . 'animation: gp-colorcycle-' . self::$element_id . ' ' . $atts['duration'] . 's infinite;';
+			foreach ( $prefix as $thePrefix ) {
+				$output .= $thePrefix . 'animation: gp-colorcycle-' . self::$elementID . ' ' . $atts['duration'] .  's infinite;';
 			}
 			$output .= '}';
 
-			if ( count( $extra_classes_color ) > 0 ) {
-				$output .= implode( ',', $extra_classes_color ) . ' {';
-				foreach ( $prefix as $the_prefix ) {
-					$output .= $the_prefix . 'animation: gp-colorcycle-colors-' . self::$element_id . ' ' . $atts['duration'] . 's infinite;';
+			if ( count( $extraClassesColor ) > 0 ) {
+				$output .= implode( ',', $extraClassesColor ) . ' {';
+				foreach ( $prefix as $thePrefix ) {
+					$output .= $thePrefix . 'animation: gp-colorcycle-colors-' . self::$elementID . ' ' . $atts['duration'] .  's infinite;';
 				}
 				$output .= '}';
 			}
 
-			foreach ( $prefix as $the_prefix ) {
-				$output .= '@' . $the_prefix . 'keyframes gp-colorcycle-' . self::$element_id . ' {';
+			foreach ( $prefix as $thePrefix ) {
+				$output .= '@' . $thePrefix . 'keyframes gp-colorcycle-' . self::$elementID . ' {';
 				$output .= '0%, 100% {background: ' . $color[0] . ';}';
 				if ( 2 == count( $color ) ) {
 					$output .= '50% {background: ' . $color[1] . ';}';
@@ -290,9 +258,9 @@ if ( ! class_exists( 'GambitColorCycleBG' ) ) {
 				$output .= '}';
 			}
 
-			if ( count( $extra_classes_color ) > 0 ) {
-				foreach ( $prefix as $the_prefix ) {
-					$output .= '@' . $the_prefix . 'keyframes gp-colorcycle-colors-' . self::$element_id . ' {';
+			if ( count( $extraClassesColor ) > 0 ) {
+				foreach ( $prefix as $thePrefix ) {
+					$output .= '@' . $thePrefix . 'keyframes gp-colorcycle-colors-' . self::$elementID . ' {';
 					$output .= '0%, 100% {color: ' . $color[0] . '; fill: ' . $color[0] . ';}';
 					if ( 2 == count( $color ) ) {
 						$output .= '50%  {color: ' . $color[1] . '; fill: ' . $color[1] . ';}';
@@ -310,9 +278,9 @@ if ( ! class_exists( 'GambitColorCycleBG' ) ) {
 
 			$output .= '</style>';
 
-			$output .= '<div ' . $id . "class='gambit_colorcycle" . $class . "' data-animclass='gambit_colorcycle_vc_row_" . self::$element_id . "'></div>";
+			$output .= "<div class='gambit_colorcycle' data-animclass='gambit_colorcycle_vc_row_" . self::$elementID . "'></div>";
 
-			self::$element_id++;
+			self::$elementID++;
 
 			return $output;
 		}

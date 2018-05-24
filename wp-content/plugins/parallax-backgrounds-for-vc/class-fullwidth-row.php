@@ -69,22 +69,6 @@ if ( ! class_exists( 'GambitVCParallaxFullwidthRow' ) ) {
 					'value' => '',
 					'description' => __( 'When your row gets stretched, your content will by default be adjusted to the <strong>content width</strong> defined by your theme. Enter a value here with units (px or %) to adjust the width of your full-width content.<br>e.g. Use <code>100%</code> to stretch your row content to the entire full-width,<br>Use <code>50%</code> to make your content exactly half of the page,<br>Use <code>700px</code> to ensure your content is at maximum 700 pixels wide,<br>or leave <strong>blank</strong> to follow the default row content width,<br>', GAMBIT_VC_PARALLAX_BG ),
 				),
-				array(
-					'type' => 'textfield',
-					'heading' => __( 'Custom ID', GAMBIT_VC_PARALLAX_BG ),
-					'param_name' => 'id',
-					'value' => '',
-					'description' => __( 'Add a custom id for the element here. Only one ID can be defined.', GAMBIT_VC_PARALLAX_BG ),
-					'group' => __( 'Advanced', GAMBIT_VC_PARALLAX_BG ),
-				),
-				array(
-					'type' => 'textfield',
-					'heading' => __( 'Custom Class', GAMBIT_VC_PARALLAX_BG ),
-					'param_name' => 'class',
-					'value' => '',
-					'description' => __( 'Add a custom class name for the element here. If defining multiple classes, separate them by lines and define them like you would in HTML code.', GAMBIT_VC_PARALLAX_BG ),
-					'group' => __( 'Advanced', GAMBIT_VC_PARALLAX_BG ),
-				),
 				),
 			) );
 		}
@@ -102,33 +86,17 @@ if ( ! class_exists( 'GambitVCParallaxFullwidthRow' ) ) {
 			global $content_width;
 
 			$defaults = array(
-				'content_width' => $content_width,
-				'class' => '',
-				'id' => '',
+			'content_width' => $content_width,
 			);
 			if ( empty( $atts ) ) {
 				$atts = array();
 			}
 			$atts = array_merge( $defaults, $atts );
-			$id = '';
-			$class = '';
-
-			// See if classes and IDs are defined.
-			if ( ! empty( $atts['class'] ) ) {
-				$class = ' ' . esc_attr( $atts['class'] );
-			} else {
-				$class = '';
-			}
-			if ( ! empty( $atts['id'] ) ) {
-				$id = 'id="' . esc_attr( $atts['id'] ) . '" ';
-			} else {
-				$id = '';
-			}
 
 			wp_enqueue_script( 'gambit_parallax', plugins_url( 'parallax/js/min/script-min.js', __FILE__ ), array( 'jquery' ), VERSION_GAMBIT_VC_PARALLAX_BG, true );
 
 			// We just add a placeholder for this.
-			return '<div ' . $id . 'class="gambit_fullwidth_row' . $class . '" data-content-width="' . esc_attr( $atts['content_width'] ) . '" style="display: none"></div>';
+			return '<div class="gambit_fullwidth_row" data-content-width="' . esc_attr( $atts['content_width'] ) . '" style="display: none"></div>';
 		}
 	}
 

@@ -309,7 +309,7 @@ if ( !function_exists( 'wbc_extended_example' ) ) {
 
         if ( class_exists( 'RevSlider' ) ) {
             $wbc_sliders_array = array(
-                'Homepage' => array( 'home_slider_1.zip', 'home_slider_2.zip' ),
+                'Main Home' => array( '' ),
             );
 
             if ( isset( $demo_active_import[$current_key]['directory'] ) && !empty( $demo_active_import[$current_key]['directory'] ) && array_key_exists( $demo_active_import[$current_key]['directory'], $wbc_sliders_array ) ) {
@@ -339,10 +339,10 @@ if ( !function_exists( 'wbc_extended_example' ) ) {
         *************************************************************************/
         // If it's demo1 - demo6
         $wbc_menu_array = array( 
-            'Homepage',
+            'Main Home',
          );
         if ( isset( $demo_active_import[$current_key]['directory'] ) && !empty( $demo_active_import[$current_key]['directory'] ) && in_array( $demo_active_import[$current_key]['directory'], $wbc_menu_array ) ) {
-            $top_menu = get_term_by( 'name', 'Main menu', 'nav_menu' );
+            $top_menu = get_term_by( 'name', 'Main Menu', 'nav_menu' );
             if ( isset( $top_menu->term_id ) ) {
                 // set_theme_mod( 'nav_menu_locations', array(
                 //         'primary' => 'Main Menu',
@@ -366,7 +366,7 @@ if ( !function_exists( 'wbc_extended_example' ) ) {
         */
         // array of demos/homepages to check/select from
         $wbc_home_pages = array(
-            'Homepage'       => 'Homepage',
+            'Main Home'       => 'Main Home',
         );
 
         if ( isset( $demo_active_import[$current_key]['directory'] ) && !empty( $demo_active_import[$current_key]['directory'] ) && array_key_exists( $demo_active_import[$current_key]['directory'], $wbc_home_pages ) ) {

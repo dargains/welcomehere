@@ -10,10 +10,3 @@
 		background-attachment: scroll !important;
 	}
 }
-
-// Target Chrome & Safari
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	.gambit_parallax_inner.fixed {
-		background-attachment: scroll !important;
-	}
-}

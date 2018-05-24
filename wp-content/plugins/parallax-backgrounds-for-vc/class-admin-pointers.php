@@ -1,7 +1,6 @@
 <?php
 /**
  * Initializes pointer for the admin license page.
- *
  * @package Parallax Backgrounds for VC
  */
 
@@ -9,7 +8,6 @@ if ( ! class_exists( 'GambitAdminPointers' ) ) {
 
 	/**
 	 * Makes the WordPress pointers work for our product.
-	 *
 	 * @package	Parallax Backgrounds for VC
 	 * @class GambitAdminPointers
 	 */
@@ -17,14 +15,12 @@ if ( ! class_exists( 'GambitAdminPointers' ) ) {
 
 		/**
 		 * Holds the number of pointers currently active.
-		 *
-		 * @var $pointers_active
+		 * @var $pointersActive
 		 */
-		public static $pointers_active = 0;
+		public static $pointersActive = 0;
 
 		/**
 		 * Everything here will run immediately.
-		 *
 		 * @param array $settings - Takes up settings first defined in each plugin's class-plugin.php file.
 		 */
 		function __construct( $settings = array() ) {
@@ -63,16 +59,16 @@ if ( ! class_exists( 'GambitAdminPointers' ) ) {
 		/**
 		 * Manually adds the pointer in user's meta
 		 *
-		 * @param string $pointer_name The name of the pointer.
+		 * @param string $pointerName The name of the pointer.
 		 *
 		 * @return void
 		 */
-		public function manually_add_pointer_in_user_meta( $pointer_name ) {
+		public function manually_add_pointer_in_user_meta( $pointerName ) {
 			$dismissed = explode( ',', (string) get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
 			$dismissed = array_filter( $dismissed );
 
-			if ( ! in_array( $pointer_name, $dismissed ) ) {
-				$dismissed[] = $pointer_name;
+			if ( ! in_array( $pointerName, $dismissed ) ) {
+				$dismissed[] = $pointerName;
 				update_user_meta( get_current_user_id(), 'dismissed_wp_pointers', implode( ',', $dismissed ) );
 			}
 
@@ -87,13 +83,13 @@ if ( ! class_exists( 'GambitAdminPointers' ) ) {
 			}
 
 			// Get the pointer.
-			$admin_pointer = $this->form_admin_pointer();
+			$adminPointer = $this->form_admin_pointer();
 
 			// Only allow a single pointer to exist.
 			// If another Gambit pointer has already been displayed, never show ours so we do not clutter the screen.
 			// This might happen if multiple plugins are activated at the same time.
-			if ( self::$pointers_active > 0 ) {
-				$this->manually_add_pointer_in_user_meta( $admin_pointer['name'] );
+			if ( self::$pointersActive > 0 ) {
+				$this->manually_add_pointer_in_user_meta( $adminPointer['name'] );
 				return;
 			}
 
@@ -108,14 +104,14 @@ if ( ! class_exists( 'GambitAdminPointers' ) ) {
 						}
 					}
 					$a.pointer( {
-						content: '<?php echo wp_kses_post( $admin_pointer['content'] ) ?>',
+						content: '<?php echo wp_kses_post( $adminPointer['content'] ) ?>',
 						position: {
 							edge: 'left',
 							align: 'middle'
 						},
 						close: function() {
 							$.post( ajaxurl, {
-								pointer: '<?php echo wp_kses_post( $admin_pointer['name'] ) ?>',
+								pointer: '<?php echo wp_kses_post( $adminPointer['name'] ) ?>',
 								action: 'dismiss-wp-pointer'
 							} );
 						}
@@ -125,7 +121,7 @@ if ( ! class_exists( 'GambitAdminPointers' ) ) {
 			<?php
 
 			// Admin pointers displayed + 1.
-			self::$pointers_active++;
+			self::$pointersActive++;
 		}
 
 		/**

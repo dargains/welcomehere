@@ -10,7 +10,6 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 
 	/**
 	 * Renders the licensing backend for every plugin.
-	 *
 	 * @class GambitAdminLicensePage
 	 */
 	class GambitAdminLicensePage {
@@ -34,10 +33,9 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 
 		/**
 		 * How many plugins from Gambit are installed?
-		 *
-		 * @var array $installed_plugins
+		 * @var array $installedPlugins
 		 */
-		public $installed_plugins = array();
+		public $installedPlugins = array();
 
 		/**
 		 * Everything here will run immediately.
@@ -58,7 +56,6 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 
 		/**
 		 * Read each product's SKU for parsing.
-		 *
 		 * @param array $headers - read it and include it into the headers array.
 		 */
 		public function add_sku_header( $headers ) {
@@ -127,30 +124,30 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 		 * @return array
 		 */
 		public function gather_installed_plugins() {
-			if ( ! empty( $this->installed_plugins ) ) {
-				return $this->installed_plugins;
+			if ( ! empty( $this->installedPlugins ) ) {
+				return $this->installedPlugins;
 			}
 
-			$all_plugins = get_plugins();
-			foreach ( $all_plugins as $plugin_file => $plugin_meta ) {
+			$allPlugins = get_plugins();
+			foreach ( $allPlugins as $pluginFile => $pluginMeta ) {
 
-				if ( empty( $plugin_meta['SKU'] ) ) {
+				if ( empty( $pluginMeta['SKU'] ) ) {
 					continue;
 				}
 
-				$this->installed_plugins[] = array(
-					'sku' => $plugin_meta['SKU'], // Should be the same in our site.
+				$this->installedPlugins[] = array(
+					'sku' => $pluginMeta['SKU'], // Should be the same in our site.
 			   	  	'store_url' => self::STORE_URL, // Our main site URL.
-			   	  	'name' => $plugin_meta['Name'], // Should be the same with our site.
-			   	  	'url' => $plugin_meta['PluginURI'],
-			   	  	'file' => $plugin_file,
-			   	  	'version' => $plugin_meta['Version'], // The version of this current plugin.
-			   	  	'author' => $plugin_meta['Author'],
+			   	  	'name' => $pluginMeta['Name'], // Should be the same with our site.
+			   	  	'url' => $pluginMeta['PluginURI'],
+			   	  	'file' => $pluginFile,
+			   	  	'version' => $pluginMeta['Version'], // The version of this current plugin.
+			   	  	'author' => $pluginMeta['Author'],
 				);
 
 			}
 
-			return $this->installed_plugins;
+			return $this->installedPlugins;
 		}
 
 
@@ -162,8 +159,8 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 		public function create_licenses_page() {
 			$this->gather_installed_plugins();
 
-			// $this->installed_plugins = apply_filters( 'gambit_plugin_updater', array() );
-			if ( empty( $this->installed_plugins ) ) {
+			// $this->installedPlugins = apply_filters( 'gambit_plugin_updater', array() );
+			if ( empty( $this->installedPlugins ) ) {
 				return;
 			}
 
@@ -183,19 +180,19 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 			}
 
 			// Check whether we have data cached.
-			$transient_exists = false;
+			$transientExists = false;
 			if ( ! is_multisite() ) {
-				$transient_exists = get_transient( self::PLUGIN_LIST_TRANSIENT );
+				$transientExists = get_transient( self::PLUGIN_LIST_TRANSIENT );
 			} else {
-				$transient_exists = get_site_transient( self::PLUGIN_LIST_TRANSIENT );
+				$transientExists = get_site_transient( self::PLUGIN_LIST_TRANSIENT );
 			}
-			if ( $transient_exists ) {
-				return $transient_exists;
+			if ( $transientExists ) {
+				return $transientExists;
 			}
 
 			// Get the list of plugins.
 			$request = wp_remote_get( self::PLUGIN_LIST_URL );
-			$other_plugins = array();
+			$otherPlugins = array();
 			if ( ! empty( $request ) ) {
 
 				// Check request status.
@@ -207,7 +204,7 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 						$plugins = json_decode( $response );
 						if ( ! empty( $plugins ) ) {
 
-							$other_plugins = $plugins;
+							$otherPlugins = $plugins;
 
 						}
 					}
@@ -215,12 +212,12 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 
 				// Cache to save calls.
 				if ( ! is_multisite() ) {
-					set_transient( self::PLUGIN_LIST_TRANSIENT, $other_plugins, DAY_IN_SECONDS );
+					set_transient( self::PLUGIN_LIST_TRANSIENT, $otherPlugins, DAY_IN_SECONDS );
 				} else {
-					set_site_transient( self::PLUGIN_LIST_TRANSIENT, $other_plugins, DAY_IN_SECONDS );
+					set_site_transient( self::PLUGIN_LIST_TRANSIENT, $otherPlugins, DAY_IN_SECONDS );
 				}
 
-				return $other_plugins;
+				return $otherPlugins;
 			}
 
 			return array();
@@ -235,23 +232,23 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 		public function render_licenses_page() {
 
 			// Get all the SKUs of the installed Gambit Plugins.
-			$installed_skus = array();
-			foreach ( $this->installed_plugins as $installed_plugin ) {
-				if ( ! empty( $installed_plugin['sku'] ) ) {
-					$installed_skus[] = $installed_plugin['sku'];
+			$installedSKUS = array();
+			foreach ( $this->installedPlugins as $installedPlugin ) {
+				if ( ! empty( $installedPlugin['sku'] ) ) {
+					$installedSKUS[] = $installedPlugin['sku'];
 				}
 			}
 
 			// Don't display installed plugins since those are already displayed.
-			$remote_plugins = array();
+			$remotePlugins = array();
 			$faqs = array();
-			foreach ( $this->get_plugin_remote_list() as $remote_plugin ) {
-				if ( ! in_array( $remote_plugin->sku, $installed_skus ) ) {
-					$remote_plugins[] = $remote_plugin;
+			foreach ( $this->get_plugin_remote_list() as $remotePlugin ) {
+				if ( ! in_array( $remotePlugin->sku, $installedSKUS ) ) {
+					$remotePlugins[] = $remotePlugin;
 
 					// Collect the FAQ links.
-				} elseif ( ! empty( $remote_plugin->faq ) ) {
-					$faqs[ $remote_plugin->sku ] = $remote_plugin->faq;
+				} else if ( ! empty( $remotePlugin->faq ) ) {
+					$faqs[ $remotePlugin->sku ] = $remotePlugin->faq;
 				}
 			}
 
@@ -448,7 +445,7 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 				
 				<h2><?php esc_html_e( 'Plugin Activation Page for Gambit Plugins', 'default' ) ?></h2>
 				
-				<p class="desc"><?php printf( esc_html_e( 'Get notified of plugin updates right here in your WordPress admin! Just enter your purchase code for our plugins in the field/s below to get automatic updates. Don&apos;t know how to get your purchase code? %1$sHere&apos;s how.%1$s', 'default' ), '<a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Can-I-Find-my-Purchase-Code-" target="_how">', '</a>' ) ?></p>
+				<p class="desc"><?php printf( esc_html_e( 'Get notified of plugin updates right here in your WordPress admin! Just enter your purchase code for our plugins in the field/s below to get automatic updates. Don&apos;t know how to get your purchase code? %sHere&apos;s how.%s', 'default' ), '<a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Can-I-Find-my-Purchase-Code-" target="_how">', '</a>' ) ?></p>
 				
 				<form method="post" action="<?php admin_url( 'plugins.php?page=' . self::LICENSES_ADMIN_SLUG ) ?>" id="pbs_licenses">
 				
@@ -465,14 +462,14 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 						</thead>
 					
 						<tbody>
-							<?php foreach ( $this->installed_plugins as $plugin ) : ?>
+							<?php foreach ( $this->installedPlugins as $plugin ) : ?>
 								<?php
 								if ( ! is_multisite() ) {
-									$license_edd_key = get_option( 'gambit_edd_license_key_' . $plugin['sku'] );
-									$purchase_code = get_option( 'gambit_purchase_code_' . $plugin['sku'] );
+									$licenseEDDKey = get_option( 'gambit_edd_license_key_' . $plugin['sku'] );
+									$purchaseCode = get_option( 'gambit_purchase_code_' . $plugin['sku'] );
 								} else {
-									$license_edd_key = get_site_option( 'gambit_edd_license_key_' . $plugin['sku'] );
-									$purchase_code = get_site_option( 'gambit_purchase_code_' . $plugin['sku'] );
+									$licenseEDDKey = get_site_option( 'gambit_edd_license_key_' . $plugin['sku'] );
+									$purchaseCode = get_site_option( 'gambit_purchase_code_' . $plugin['sku'] );
 								}
 								?>
 								<tr valign="top">	
@@ -482,10 +479,10 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 									<td>
 										<i class="spinner is-active" style="display: none"></i>
 										<i class="dashicons dashicons-no" style="display: none"></i>
-										<i class="dashicons dashicons-yes" <?php echo ! empty( $license_edd_key ) ? '' : 'style="display: none"' ?>></i>
+										<i class="dashicons dashicons-yes" <?php echo ! empty( $licenseEDDKey ) ? '' : 'style="display: none"' ?>></i>
 										<input type="hidden" name="sku" value="<?php echo esc_attr( $plugin['sku'] ) ?>"/>
-										<input id="license_key_<?php echo esc_attr( $plugin['sku'] ) ?>" name="license_key_<?php echo esc_attr( $plugin['sku'] ) ?>" type="text" class="regular-text" value="<?php echo esc_attr( $purchase_code ) ?>" placeholder="<?php echo esc_attr( __( 'Purcahse Code', 'default' ) ) ?>"/>
-										<button class="button-secondary edd_license_activate" <?php echo ! empty( $license_edd_key ) ? 'style="display: none"' : '' ?>><?php esc_html_e( 'Save & Activate Automatic Updates', 'default' ) ?></button>
+										<input id="license_key_<?php echo esc_attr( $plugin['sku'] ) ?>" name="license_key_<?php echo esc_attr( $plugin['sku'] ) ?>" type="text" class="regular-text" value="<?php echo esc_attr( $purchaseCode ) ?>" placeholder="<?php echo esc_attr( __( 'Purcahse Code', 'default' ) ) ?>"/>
+										<button class="button-secondary edd_license_activate" <?php echo ! empty( $licenseEDDKey ) ? 'style="display: none"' : '' ?>><?php esc_html_e( 'Save & Activate Automatic Updates', 'default' ) ?></button>
 									</td>
 									<?php if ( count( $faqs ) ) : ?>
 										<td>
@@ -501,7 +498,7 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 					</table>
 					
 					
-					<?php if ( ! empty( $remote_plugins ) ) : ?>
+					<?php if ( ! empty( $remotePlugins ) ) : ?>
 				
 						<table class="form-table other-plugins">
 							<thead>
@@ -512,7 +509,7 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 						
 							<tbody>
 
-								<?php foreach ( $remote_plugins as $i => $plugin ) : ?>
+								<?php foreach ( $remotePlugins as $i => $plugin ) : ?>
 									<?php
 									if ( ( $i + 1 ) % 2 === 1 ) :
 									?>
@@ -551,7 +548,7 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 											<?php endif; ?>
 										</td>
 									<?php
-									if ( $i % 2 || count( $remote_plugins ) - 1 === $i ) :
+									if ( $i % 2 || count( $remotePlugins ) - 1 === $i ) :
 									?>
 										</tr>
 									<?php
@@ -623,13 +620,13 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 			$code = esc_attr( $_POST['code'] );
 
 			// Verify SKU.
-			$this->installed_plugins = $this->gather_installed_plugins();
-			if ( empty( $this->installed_plugins ) ) {
+			$this->installedPlugins = $this->gather_installed_plugins();
+			if ( empty( $this->installedPlugins ) ) {
 				$this->delete_license_key( $sku );
 				die( 'no_plugins' );
 			}
-			foreach ( $this->installed_plugins as $installed_plugin ) {
-				if ( $installed_plugin['sku'] !== $sku ) {
+			foreach ( $this->installedPlugins as $installedPlugin ) {
+				if ( $installedPlugin['sku'] !== $sku ) {
 					continue;
 				}
 
@@ -645,27 +642,27 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 				 */
 
 				// Data to send in our API request.
-				$api_params = array(
+				$apiParams = array(
 					'purchase_code' => $code,
 					'sku' => $sku,
 					'url' => home_url(),
 				);
-				$response = wp_remote_get( add_query_arg( $api_params, self::VERIFY_PURCHASE_CODE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
+				$response = wp_remote_get( add_query_arg( $apiParams, self::VERIFY_PURCHASE_CODE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
 
 				if ( is_wp_error( $response ) ) {
 					die( esc_html( $response->get_error_message() ) );
 				}
-				$license_key = wp_remote_retrieve_body( $response );
+				$licenseKey = wp_remote_retrieve_body( $response );
 
-				if ( empty( $license_key ) ) {
+				if ( empty( $licenseKey ) ) {
 					$this->delete_license_key( $sku );
 					die( 'invalid_purchase_code' );
 				}
 
 				if ( ! is_multisite() ) {
-					update_option( 'gambit_edd_license_key_' . $sku, $license_key );
+					update_option( 'gambit_edd_license_key_' . $sku, $licenseKey );
 				} else {
-					update_site_option( 'gambit_edd_license_key_' . $sku, $license_key );
+					update_site_option( 'gambit_edd_license_key_' . $sku, $licenseKey );
 				}
 
 				die();
@@ -683,32 +680,32 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 		 */
 		public function check_for_updates() {
 
-			// $this->installed_plugins = apply_filters( 'gambit_plugin_updater', array() );
+			// $this->installedPlugins = apply_filters( 'gambit_plugin_updater', array() );
 			$this->gather_installed_plugins();
-			if ( empty( $this->installed_plugins ) ) {
+			if ( empty( $this->installedPlugins ) ) {
 				return;
 			}
 
-			foreach ( $this->installed_plugins as $installed_plugin ) {
+			foreach ( $this->installedPlugins as $installedPlugin ) {
 				// Only check ones with an SKU.
-				if ( empty( $installed_plugin['sku'] ) ) {
+				if ( empty( $installedPlugin['sku'] ) ) {
 					continue;
 				}
-				$sku = esc_attr( $installed_plugin['sku'] );
+				$sku = esc_attr( $installedPlugin['sku'] );
 
 				// Retrieve our license key.
-				$license_edd_key = self::get_edd_license_key( $sku );
-				if ( ! $license_edd_key ) {
+				$licenseEDDKey = self::get_edd_license_key( $sku );
+				if ( ! $licenseEDDKey ) {
 					continue;
 				}
 
 				// Setup the updater.
-				$edd_updater = new GAMBIT_EDD_SL_Plugin_Updater( $installed_plugin['store_url'], $installed_plugin['file'],
+				$eddUpdater = new GAMBIT_EDD_SL_Plugin_Updater( $installedPlugin['store_url'], $installedPlugin['file'],
 					array(
-						'version' => $installed_plugin['version'], // Current version number.
-						'license' => $license_edd_key, // License key - used get_option above to retrieve from DB.
-						'item_name' => $installed_plugin['name'], // Name of this plugin.
-						'author' => $installed_plugin['author'], // Author of this plugin.
+						'version' => $installedPlugin['version'], // Current version number.
+						'license' => $licenseEDDKey, // License key - used get_option above to retrieve from DB.
+						'item_name' => $installedPlugin['name'], // Name of this plugin.
+						'author' => $installedPlugin['author'], // Author of this plugin.
 						'item_id' => $sku,
 					)
 				);
@@ -724,16 +721,16 @@ if ( ! class_exists( 'GambitAdminLicensePage' ) ) {
 		 */
 		public static function get_edd_license_key( $sku ) {
 			if ( ! is_multisite() ) {
-				$license_edd_key = get_option( 'gambit_edd_license_key_' . $sku );
-				$purchase_code = get_option( 'gambit_purchase_code_' . $sku );
+				$licenseEDDKey = get_option( 'gambit_edd_license_key_' . $sku );
+				$purchaseCode = get_option( 'gambit_purchase_code_' . $sku );
 			} else {
-				$license_edd_key = get_site_option( 'gambit_edd_license_key_' . $sku );
-				$purchase_code = get_site_option( 'gambit_purchase_code_' . $sku );
+				$licenseEDDKey = get_site_option( 'gambit_edd_license_key_' . $sku );
+				$purchaseCode = get_site_option( 'gambit_purchase_code_' . $sku );
 			}
-			if ( empty( $purchase_code ) || empty( $license_edd_key ) ) {
+			if ( empty( $purchaseCode ) || empty( $licenseEDDKey ) ) {
 				return false;
 			}
-			return $license_edd_key;
+			return $licenseEDDKey;
 		}
 	}
 
@@ -755,32 +752,28 @@ if ( ! class_exists( 'GAMBIT_EDD_SL_Plugin_Updater' ) ) {
 	 * @author Pippin Williamson
 	 * @version 1.6
 	 */
-	class GAMBIT_EDD_SL_Plugin_Updater {
-		// Namespaced to PBS for error protection.
+	class GAMBIT_EDD_SL_Plugin_Updater { // Namespaced to PBS for error protection.
+
 		/**
 		 * The API URL.
-		 *
 		 * @var $api_url
 		 */
 		private $api_url = '';
 
 		/**
 		 * The API data.
-		 *
 		 * @var $api_data
 		 */
 		private $api_data  = array();
 
 		/**
 		 * The plugin name.
-		 *
 		 * @var $name
 		 */
 		private $name      = '';
 
 		/**
 		 * The plugin slug.
-		 *
 		 * @var $slug
 		 */
 		private $slug      = '';
@@ -898,7 +891,7 @@ if ( ! class_exists( 'GAMBIT_EDD_SL_Plugin_Updater' ) ) {
 
 			if ( ! is_object( $update_cache ) || empty( $update_cache->response ) || empty( $update_cache->response[ $this->name ] ) ) {
 
-				$cache_key    = md5( 'edd_plugin_' . sanitize_key( $this->name ) . '_version_info' );
+				$cache_key    = md5( 'edd_plugin_' .sanitize_key( $this->name ) . '_version_info' );
 				$version_info = get_transient( $cache_key );
 
 				if ( false === $version_info ) {
@@ -1043,7 +1036,7 @@ if ( ! class_exists( 'GAMBIT_EDD_SL_Plugin_Updater' ) ) {
 			if ( empty( $data['license'] ) ) {
 				return; }
 
-			if ( home_url() == $this->api_url ) {
+			if ( $this->api_url == home_url() ) {
 				return false; // Don't allow a plugin to ping itself.
 			}
 
@@ -1079,17 +1072,17 @@ if ( ! class_exists( 'GAMBIT_EDD_SL_Plugin_Updater' ) ) {
 		 */
 		public function show_changelog() {
 			// Sanitize $_REQUEST before use.
-			$the_request = wp_unslash( $_REQUEST );
+			$theRequest = wp_unslash( $_REQUEST );
 
-			if ( empty( $the_request['edd_sl_action'] ) || 'view_plugin_changelog' !== $the_request['edd_sl_action'] ) {
+			if ( empty( $theRequest['edd_sl_action'] ) || 'view_plugin_changelog' !== $theRequest['edd_sl_action'] ) {
 				return;
 			}
 
-			if ( empty( $the_request['plugin'] ) ) {
+			if ( empty( $theRequest['plugin'] ) ) {
 				return;
 			}
 
-			if ( empty( $the_request['slug'] ) ) {
+			if ( empty( $theRequest['slug'] ) ) {
 				return;
 			}
 
@@ -1097,7 +1090,7 @@ if ( ! class_exists( 'GAMBIT_EDD_SL_Plugin_Updater' ) ) {
 				wp_die( esc_attr__( 'You do not have permission to install plugin updates', 'default' ), esc_attr__( 'Error', 'edd' ), array( 'response' => 403 ) );
 			}
 
-			$response = $this->api_request( 'plugin_latest_version', array( 'slug' => $the_request['slug'] ) );
+			$response = $this->api_request( 'plugin_latest_version', array( 'slug' => $theRequest['slug'] ) );
 
 			if ( $response && isset( $response->sections['changelog'] ) ) {
 				echo '<div style="background:#fff;padding:10px;">' . esc_html( $response->sections['changelog'] ) . '</div>';

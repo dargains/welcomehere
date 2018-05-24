@@ -2,8 +2,8 @@
 /**
 Plugin Name: Parallax Backgrounds for VC
 Description: Adds new options to Visual Composer for adding parallax scrolling images & video backgrounds.
-Author: Gambit Technologies, Inc.
-Version: 4.5
+Author: Benjamin Intal - Gambit
+Version: 4.3
 Author URI: http://gambit.ph
 Plugin URI: http://gambit.ph/downloads/parallax-backgrounds-for-vc/
 Text Domain: parallax
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly.
 }
 
 // Identifies the current plugin version.
-defined( 'VERSION_GAMBIT_VC_PARALLAX_BG' ) or define( 'VERSION_GAMBIT_VC_PARALLAX_BG', '4.5' );
+defined( 'VERSION_GAMBIT_VC_PARALLAX_BG' ) or define( 'VERSION_GAMBIT_VC_PARALLAX_BG', '4.3' );
 
 // The slug used for translations & other identifiers.
 defined( 'GAMBIT_VC_PARALLAX_BG' ) or define( 'GAMBIT_VC_PARALLAX_BG', 'parallax' );
@@ -29,6 +29,7 @@ defined( 'GAMBIT_DISABLE_SMOOTH_SCROLLING_RATING' ) or define( 'GAMBIT_DISABLE_S
 require_once( 'class-admin-license.php' );
 
 // Loads all the modules related to the plugin.
+require_once( 'inc/otf_regen_thumbs.php' );
 require_once( 'class-fullwidth-row.php' );
 require_once( 'class-fullheight-row.php' );
 require_once( 'class-parallax-row.php' );
@@ -36,7 +37,6 @@ require_once( 'class-video-row.php' );
 require_once( 'class-hover-row.php' );
 require_once( 'class-background-row.php' );
 require_once( 'class-color-cycle-bg.php' );
-require_once( 'class-background-gradient.php' );
 
 // Initializes plugin class.
 if ( ! class_exists( 'GambitVCParallaxBackgrounds' ) ) {
@@ -110,14 +110,14 @@ if ( ! class_exists( 'GambitVCParallaxBackgrounds' ) ) {
 		 **/
 		public function plugin_links( $plugin_meta, $plugin_file ) {
 			if ( plugin_basename( __FILE__ ) == $plugin_file ) {
-				$plugin_data = get_plugin_data( __FILE__ );
+				$pluginData = get_plugin_data( __FILE__ );
 
 				$plugin_meta[] = sprintf( "<a href='%s' target='_blank'>%s</a>",
-					'http://support.gambit.ph?utm_source=' . urlencode( $plugin_data['Name'] ) . '&utm_medium=plugin_link',
+					'http://support.gambit.ph?utm_source=' . urlencode( $pluginData['Name'] ) . '&utm_medium=plugin_link',
 					__( 'Get Customer Support', GAMBIT_VC_PARALLAX_BG )
 				);
 				$plugin_meta[] = sprintf( "<a href='%s' target='_blank'>%s</a>",
-					'http://codecanyon.net/user/GambitTech/portfolio?utm_source=' . urlencode( $plugin_data['Name'] ) . '&utm_medium=plugin_link',
+					'http://codecanyon.net/user/GambitTech/portfolio?utm_source=' . urlencode( $pluginData['Name'] ) . '&utm_medium=plugin_link',
 					__( 'Get More Plugins', GAMBIT_VC_PARALLAX_BG )
 				);
 			}

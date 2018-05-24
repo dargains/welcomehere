@@ -16,9 +16,9 @@ if ( ! class_exists( 'GambitVCVideoRow' ) ) {
 		/**
 		 * Uniquely identifies rendered videos.
 		 *
-		 * @var string $video_id - The Video ID used.
+		 * @var string $videoID - The Video ID used.
 		 */
-		public static $video_id = 0;
+		public static $videoID = 0;
 
 
 		/**
@@ -106,22 +106,6 @@ if ( ! class_exists( 'GambitVCVideoRow' ) ) {
 					'value' => '100',
 					'description' => __( 'You may set the opacity level for your parallax. You can add a background color to your row and add an opacity here to tint your parallax. <strong>Please choose an integer value between 1 and 100.</strong>', GAMBIT_VC_PARALLAX_BG ),
 				),
-				array(
-					'type' => 'textfield',
-					'heading' => __( 'Custom ID', GAMBIT_VC_PARALLAX_BG ),
-					'param_name' => 'id',
-					'value' => '',
-					'description' => __( 'Add a custom id for the element here. Only one ID can be defined.', GAMBIT_VC_PARALLAX_BG ),
-					'group' => __( 'Advanced', GAMBIT_VC_PARALLAX_BG ),
-				),
-				array(
-					'type' => 'textfield',
-					'heading' => __( 'Custom Class', GAMBIT_VC_PARALLAX_BG ),
-					'param_name' => 'class',
-					'value' => '',
-					'description' => __( 'Add a custom class name for the element here. If defining multiple classes, separate them by lines and define them like you would in HTML code.', GAMBIT_VC_PARALLAX_BG ),
-					'group' => __( 'Advanced', GAMBIT_VC_PARALLAX_BG ),
-				),
 				),
 			) );
 		}
@@ -137,20 +121,16 @@ if ( ! class_exists( 'GambitVCVideoRow' ) ) {
 		 */
 		public function create_shortcode( $atts, $content = null ) {
 			$defaults = array(
-				'video' => '',
-				'mute' => '',
-				'force_hd' => '',
-				'aspect_ratio' => '16:9',
-				'opacity' => '100',
-				'class' => '',
-				'id' => '',
+			'video' => '',
+			'mute' => '',
+			'force_hd' => '',
+			'aspect_ratio' => '16:9',
+			'opacity' => '100',
 			);
 			if ( empty( $atts ) ) {
 				$atts = array();
 			}
 			$atts = array_merge( $defaults, $atts );
-			$id = '';
-			$class = '';
 
 			if ( empty( $atts['video'] ) ) {
 				return '';
@@ -159,34 +139,21 @@ if ( ! class_exists( 'GambitVCVideoRow' ) ) {
 			wp_enqueue_script( 'gambit_parallax', plugins_url( 'parallax/js/min/script-min.js', __FILE__ ), array( 'jquery' ), VERSION_GAMBIT_VC_PARALLAX_BG, true );
 			wp_enqueue_style( 'gambit_parallax', plugins_url( 'parallax/css/style.css', __FILE__ ), array(), VERSION_GAMBIT_VC_PARALLAX_BG );
 
-			// See if classes and IDs are defined.
-			if ( ! empty( $atts['class'] ) ) {
-				$class = ' ' . esc_attr( $atts['class'] );
-			} else {
-				$class = '';
-			}
-			if ( ! empty( $atts['id'] ) ) {
-				$id = "id='" . esc_attr( $atts['id'] ) . "' ";
-			} else {
-				$id = '';
-			}
+			self::$videoID++;
 
-			self::$video_id++;
-
-			$video_meta = self::get_video_provider( $atts['video'] );
-			if ( 'youtube' == $video_meta['type'] ) {
-				$video_div = "<div class='click-overrider'></div><div style='visibility: hidden' id='video-" . self::$video_id . "' data-youtube-video-id='" . esc_attr( $video_meta['id'] ) . "' data-force-hd='" . ( 'forcehd' == $atts['force_hd'] ? 'true' : 'false' ) . "' data-mute='" . ( 'mute' == $atts['mute'] ? 'true' : 'false' ) . "' data-video-aspect-ratio='" . esc_attr( $atts['aspect_ratio'] ) . "' ><div id='video-" . self::$video_id . "-inner'></div></div>";
+			$videoMeta = self::get_video_provider( $atts['video'] );
+			if ( 'youtube' == $videoMeta['type'] ) {
+				$videoDiv = "<div class='click-overrider'></div><div style='visibility: hidden' id='video-" . self::$videoID . "' data-youtube-video-id='" . esc_attr( $videoMeta['id'] ) . "' data-force-hd='" . ( 'forcehd' == $atts['force_hd'] ? 'true' : 'false' ) . "' data-mute='" . ( 'mute' == $atts['mute'] ? 'true' : 'false' ) . "' data-video-aspect-ratio='" . esc_attr( $atts['aspect_ratio'] ) . "'><div id='video-" . self::$videoID . "-inner'></div></div>";
 			} else {
 				// Need to include "webkitallowfullscreen mozallowfullscreen allowfullscreen" below or else video will NOT loop in Firefox.
-				// $video_div = '<script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script><div class="click-overrider"></div><div id="video-' .
-				$video_div = '<div class="click-overrider"></div><div id="video-' . self::$video_id . '" data-vimeo-video-id="' . esc_attr( $video_meta['id'] ) . '" data-mute="' . ( 'mute' == $atts['mute'] ? 'true' : 'false' ) . '" data-video-aspect-ratio="' . esc_attr( $atts['aspect_ratio'] ) . '"><iframe id="video-iframe-' . self::$video_id . '" src="https://player.vimeo.com/video/' . $video_meta['id'] . '?api=1&player_id=video-iframe-' . self::$video_id . '&html5=1&autopause=0&autoplay=1&badge=0&byline=0&loop=1&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
+				$videoDiv = '<script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script><div class="click-overrider"></div><div id="video-' . self::$videoID . '" data-vimeo-video-id="' . esc_attr( $videoMeta['id'] ) . '" data-mute="' . ( 'mute' == $atts['mute'] ? 'true' : 'false' ) . '" data-video-aspect-ratio="' . esc_attr( $atts['aspect_ratio'] ) . '"><iframe id="video-iframe-' . self::$videoID . '" src="//player.vimeo.com/video/' . $videoMeta['id'] . '?api=1&player_id=video-iframe-' . self::$videoID . '&html5=1&autopause=0&autoplay=1&badge=0&byline=0&loop=1&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
 			}
 
-			return  '<div ' . $id . "class='gambit_video_row" . $class . "' " .
+			return  "<div class='gambit_video_row' " .
 	        "data-mute='" . esc_attr( $atts['mute'] ) . "' " .
 	        "data-opacity='" . esc_attr( $atts['opacity'] ) . "' " .
 			"style='display: none'>" .
-			$video_div .
+			$videoDiv .
 			'</div>';
 		}
 
@@ -194,72 +161,72 @@ if ( ! class_exists( 'GambitVCVideoRow' ) ) {
 		/**
 		 * Gets the Video ID & Provider from a video URL or ID.
 		 *
-		 * @param string $video_string - The URL or ID of a video.
+		 * @param string $videoString - The URL or ID of a video.
 		 * @return	array - The container whether the video is a YouTube video or a Vimeo video along with the video ID.
 		 * @since	3.0
 		 */
-		protected static function get_video_provider( $video_string ) {
+		protected static function get_video_provider( $videoString ) {
 
-			$video_string = trim( $video_string );
+			$videoString = trim( $videoString );
 
 			/*
 			 * Check for YouTube.
 			 */
-			$video_id = false;
-			if ( preg_match( '/youtube\.com\/watch\?v=([^\&\?\/]+)/', $video_string, $id ) ) {
+			$videoID = false;
+			if ( preg_match( '/youtube\.com\/watch\?v=([^\&\?\/]+)/', $videoString, $id ) ) {
 				if ( count( $id > 1 ) ) {
-					$video_id = $id[1];
+					$videoID = $id[1];
 				}
-			} elseif ( preg_match( '/youtube\.com\/embed\/([^\&\?\/]+)/', $video_string, $id ) ) {
+			} else if ( preg_match( '/youtube\.com\/embed\/([^\&\?\/]+)/', $videoString, $id ) ) {
 				if ( count( $id > 1 ) ) {
-					$video_id = $id[1];
+					$videoID = $id[1];
 				}
-			} elseif ( preg_match( '/youtube\.com\/v\/([^\&\?\/]+)/', $video_string, $id ) ) {
+			} else if ( preg_match( '/youtube\.com\/v\/([^\&\?\/]+)/', $videoString, $id ) ) {
 				if ( count( $id > 1 ) ) {
-					$video_id = $id[1];
+					$videoID = $id[1];
 				}
-			} elseif ( preg_match( '/youtu\.be\/([^\&\?\/]+)/', $video_string, $id ) ) {
+			} else if ( preg_match( '/youtu\.be\/([^\&\?\/]+)/', $videoString, $id ) ) {
 				if ( count( $id > 1 ) ) {
-					$video_id = $id[1];
+					$videoID = $id[1];
 				}
 			}
 
-			if ( ! empty( $video_id ) ) {
+			if ( ! empty( $videoID ) ) {
 				return array(
 				'type' => 'youtube',
-				'id' => $video_id,
+				'id' => $videoID,
 				);
 			}
 
 			/*
 			 * Check for Vimeo.
 			 */
-			if ( preg_match( '/vimeo\.com\/(\w*\/)*(\d+)/', $video_string, $id ) ) {
+			if ( preg_match( '/vimeo\.com\/(\w*\/)*(\d+)/', $videoString, $id ) ) {
 				if ( count( $id > 1 ) ) {
-					$video_id = $id[ count( $id ) - 1 ];
+					$videoID = $id[ count( $id ) - 1 ];
 				}
 			}
 
-			if ( ! empty( $video_id ) ) {
+			if ( ! empty( $videoID ) ) {
 				return array(
 				'type' => 'vimeo',
-				'id' => $video_id,
+				'id' => $videoID,
 				);
 			}
 
 			/*
 			 * Non-URL form.
 			 */
-			if ( preg_match( '/^\d+$/', $video_string ) ) {
+			if ( preg_match( '/^\d+$/', $videoString ) ) {
 				return array(
 				'type' => 'vimeo',
-				'id' => $video_string,
+				'id' => $videoString,
 				);
 			}
 
 			return array(
 			'type' => 'youtube',
-			'id' => $video_string,
+			'id' => $videoString,
 			);
 		}
 	}

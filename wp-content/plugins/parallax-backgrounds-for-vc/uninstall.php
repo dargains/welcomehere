@@ -12,10 +12,10 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 // NOTE: This should correspond to the pointer_name in the main plugin file.
-$pointer_name = 'gambitprlx';
+$pointerName = 'gambitprlx';
 
 // Deletes the dismissed admin pointer for this plugin.
-$dismissed_admin_pointers = get_user_meta( get_current_user_id(), 'dismissed_wp_pointers' );
-$dismissed_admin_pointers = preg_replace( '/' . $pointer_name . '(,)?)/', null, $dismissed_admin_pointers['0'] );
-$dismissed_admin_pointers = preg_replace( '/(,)$/', null, $dismissed_admin_pointers );
-update_user_meta( get_current_user_id(), 'dismissed_wp_pointers', $dismissed_admin_pointers );
+$dismissedAdminPointers = get_user_meta( get_current_user_id(), 'dismissed_wp_pointers' );
+$dismissedAdminPointers = preg_replace( '/' . $pointerName . '(,)?)/', null, $dismissedAdminPointers['0'] );
+$dismissedAdminPointers = preg_replace( '/(,)$/', null, $dismissedAdminPointers );
+update_user_meta( get_current_user_id(), 'dismissed_wp_pointers', $dismissedAdminPointers );
