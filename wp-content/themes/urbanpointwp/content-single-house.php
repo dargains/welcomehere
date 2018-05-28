@@ -18,10 +18,7 @@ if($thumbnail_src_featured) { ?>
         <div class="absolute gradient-holder flex">
             <div class="container relative flex">
                 <div class="post-name">
-                    <h1 class="post-title pull-left">
-                        <?php echo get_the_title(); ?> <!-- / 
-                        <div class="mt_car--tax-type"><?php echo get_the_term_list( get_the_ID(), 'mt-house-type', '', ' ' ); ?></div> -->
-                    </h1>
+                    
 
                     <!-- GALLERY -->
                     <div class="mt_car--gallery pull-left">
@@ -70,6 +67,7 @@ if($thumbnail_src_featured) { ?>
         </div>
         <?php the_post_thumbnail( 'urbanpointwp_listing_single_featured', array('class' => 'class_name')); ?>
     </div>
+
 <?php } ?>
 <div class="clearfix"></div>
 
@@ -96,33 +94,11 @@ if($thumbnail_src_featured) { ?>
             
             <!-- POST CONTENT -->
             <div class="<?php echo esc_attr($cols); ?> main_stickit main-content">
-
-                <?php if(urbanpointwp_plugin_active('modeltheme-framework/modeltheme-framework.php')){ ?>
-                    <!-- MAP LOCATION -->
-                    <div class="mt_listing_map_location">
-                        <?php 
-                            $mt_map_coordinates = get_post_meta( get_the_ID(), 'mt_map_coordinates', true );
-                            if (isset($mt_map_coordinates) && !empty($mt_map_coordinates)) {
-                                $gmap_pin = '';
-                                $gmap_pin .= '[sbvcgmap map_width="100" map_height="400" mapstyles="style-55" zoom="18" scrollwheel="no" searchradius="500" sbvcgmap_title="Google Maps"]';
-                                
-                                    $categories = wp_get_post_terms(get_the_ID(), 'mt-house-type', array("fields" => "all"));
-                                    foreach($categories as $category) {
-                                        if ($category) {
-                                            $image_id = get_term_meta ( $category->term_id, 'category-image-id', true );
-                                            $mt_map_coordinates = get_post_meta( get_the_ID(), 'mt_map_coordinates', true );
-                                            if (isset($mt_map_coordinates) && !empty($mt_map_coordinates)) {
-                                                $gmap_pin .= '[sbvcgmap_marker animation="DROP" address="'.esc_attr($mt_map_coordinates).'" icon="'.esc_attr($image_id).'"]<a href="'.get_the_permalink().'">'.get_the_title().'</a>[/sbvcgmap_marker]';
-                                            }
-                                        }
-                                    }
-
-                                $gmap_pin .= '[/sbvcgmap]';
-                            }
-                            echo do_shortcode($gmap_pin);
-                        ?>
-                    </div>
-                <?php } ?>
+<h1 class="post-title" style="margin-bottom:20px;margin-top:0;">
+                        <?php echo get_the_title(); ?> <!-- / 
+                        <div class="mt_car--tax-type"><?php echo get_the_term_list( get_the_ID(), 'mt-house-type', '', ' ' ); ?></div> -->
+                    </h1>
+                
 
                 <!-- HEADER -->
                 <div class="article-header">
@@ -209,6 +185,35 @@ if($thumbnail_src_featured) { ?>
                         <h4 class="content-car-heading"><?php echo esc_html__('Facilidades','urbanpointwp'); ?></h4>
                         <?php echo get_the_term_list( get_the_ID(), 'mt-house-features', '<div class="single-post-tags row"><div class="col-md-4 features_items"><i class="fa fa-check-square-o"></i> ', '</div><div class="col-md-4 features_items"><i class="fa fa-check-square-o"></i> ', '</div></div>' ); ?>
                     </div>
+
+                    <?php if(urbanpointwp_plugin_active('modeltheme-framework/modeltheme-framework.php')){ ?>
+
+                    <!-- MAP LOCATION -->
+                    <div class="mt_listing_map_location">
+                        <h4 class="content-car-heading">Localização</h4>
+                        <?php 
+                            $mt_map_coordinates = get_post_meta( get_the_ID(), 'mt_map_coordinates', true );
+                            if (isset($mt_map_coordinates) && !empty($mt_map_coordinates)) {
+                                $gmap_pin = '';
+                                $gmap_pin .= '[sbvcgmap map_width="100" map_height="400" mapstyles="style-55" zoom="18" scrollwheel="no" searchradius="500" sbvcgmap_title="Google Maps"]';
+                                
+                                    $categories = wp_get_post_terms(get_the_ID(), 'mt-house-type', array("fields" => "all"));
+                                    foreach($categories as $category) {
+                                        if ($category) {
+                                            $image_id = get_term_meta ( $category->term_id, 'category-image-id', true );
+                                            $mt_map_coordinates = get_post_meta( get_the_ID(), 'mt_map_coordinates', true );
+                                            if (isset($mt_map_coordinates) && !empty($mt_map_coordinates)) {
+                                                $gmap_pin .= '[sbvcgmap_marker animation="DROP" address="'.esc_attr($mt_map_coordinates).'" icon="'.esc_attr($image_id).'"]<a href="'.get_the_permalink().'">'.get_the_title().'</a>[/sbvcgmap_marker]';
+                                            }
+                                        }
+                                    }
+
+                                $gmap_pin .= '[/sbvcgmap]';
+                            }
+                            echo do_shortcode($gmap_pin);
+                        ?>
+                    </div>
+                <?php } ?>
 
                     <?php
                     $house_video_tour = get_post_meta( get_the_ID(), 'mt_video_tour', true );
