@@ -1385,6 +1385,7 @@ img.mfp-img {
     float: left;
     font-style: italic;
     padding: 15px 25px;
+    border: 1px solid lightgray;
     width: 65%;
     border-radius: 30px;
     font-family: "Ubuntu";

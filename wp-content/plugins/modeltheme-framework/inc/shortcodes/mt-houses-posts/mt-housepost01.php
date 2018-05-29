@@ -49,10 +49,9 @@ function modeltheme_shortcode_housepost01($params, $content) {
         $house_location = get_the_term_list( $blogpost->ID, 'mt-house-location', '', ' ' );
         $house_scope = get_the_term_list( $blogpost->ID, 'mt-house-category', '', ' ' );
 
-        $house_bathrooms = get_post_meta( $blogpost->ID, 'mt_bathrooms', true );
+        $house_bedrooms = get_post_meta( $blogpost->ID, 'mt_bedrooms', true );
         $mt_house_price_day = get_post_meta( $blogpost->ID, 'mt_house_price_day', true );
         $mt_house_price_month = get_post_meta( $blogpost->ID, 'mt_house_price_month', true );
-        $mt_house_price_for_sale = get_post_meta( $blogpost->ID, 'mt_house_price_for_sale', true );
 
         if ($thumbnail_src) {
             $post_img = '<div class="grid">
@@ -93,10 +92,10 @@ function modeltheme_shortcode_housepost01($params, $content) {
                                 $html .= '<p class="house_display_posts">'.$house_location.'</p>';
 
                                 #bathrooms
-                                if (empty($house_bathrooms)) {
+                                if (empty($house_bedrooms)) {
                                   $html .= "<p class='house_display_posts'>0 bathrooms<p>";
-                                } elseif (!empty($house_bathrooms)) {
-                                  $html .= '<p class="house_display_posts">'.$house_bathrooms.' bathrooms</p>';
+                                } elseif (!empty($house_bedrooms)) {
+                                  $html .= '<p class="house_display_posts">T'.$house_bedrooms.'</p>';
                                 }
                               $html .= '</div>
 
@@ -107,8 +106,6 @@ function modeltheme_shortcode_housepost01($params, $content) {
                                 if(!empty($mt_house_price_day)) {
                                   $html .= '<p class="house_display_posts">'.$mt_house_price_day.urbanpointwp_get_currency_symbol().' por dia</p>';
 
-                                } elseif(empty($mt_house_price_day) and !empty($mt_house_price_for_sale)) {
-                                  $html .= '<p class="house_display_posts">'.$mt_house_price_for_sale.urbanpointwp_get_currency_symbol().' for sell</p>';
                                 }
 
                               $html .= '</div>
