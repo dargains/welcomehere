@@ -50,6 +50,8 @@ function modeltheme_shortcode_housepost01($params, $content) {
         $house_scope = get_the_term_list( $blogpost->ID, 'mt-house-category', '', ' ' );
 
         $house_bedrooms = get_post_meta( $blogpost->ID, 'mt_bedrooms', true );
+        $house_bathrooms = get_post_meta( $blogpost->ID, 'mt_bathrooms', true );
+        $house_area = get_post_meta( $blogpost->ID, 'mt_square_areas', true);
         $mt_house_price_day = get_post_meta( $blogpost->ID, 'mt_house_price_day', true );
         $mt_house_price_month = get_post_meta( $blogpost->ID, 'mt_house_price_month', true );
 
@@ -57,7 +59,12 @@ function modeltheme_shortcode_housepost01($params, $content) {
             $post_img = '<div class="grid">
                           <figure class="effect-apollo">
                             <img class="blog_post_image" src="'. esc_url($thumbnail_src[0]) . '" alt="'.$blogpost->post_title.'" />
-                            <figcaption></figcaption>
+                            <div>
+                              <h2>'.$blogpost->post_title.'</h2>
+                              <p>'.$house_bedrooms.' quartos</p>
+                              <p>'.$house_bathrooms.' casas de banho</p>
+                              <p>'.$house_area.'m2</p>
+                            </div>
                           </figure>
                         </div>';
             $post_col = 'col-md-12';
@@ -78,29 +85,14 @@ function modeltheme_shortcode_housepost01($params, $content) {
                           <!-- POST DETAILS -->
                           <div class="post-details '.$post_col.'">
 
-
-                            <!-- <h3 class="property-post-name text-center">
-                              <a href="'.get_permalink($blogpost->ID).'" title="'. $blogpost->post_title .'">'. $blogpost->post_title .'</a>
-                            </h3> -->
-
-
-
                             <div class="row">
 
                               <div class="text-left col-md-6 vc_col-sm-6 vc_col-xs-6">';
                                 #location
                                 $html .= '<p class="house_display_posts">'.$house_location.'</p>';
-
-                                #bathrooms
-                                if (empty($house_bedrooms)) {
-                                  $html .= "<p class='house_display_posts'>0 bathrooms<p>";
-                                } elseif (!empty($house_bedrooms)) {
-                                  $html .= '<p class="house_display_posts">T'.$house_bedrooms.'</p>';
-                                }
                               $html .= '</div>
 
-                              <div class="text-right col-md-6 vc_col-sm-6 vc_col-xs-6">
-                                <p class="house_display_posts">for '.$house_scope.'</p>';
+                              <div class="text-right col-md-6 vc_col-sm-6 vc_col-xs-6">';
                               
                                 #prices
                                 if(!empty($mt_house_price_day)) {

@@ -180,7 +180,7 @@ article.single-post .mt_cars--extra-pics img {
     font-weight: 500;
 }
 .section-border {
-    background: rgba(0, 0, 0, 0) url("img/delimiter.png") no-repeat scroll center center;
+    background: rgba(0, 0, 0, 0) url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdYAAABFCAYAAAD3n8cDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MTEwMkU2NzE0MUZBMTFFNzk4NUNFQUJFQTkxRUNBRTQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTEwMkU2NzA0MUZBMTFFNzk4NUNFQUJFQTkxRUNBRTQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0RTExQjM2ODBCREYxMUU3OTAzMEM4QkU4ODdGMzJBQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0RTExQjM2OTBCREYxMUU3OTAzMEM4QkU4ODdGMzJBQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PiX/5nIAAASlSURBVHja7N1PiJR1HAbw2VikDqIIJWUQGNQG/ondigiCoFAJqotdgixCOrRgBGVQh6AOBd3qIIiH8NDFLgZFxUZEIIZppJKWaZpah8Ay2VZEsudt38V1c/7szM7M7s7nAw/uzrzv73W/4D6+O++823fp0qUKADAz+hQrAChWAFCsAKBYAQDFCgCKFQAUKwCgWAFAsQKAYgUAxQoAKFYAUKwAoFgBAMUK3bTv4OFGN12YrExuSW5OFpSPX0hOJSeSA4MrBs6ZKihWUKzVDSUPJXcl19bZ9nzyTTKSgt1ruqBYQbFetizZWBZqM4qC3ZaCPW3KoFih14v1geT5pL/F5S8m76RcvzBpUKzQq8X6eLJhhg+zPeW6w7ShO64xAuiadW0o1cKGFPg64wXFCr1keTLcxvWHU67LjRkUK/SKV6ax7clkT5mTbToGMEP6jQA6bm2ytIHtPk4+S45OPDC4YqB4nfbWfLgmebjO/kuz7drs86mRgzNWmM+eqPP8WPJqsmVyqU4q16PJlnKbsRaPBShWmNNWJUvqbLM52V9voZTr/nLbWpbkrHWVsYNihfnq3jrPb0uON7pYyvV4uU8rxwQUK8xZt9V47myyc7oLplx3lvs2c0xAscKcVuuipd0trLu7yWMCihXmtFo31j/WwrrHmjwmoFhhTqt1D9GxFtYda/KYgGKFeVusi1tYd7FiBcUKvajWRUarW1h3dZPHBBQrzGknajw3mCya7oL7Dh5eVO5bzS/GDp3Tn3+ULxkDvWZo5R1vV3uuzb9KcW+l+vtK+5JNgysG3pjmmpvKfav5rtPz7esb/+vsPXDI9xd6r1iT240BOuar5LkaRXhP/rO7PuX6QYNnq+uLfeps9mUXv17fX+jJYv3QGKAzUpijKcPixvpra2z2VLYpbnv4Xra/UKVQF+SPp5NH6hxyJGv81cUv2fcXek5fm3/sBVxZiMUfC5P3G9j89+Tz5EDya/nYTcnK5MHk+gbWeDLF+qfJg2KF+VyshceSjW0+3PaU6g5Th85yVTB0R3F/3+/buP5PShUUK/Sa15O/27Du+eQ14wXFCr1mNHkh+WMG1yxuBvFily9YAsUKdE1xUVLxWuvXM7DWvmQ4pXrCWKF7XLwEHTTp4qUJxVW+xZ2TDlXG34/6TLKsiXLekUIdMWFQrNDrxVq4LxlK3i0/Lz5ekwwkS6osdSYpFvskhfqtycLs0W8E0HW7KuO/naa4Unhr8lFl/NaHlfJs9sbkhvLz4r2tv01+b2rK+rp8PmaM4IwVnLFe6f5kc2X8qt7i7kx7kv3JPxMbpECLNYprI1YldyePJj/n8U2mC4oVFOv/3ZlMvQn/uWTiDLU4s1045fk3U6y7TBcUKyjWqytuXP9Wpf5LNReTl1OqP5oszB7ebgOzzw+Vyz8SrqZ4TXWzUgXFCjTmSGX85hGjV3nuvxtLpFSPGBMoVqBxp8pyPTPpsTNlqZ42HpidvMYKHdTga6xTFW+5ebb8eGtK9axJgmIFAMUKAChWAFCsAKBYAQDFCgCKFQAUKwAoVgBAsQKAYgUAxQoAKFYAUKwAoFgBQLECAK36V4ABAEnZbuk5bp2AAAAAAElFTkSuQmCC") no-repeat scroll center center;
     height: 54px;
     margin: 5px 0 10px;
     width: 100%;
@@ -3294,6 +3294,7 @@ h3.post-name.row.car-name:hover a {
 
 figure.effect-apollo {
     background: transparent;
+    max-height: 225px;
 }
 
 figure.effect-apollo img {
@@ -3317,18 +3318,21 @@ figure.effect-apollo figcaption::before {
     transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
 }
 
-figure.effect-apollo p {
+figure.effect-apollo div {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 3em;
-    padding: 0 1em;
-    max-width: 150px;
-    border-right: 4px solid #fff;
-    text-align: right;
+    text-align: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
     opacity: 0;
     -webkit-transition: opacity 0.35s;
     transition: opacity 0.35s;
+}
+
+figure.effect-apollo p {
+    font-weight: 700;
 }
 
 figure.effect-apollo h2 {
@@ -3336,7 +3340,7 @@ figure.effect-apollo h2 {
 }
 
 figure.effect-apollo:hover img {
-    opacity: 0.6;
+    opacity: 0.2;
     -webkit-transform: scale3d(1,1,1);
     transform: scale3d(1,1,1);
 }
@@ -3346,7 +3350,7 @@ figure.effect-apollo:hover figcaption::before {
     transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
 }
 
-figure.effect-apollo:hover p {
+figure.effect-apollo:hover div {
     opacity: 1;
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
@@ -3430,7 +3434,7 @@ figure.effect-apollo:hover p {
 
 .grid figure p {
     letter-spacing: 1px;
-    font-size: 68.5%;
+    font-size: 16px;
 }
 
 
