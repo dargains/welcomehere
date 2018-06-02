@@ -73,6 +73,18 @@ if($thumbnail_src_featured) { ?>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ARTICLE CONTENT -->
 <article id="post-<?php the_ID(); ?>" <?php post_class('post high-padding'); ?>>
     <div class="container">

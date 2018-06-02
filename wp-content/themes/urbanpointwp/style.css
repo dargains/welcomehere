@@ -233,7 +233,7 @@ table {
 }
 table, th, td {
    border: 1px solid #e6e6e6;
-} 
+}
 td, th {
     padding: 10px !important;
     text-align: center;
@@ -483,10 +483,10 @@ body.single-post {
     opacity: 0.5;
     top: 9px;
 }
-#contact_form input[type="text"]::-webkit-input-placeholder, 
-#contact_form input[type="text"]:-moz-placeholder, 
-#contact_form input[type="text"]::-moz-placeholder, 
-#contact_form input[type="text"]:-ms-input-placeholder, 
+#contact_form input[type="text"]::-webkit-input-placeholder,
+#contact_form input[type="text"]:-moz-placeholder,
+#contact_form input[type="text"]::-moz-placeholder,
+#contact_form input[type="text"]:-ms-input-placeholder,
 #contact_form textarea::-webkit-input-placeholder,
 #contact_form textarea:-moz-placeholder,
 #contact_form textarea::-moz-placeholder,
@@ -612,8 +612,8 @@ body.single-post {
 .wpb_button:hover:after {
 	width: 100%;
 }
-body .vc_btn, 
-body a.vc_btn, 
+body .vc_btn,
+body a.vc_btn,
 body button.vc_btn {
 	color: #FFF;
 	font-size: 14px;
@@ -883,7 +883,7 @@ h2.heading-bottom.text-right:after {
 .wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header {
 	background: #FFFFFF;
 }
-.wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header.ui-state-active {	
+.wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header.ui-state-active {
 	border-bottom: 1px solid #d5dadd;
 }
 .wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header.ui-state-active a {
@@ -903,7 +903,7 @@ h2.heading-bottom.text-right:after {
 .masonry_banner a {
     display: block;
 }
-.masonry_banner a:before, 
+.masonry_banner a:before,
 .masonry_banner a:after {
   position: absolute;
   top: 20px;
@@ -927,7 +927,7 @@ h2.heading-bottom.text-right:after {
   -webkit-transform: scale(1,0);
   transform: scale(1,0);
 }
-.masonry_banner:hover a:before, 
+.masonry_banner:hover a:before,
 .masonry_banner:hover a:after {
   opacity: 1;
   transform: scale(1);
@@ -1019,6 +1019,12 @@ h2.heading-bottom.text-right:after {
 .wpb_row {
 	margin-bottom: 80px;
 }
+@media only screen and (max-width: 767px) {
+	.wpb_row {
+		margin-bottom: 40px;
+	}
+}
+
 .shop_feature {
 	margin-top: 40px;
 	padding-bottom: 40px;
@@ -1136,4 +1142,3 @@ h2.heading-bottom.text-right:after {
 .single article .article-content p {
     color: #454646 !important;
 }
-
