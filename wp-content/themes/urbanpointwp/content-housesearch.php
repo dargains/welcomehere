@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
 * Template for House Listings
 * Used in: taxonomy-mt-car-category.php, taxonomy-mt-car-features.php, taxonomy-mt-car-type.php, search.php
@@ -19,16 +19,16 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('single-post list-view col-md-12'); ?> > 
+<article id="post-<?php the_ID(); ?>" <?php post_class('single-post list-view col-md-12'); ?> >
     <div class="blog_custom row">
 
         <div class="col-md-12 post-details">
             <div class="row description_container">
-                
+
 
                 <div class="col-md-6 mt_cars--features-description">
-                    
-                    <?php 
+
+                    <?php
                         $house_location = get_the_term_list( get_the_ID(), 'mt-house-location', '', ' ' );
                         $content_post   = get_post(get_the_ID());
                         $content        = $content_post->post_content;
@@ -53,13 +53,13 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
 		                ?>
                     </h3>
 
-                    
 
-                    <?php 
+
+                    <?php
                         // Price per day - meta
                         $mt_house_price_day = get_post_meta( get_the_ID(), 'mt_house_price_day', true );
                         $mt_house_price_for_sale = get_post_meta( get_the_ID(), 'mt_house_price_for_sale', true );
-                        
+
                         // Price per day
                         if(!empty($mt_house_price_day)){
                             echo '<div class="mt_car--price-day mt_car--price">';
@@ -105,9 +105,9 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
                         ?>
                     </div>
 
-                    
 
-                    <?php 
+
+                    <?php
                         // Square areas - meta
                         $mt_square_areas = get_post_meta( get_the_ID(), 'mt_square_areas', true );
 
@@ -126,7 +126,7 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
                         // Bathrooms - icon
                         $bathrooms_icon = get_template_directory_uri() . '/images/theme_urbanpoint_icon3.png';
 
-                        
+
                     ?>
 
                     <div class="mt_car--important-features col-md-12">
@@ -144,7 +144,7 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
 	                        if(!empty($mt_bedrooms)) {
 	                        	echo '<span class="col-md-4 text-center car_luggage">';
 		                        	echo '<img src="'.esc_url($bedrooms_icon).'" alt="luggage" height=25" width="25">';
-		                        		echo '<span class="car_luggage_value">'.esc_attr($mt_bedrooms).' Bedrooms</span>';
+		                        		echo '<span class="car_luggage_value">'.esc_attr($mt_bedrooms).' Quartos</span>';
 	                        	echo '</span>';
 
 	                        }
@@ -152,7 +152,7 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
 	                        if(!empty($mt_bathrooms)) {
 	                        	echo '<span class="col-md-4 text-center car_gearbox">';
 		                        	echo '<img src="'.esc_url($bathrooms_icon).'" alt="gearbox" height="25" width="25">';
-		                        		echo '<span class="car_gearbox_value">'.esc_attr($mt_bathrooms).' Bathrooms</span>';
+		                        		echo '<span class="car_gearbox_value">'.esc_attr($mt_bathrooms).' Casas de banho</span>';
 	                        	echo '</span>';
 
 	                        }
@@ -168,7 +168,7 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
                 <div class="col-md-6 mt_cars--main-pic">
 
                     <a href="<?php the_permalink(); ?>" class="relative">
-                        <div class="absolute gradient-holder-category"></div>  
+                        <div class="absolute gradient-holder-category"></div>
                         <?php echo wp_kses_post($post_img); ?>
                         <?php
 

@@ -7,7 +7,7 @@
 
 <!-- LISTING FEATURED IMAGE -->
 
-<?php 
+<?php
 $thumbnail_src_featured = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'urbanpointwp_listing_single_featured' );
 $thumbnail_src_featured_full = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
 
@@ -18,7 +18,7 @@ if($thumbnail_src_featured) { ?>
         <div class="absolute gradient-holder flex">
             <div class="container relative flex">
                 <div class="post-name">
-                    
+
 
                     <!-- GALLERY -->
                     <div class="mt_car--gallery pull-left">
@@ -35,7 +35,7 @@ if($thumbnail_src_featured) { ?>
 
                         <!-- FEATURED IMAGE -->
                         <a class="mt_car--single-gallery mt_car--featured-single-gallery" href="<?php echo esc_url($thumbnail_src_featured_full[0]); ?>">
-                            <i class="fa fa-camera-retro" aria-hidden="true"></i> 
+                            <i class="fa fa-camera-retro" aria-hidden="true"></i>
                             <?php echo esc_html__('Ver galeria de imagens - ','urbanpointwp'); ?>
                             <?php echo esc_attr($final_photos_number); ?>
                             <?php echo esc_html__(' fotos','urbanpointwp'); ?>
@@ -59,7 +59,7 @@ if($thumbnail_src_featured) { ?>
                                     $multiple_featured_image1 = wp_get_attachment_url( $media, 'full' );
                                     echo '<a class="mt_car--single-gallery" href="'.esc_url($multiple_featured_image1).'"></a>';
                                 }
-                            } 
+                            }
                         ?>
                     </div>
                 </div>
@@ -76,9 +76,7 @@ if($thumbnail_src_featured) { ?>
 
 
 
-
-
-
+<!-- SLIDER -->
 
 
 
@@ -103,14 +101,14 @@ if($thumbnail_src_featured) { ?>
                 $cols = 'col-md-8';
             } ?>
 
-            
+
             <!-- POST CONTENT -->
             <div class="<?php echo esc_attr($cols); ?> main_stickit main-content">
 <h1 class="post-title" style="margin-bottom:20px;margin-top:0;">
-                        <?php echo get_the_title(); ?> <!-- / 
+                        <?php echo get_the_title(); ?> <!-- /
                         <div class="mt_car--tax-type"><?php echo get_the_term_list( get_the_ID(), 'mt-house-type', '', ' ' ); ?></div> -->
                     </h1>
-                
+
 
                 <!-- HEADER -->
                 <div class="article-header">
@@ -135,7 +133,7 @@ if($thumbnail_src_featured) { ?>
                         <!-- POST Specifications -->
                         <h4 class="content-car-heading"><?php echo esc_html__('Especificações','urbanpointwp'); ?></h4>
                         <div class="row">
-                            <?php 
+                            <?php
                             $mt_car_parking = get_post_meta( get_the_ID(), 'mt_car_parking', true );
                             $mt_built_year = get_post_meta( get_the_ID(), 'mt_built_year', true );
                             $mt_living_rooms = get_post_meta( get_the_ID(), 'mt_living_rooms', true );
@@ -149,6 +147,7 @@ if($thumbnail_src_featured) { ?>
                             $mt_garages = get_post_meta( get_the_ID(), 'mt_garages', true );
                             $mt_pools = get_post_meta( get_the_ID(), 'mt_pools', true );
                             $mt_insurance = get_post_meta( get_the_ID(), 'mt_insurance', true );
+                            $mt_people = get_post_meta( get_the_ID(), 'mt_house_people', true );
 
 
                             if(isset($mt_built_year)){
@@ -174,7 +173,7 @@ if($thumbnail_src_featured) { ?>
                             }
                             // if(isset($mt_total_floors)){
                             //     echo '<div class="col-md-4 features_items"><p>'.esc_html__('Total Floors: ','urbanpointwp').'<strong>'.esc_attr($mt_total_floors).'</strong></p></div>';
-                            // } 
+                            // }
                             if(isset($mt_kitchens)){
                                 echo '<div class="col-md-4 features_items"><p>'.esc_html__('Cozinhas: ','urbanpointwp').'<strong>'.esc_attr($mt_kitchens).'</strong></p></div>';
                             }
@@ -184,9 +183,9 @@ if($thumbnail_src_featured) { ?>
                             // if(isset($mt_pools)){
                             //     echo '<div class="col-md-4 features_items"><p>'.esc_html__('Pools: ','urbanpointwp').'<strong>'.esc_attr($mt_pools).'</strong></p></div>';
                             // }
-                            if(isset($mt_insurance)){
-                                echo '<div class="col-md-4 features_items"><p>'.esc_html__('Seguro: ','urbanpointwp').'<strong>'.esc_attr($mt_insurance).'</strong></p></div>';
-                            } 
+                            if(isset($mt_people)){
+                                echo '<div class="col-md-4 features_items"><p>'.esc_html__('Lotação: ','urbanpointwp').'<strong>'.esc_attr($mt_people).'</strong></p></div>';
+                            }
                         ?>
                         </div>
                     </div>
@@ -203,12 +202,12 @@ if($thumbnail_src_featured) { ?>
                     <!-- MAP LOCATION -->
                     <div class="mt_listing_map_location">
                         <h4 class="content-car-heading">Localização</h4>
-                        <?php 
+                        <?php
                             $mt_map_coordinates = get_post_meta( get_the_ID(), 'mt_map_coordinates', true );
                             if (isset($mt_map_coordinates) && !empty($mt_map_coordinates)) {
                                 $gmap_pin = '';
                                 $gmap_pin .= '[sbvcgmap map_width="100" map_height="400" mapstyles="style-55" zoom="18" scrollwheel="no" searchradius="500" sbvcgmap_title="Google Maps"]';
-                                
+
                                     $categories = wp_get_post_terms(get_the_ID(), 'mt-house-type', array("fields" => "all"));
                                     foreach($categories as $category) {
                                         if ($category) {
@@ -255,7 +254,7 @@ if($thumbnail_src_featured) { ?>
                     <?php } ?>
 
                     <div class="clearfix"></div>
-                                      
+
                     <!-- COMMENTS -->
                     <?php
 
@@ -272,10 +271,9 @@ if($thumbnail_src_featured) { ?>
                 <div class="mt_car--pricings">
                     <div class="">
                         <div class="mt_house--price-container">
-                            <?php 
+                            <?php
                                 $mt_house_price_day = get_post_meta( get_the_ID(), 'mt_house_price_day', true );
                                 $mt_house_price_month = get_post_meta( get_the_ID(), 'mt_house_price_month', true );
-                                $mt_house_price_for_sale = get_post_meta( get_the_ID(), 'mt_house_price_for_sale', true );
 
                                 // Price per day
                                 if(isset($mt_house_price_day) && !empty($mt_house_price_day)){
@@ -350,7 +348,7 @@ if($thumbnail_src_featured) { ?>
                     ?>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </article>
@@ -365,27 +363,27 @@ if($thumbnail_src_featured) { ?>
                 <div class="clearfix"></div>
                 <div class="related-posts sticky-posts">
                     <?php
-                    global  $post;  
-                    $orig_post = $post;  
+                    global  $post;
+                    $orig_post = $post;
                     ?>
 
                     <h2 class="heading-bottom"><?php esc_html_e('Outros apartamentos', 'urbanpointwp'); ?></h2>
                     <div class="row">
-                        <?php 
-                        $args=array(  
-                            'post__not_in'          => array($post->ID),  
-                            'posts_per_page'        => 3, // Number of related posts to display.  
+                        <?php
+                        $args=array(
+                            'post__not_in'          => array($post->ID),
+                            'posts_per_page'        => 3, // Number of related posts to display.
                             'post_type'             => 'mt_house',
                             'post_status'           => 'publish',
-                            'ignore_sticky_posts'   => 1  
-                        );  
+                            'ignore_sticky_posts'   => 1
+                        );
 
-                        $my_query = new wp_query( $args );  
+                        $my_query = new wp_query( $args );
 
-                        while( $my_query->have_posts() ) {  
-                            $my_query->the_post(); 
-                        
-                        ?>  
+                        while( $my_query->have_posts() ) {
+                            $my_query->the_post();
+
+                        ?>
                             <div class="col-md-4 post">
                                 <div class="related_blog_custom">
                                     <?php $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'urbanpointwp_related_post_pic500x300' ); ?>
@@ -402,14 +400,14 @@ if($thumbnail_src_featured) { ?>
                                 </div>
                             </div>
 
-                        <?php 
+                        <?php
                         } ?>
                     </div>
                 </div>
-                    <?php 
-                    $post = $orig_post;  
-                    wp_reset_postdata();  
-                    ?>  
+                    <?php
+                    $post = $orig_post;
+                    wp_reset_postdata();
+                    ?>
                 <?php } ?>
 
             </div>

@@ -1224,7 +1224,7 @@ $line_icons_font_i = array(
       );
 
 
-      
+
 
 
       /**
@@ -1307,7 +1307,7 @@ $line_icons_font_i = array(
             $sql            = $wpdb->prepare( "SELECT * FROM $tablename LIMIT %d, %d", $limit_small, $limit_high);
             $sliders        = $wpdb->get_results($sql, ARRAY_A);
 
-            $revliders = array(); 
+            $revliders = array();
             if ($sliders) {
                   $revliders[] = array(
                         'name'  => 'Please select a slider',
@@ -1321,7 +1321,7 @@ $line_icons_font_i = array(
                   }
             }
       }else{
-            $revliders = array(); 
+            $revliders = array();
       }
 
 
@@ -1352,13 +1352,13 @@ $line_icons_font_i = array(
       $meta_boxes['page_metaboxs'] = array(
             'id'         => 'page_metaboxs',
             'title'      => __( 'MT Custom Options', 'modeltheme' ),
-            'pages'      => array( 
-                                    'page', 
-                                    'post', 
-                                    'mt_event', 
-                                    'mt_job', 
-                                    'testimonial', 
-                                    'portfolio', 
+            'pages'      => array(
+                                    'page',
+                                    'post',
+                                    'mt_event',
+                                    'mt_job',
+                                    'testimonial',
+                                    'portfolio',
                                     'member',
                                     'service',
                                     'clients'
@@ -1468,9 +1468,9 @@ $line_icons_font_i = array(
                         'desc' => 'Upload an image or enter an URL.',
                         'id' => $prefix . 'header_custom_logo',
                         'type' => 'file',
-                        'allow' => array( 
-                              'url', 
-                              'attachment' 
+                        'allow' => array(
+                              'url',
+                              'attachment'
                         )
                   ),
                   array(
@@ -1515,7 +1515,7 @@ $line_icons_font_i = array(
                         ),
                         'default' => 'no',
                   ),
-                 
+
 
 
 
@@ -1620,9 +1620,9 @@ $line_icons_font_i = array(
                         'default' => ''
                   ),
                   array(
-                        'name'    => __( 'Price (For Sale)', 'modeltheme' ),
-                        'desc'    => __( 'Set the price for sale', 'modeltheme' ),
-                        'id'      => 'mt_house_price_for_sale',
+                        'name'    => __( 'Lotação', 'modeltheme' ),
+                        'desc'    => __( 'Escolher a lotação', 'modeltheme' ),
+                        'id'      => 'mt_house_people',
                         'type'    => 'text_small',
                         'default' => ''
                   ),
@@ -1655,7 +1655,7 @@ $line_icons_font_i = array(
                         'name'    => __( 'Morada', 'modeltheme' ),
                         'desc'    => __( 'Escolher a morada', 'modeltheme' ),
                         'id'      => 'mt_address',
-                        'type'    => 'text_small',
+                        'type'    => 'text_medium',
                         'default' => ''
                   ),
                   array(
@@ -1665,7 +1665,7 @@ $line_icons_font_i = array(
                         'type'    => 'text_medium',
                         'default' => ''
                   ),
-                  
+
 
 
 
@@ -1740,7 +1740,7 @@ $line_icons_font_i = array(
                         'default' => ''
                   ),
 
-                  
+
             ),
       );
 

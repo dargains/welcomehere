@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 /**
@@ -7,7 +7,7 @@
 
 */
 function modeltheme_shortcode_housepost01($params, $content) {
-    extract( shortcode_atts( 
+    extract( shortcode_atts(
         array(
             'number'              =>'',
             'columns'             =>'',
@@ -31,15 +31,15 @@ function modeltheme_shortcode_housepost01($params, $content) {
                 )
 
             ),
-            'post_status'      => 'publish' 
-            ); 
+            'post_status'      => 'publish'
+            );
     $blogposts = get_posts($args_blogposts);
 
     foreach ($blogposts as $blogpost) {
 
         #thumbnail
         $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $blogpost->ID ),'urbanpointwp_listing_archive_featured' );
-        
+
         $content_post   = get_post($blogpost->ID);
         $content        = $content_post->post_content;
         $content        = apply_filters('the_content', $content);
@@ -63,7 +63,7 @@ function modeltheme_shortcode_housepost01($params, $content) {
                               <h2>'.$blogpost->post_title.'</h2>
                               <p>'.$house_bedrooms.' quartos</p>
                               <p>'.$house_bathrooms.' casas de banho</p>
-                              <p>'.$house_area.'m2</p>
+                              <p>'.$house_area.'m<sup>2</sup></p>
                             </div>
                           </figure>
                         </div>';
@@ -93,7 +93,7 @@ function modeltheme_shortcode_housepost01($params, $content) {
                               $html .= '</div>
 
                               <div class="text-right col-md-6 vc_col-sm-6 vc_col-xs-6">';
-                              
+
                                 #prices
                                 if(!empty($mt_house_price_day)) {
                                   $html .= '<p class="house_display_posts">'.$mt_house_price_day.urbanpointwp_get_currency_symbol().' por dia</p>';
@@ -130,7 +130,7 @@ if ( is_plugin_active( 'js_composer/js_composer.php' ) ) {
 
     add_action('init', 'my_get_woo_cats');
     function my_get_woo_cats() {
-        
+
 
         $post_scope_tax = get_terms( array( 'taxonomy' => 'mt-house-category','hide_empty' => 0, 'orderby' => 'ASC',  'parent' =>0) );
         $post_scope = array();
@@ -138,7 +138,7 @@ if ( is_plugin_active( 'js_composer/js_composer.php' ) ) {
            $post_scope[$term->name] = $term->slug;
         }
 
-        
+
 
         vc_map( array(
          "name" => esc_attr__("MT - House Posts", 'modeltheme'),
