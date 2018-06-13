@@ -12,9 +12,23 @@
         <!-- FOOTER TOP -->
         <div class="row footer-top">
             <div class="container">
-            <?php          
+            <?php
                 //FOOTER ROW #1
+                 if(urbanpointwp_redux('mt_logo','url')){ ?>
+                  <h1 class="logo">
+                      <a href="<?php echo get_site_url(); ?>">
+                          <img src="<?php echo esc_attr(urbanpointwp_redux('mt_logo','url')); ?>" alt="<?php echo esc_attr(get_bloginfo()); ?>" />
+                      </a>
+                  </h1>
+                <?php }else{ ?>
+                  <h1 class="logo no-logo">
+                      <a href="<?php echo esc_url(get_site_url()); ?>">
+                        <?php echo esc_attr(get_bloginfo()); ?>
+                      </a>
+                  </h1>
+                <?php }
                 echo urbanpointwp_footer_row1();
+
                 //FOOTER ROW #2
                 echo urbanpointwp_footer_row2();
                 //FOOTER ROW #3
@@ -28,12 +42,7 @@
             <div class="container footer">
                 <div class="col-md-4">
 
-
-
-                	<p class="copyright text-center"><?php echo urbanpointwp_redux('mt_footer_text'); ?></p>
-                    
-
-
+                	<p class="copyright text-left"><?php echo urbanpointwp_redux('mt_footer_text'); ?></p>
                 </div>
                 <div class="col-md-4">
 
@@ -51,10 +60,10 @@
 				        <?php } ?>
 				    <?php } ?>
 
-                    
+
 
                 </div>
-                <div class="col-md-4"> 
+                <div class="col-md-4">
                     <ul class="social-links">
                         <?php if ( urbanpointwp_redux('mt_social_fb') && urbanpointwp_redux('mt_social_fb') != '' ) { ?>
                             <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_fb') ) ?>"><i class="fa fa-facebook"></i></a></li>
