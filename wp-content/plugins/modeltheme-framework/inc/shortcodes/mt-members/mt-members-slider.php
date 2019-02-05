@@ -10,7 +10,7 @@ require_once(__DIR__.'/../vc-shortcodes.inc.arrays.php');
 */
 
 function mt_shortcode_members01($params, $content) {
-    extract( shortcode_atts( 
+    extract( shortcode_atts(
         array(
             'animation' => '',
             'number' => '',
@@ -58,7 +58,7 @@ function mt_shortcode_members01($params, $content) {
                             [1600,  '.$number_desktop.']
                         ]
                     });
-                    
+
                 jQuery(".'.$class_slider.' .owl-wrapper .owl-item:nth-child(2)").addClass("hover_class");
                 jQuery(".'.$class_slider.' .owl-wrapper .owl-item").hover(
                   function () {
@@ -78,8 +78,8 @@ function mt_shortcode_members01($params, $content) {
                 'orderby'          => 'post_date',
                 'order'            => $order,
                 'post_type'        => 'member',
-                'post_status'      => 'publish' 
-                ); 
+                'post_status'      => 'publish'
+                );
         $members = get_posts($args_members);
             foreach ($members as $member) {
                 #metaboxes
@@ -117,27 +117,30 @@ function mt_shortcode_members01($params, $content) {
                 if($metabox_vimeo_url) {
                     $profil_vi = '<a target="_new" href="'. $metabox_vimeo_url .'" class="member01_vimeo_url"> <i class="fa fa-vimeo" aria-hidden="true"></i> </a> ';
                 }
-                
+
                 $html.='
                     <div class="col-md-12 relative">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="members_img_holder">
                                     <div class="memeber01-img-holder">';
-                                        if($thumbnail_src) { 
+                                        if($thumbnail_src) {
                                             $html .= '<div class="grid">
                                                         <figure class="effect-duke">
                                                             <img src="'. $thumbnail_src[0] . '" alt="'. $member->post_title .'" />
                                                         </figure>
                                                       </div>';
-                                        }else{ 
-                                            $html .= '<img src="http://placehold.it/450x1000" alt="'. $member->post_title .'" />'; 
+                                        }else{
+                                            $html .= '<img src="http://placehold.it/450x1000" alt="'. $member->post_title .'" />';
                                         }
                                     $html.='</div>
                                     <div class="member01-content">
                                         <div class="member01-content-inside">
                                             <h3 class="member01_name">'.$member_title.'</h3>
+                                            <h4>'.$metabox_member_position.'</h4>
                                             <div class="content-div-content">'. urbanpointwp_excerpt_limit($content,20) . '</div>
+                                            <div><a href="mailto:'.$metabox_member_email.'">'.$metabox_member_email.'</a></div>
+                                            <div><a href="tel:'.$metabox_member_phone.'">'.$metabox_member_phone.'</div>
                                             <div class="member01_social">' . $profil_fb . $profil_tw . $profil_in . $profil_vi . '</div>
                                         </div>
                                     </div>
@@ -162,7 +165,7 @@ add_shortcode('mt_members_slider', 'mt_shortcode_members01');
 
 */
 if ( is_plugin_active( 'js_composer/js_composer.php' ) ) {
-    
+
     vc_map( array(
         "name" => esc_attr__("MT - Members Slider", 'modeltheme'),
         "base" => "mt_members_slider",
@@ -192,7 +195,7 @@ if ( is_plugin_active( 'js_composer/js_composer.php' ) ) {
                     esc_attr__('Ascending', 'modeltheme') => 'asc',
                     esc_attr__('Descending', 'modeltheme') => 'desc',
                 )
-                
+
             ),
             array(
                 "group" => "Slider Options",

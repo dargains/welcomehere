@@ -15,11 +15,11 @@
             <?php
                 //FOOTER ROW #1
                  if(urbanpointwp_redux('mt_logo','url')){ ?>
-                  <h1 class="logo">
+                  <!-- <h1 class="logo">
                       <a href="<?php echo get_site_url(); ?>">
                           <img src="<?php echo esc_attr(urbanpointwp_redux('mt_logo','url')); ?>" alt="<?php echo esc_attr(get_bloginfo()); ?>" />
                       </a>
-                  </h1>
+                  </h1> -->
                 <?php }else{ ?>
                   <h1 class="logo no-logo">
                       <a href="<?php echo esc_url(get_site_url()); ?>">

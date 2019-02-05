@@ -29,7 +29,7 @@ function urbanpointwp_header_title_breadcrumbs(){
     include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
     $html = '';
-    $html .= '<div class="header-title-breadcrumb relative">';
+    $html .= '<div class="header-title-breadcrumb relative" style="display:none;">';
         $html .= '<div class="header-title-breadcrumb-overlay text-center">
                         <div class="container">
                             <div class="row">
@@ -51,7 +51,7 @@ function urbanpointwp_header_title_breadcrumbs(){
                                     }
                       $html .= '</div>
                                 <div class="col-md-5 col-sm-6 col-xs-6">
-                                    <ol class="breadcrumb text-right">'.urbanpointwp_breadcrumb().'</ol>                    
+                                    <ol class="breadcrumb text-right">'.urbanpointwp_breadcrumb().'</ol>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@ if ( is_plugin_active( 'modeltheme-framework/modeltheme-framework.php' ) ) {
                 $i++;
 
             }
-        } 
+        }
 
         return $ids;
     }
@@ -139,7 +139,7 @@ if ( is_plugin_active( 'modeltheme-framework/modeltheme-framework.php' ) ) {
 
 
 function urbanpointwp_get_currency_symbol( $currency = '' ) {
-    
+
     if ( !$currency ) {
         $currency = urbanpointwp_redux('mt_cars_settings_currency');
     }

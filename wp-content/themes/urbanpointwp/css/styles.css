@@ -46,12 +46,12 @@
 /*--- 1. Body ---*/
 /*---------------------------------------------*/
 /* General styling */
-html,body { 
-    height: 100%; 
-    width: 100%; 
+html,body {
+    height: 100%;
+    width: 100%;
 }
 body{
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 * {
     word-wrap: break-word;
@@ -85,11 +85,11 @@ figure.gallery-item {
   text-align: center;
   width: 33%;
 }
-.gallery-columns-2 .gallery-item { 
-  width: 50%; 
+.gallery-columns-2 .gallery-item {
+  width: 50%;
 }
-.gallery-columns-4 .gallery-item { 
-  width: 25%; 
+.gallery-columns-4 .gallery-item {
+  width: 25%;
 }
 .gallery img {
   box-shadow: 0px 0px 4px #999;
@@ -217,6 +217,12 @@ p.subtitle {
 }
 .high-padding {
     padding: 80px 0;
+}
+@media only screen and (max-width: 768px) {
+  .high-padding {
+    padding: 40px 0;
+  }
+
 }
 .medium-padding {
     padding: 50px 0;
@@ -467,12 +473,12 @@ body .no-margin{
     opacity: 1;
     visibility: visible;
 }
-textarea, 
-input[type="text"], 
-input[type="button"], 
-input[type="search"], 
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="search"],
 input[type="submit"]{
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
 }
 .newspaper-info-bordered .holder {
     padding: 10px 0 10px 15px;
@@ -530,7 +536,7 @@ blockquote {
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
-    background: transparent;    
+    background: transparent;
 }
 .quotes-container blockquote:before {
     font-family: "Libre Baskerville";
@@ -545,7 +551,7 @@ blockquote {
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
-    background: transparent;    
+    background: transparent;
     top: -20px;
 }
 
@@ -1287,11 +1293,11 @@ label.error {
     background-color: #ecf0f1;
 }
 
-.table>thead>tr>th, 
-.table>tbody>tr>th, 
-.table>tfoot>tr>th, 
-.table>thead>tr>td, 
-.table>tbody>tr>td, 
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
 .table>tfoot>tr>td {
     border-color: #ecf0f1;
 }
@@ -1397,7 +1403,7 @@ article.single-post img {
 .sticky_post_blog_details .post-author > a {
     display: inline;
 }
-.list-view .post-details .post-excerpt td, 
+.list-view .post-details .post-excerpt td,
 .list-view .post-details .post-excerpt th,
 .list-view .post-details .post-excerpt dd,
 .list-view .post-details .post-excerpt dt,
@@ -1798,7 +1804,7 @@ article.single-post img {
 .modeltheme-breadcrumbs .breadcrumb{
     background: transparent;
     margin: 0;
-    padding-right: 0; 
+    padding-right: 0;
 }
 .breadcrumb > li + li::before{
     content: "";
@@ -2140,10 +2146,10 @@ article.single-post img {
     content: ",";
     color: #000;
     opacity: 0.5;
-}   
+}
 .single_tax:last-child::after {
     content: "";
-}   
+}
 .article-content {
     margin-bottom: 20px;
     padding-bottom: 20px;
@@ -2565,14 +2571,14 @@ footer .widget_nav_menu a {
     text-align: left;
 }
 footer .widget:last-child {
-  margin-bottom: 0; 
+  margin-bottom: 0;
 }
 footer .widget {
     clear: both;
     /*display: inline-table;*/
     margin-bottom: 30px;
 }
-footer #wp-calendar th, 
+footer #wp-calendar th,
 footer #wp-calendar td {
     color: #ffffff;
 }
@@ -2799,7 +2805,7 @@ END: WIDGET MONSTER FIX
     list-style: outside none none !important;
 }
 #wp-calendar th,
-#wp-calendar td, 
+#wp-calendar td,
 #wp-calendar caption,
 .widget_search .search-field,
 .widget_toggles .panel-body,
@@ -2884,7 +2890,7 @@ END: WIDGET MONSTER FIX
     background: none repeat scroll 0 0 #f1f1f1;
     display: block;
     padding: 15px;
-    
+
 }
 /*Elements: Popular Recent posts - tabs*/
 .widget_popular_recent_tabs .nav-tabs > li > a{
@@ -3289,7 +3295,7 @@ ul.share-social-links {
 .slider_navigation .btn:hover{
     opacity: 0.85;
 }
-.hephaistos .tp-bullet:hover, 
+.hephaistos .tp-bullet:hover,
 .hephaistos .tp-bullet.selected {
     background: rgb(255, 255, 255) none repeat scroll 0 0;
     border: 0 none;
@@ -3717,7 +3723,7 @@ h3.widget-title,
 #contact_form .button[type="submit"],
 #contact-us .form-control,
 .search-field,
-.btn-lg, 
+.btn-lg,
 .btn-group-lg>.btn,
 .btn,
 pre,
@@ -3775,9 +3781,9 @@ li:hover .hover-components .component a{
 
 
 /*IS MOBILE*/
-.is-mobile .masonry_banner a::before, 
+.is-mobile .masonry_banner a::before,
 .is-mobile .masonry_banner a::after,
-.is-mobile .sale_banner .sale_banner_holder::before, 
+.is-mobile .sale_banner .sale_banner_holder::before,
 .is-mobile .sale_banner .sale_banner_holder::after{
     display: none;
 }
@@ -4093,17 +4099,17 @@ article.single-post.member {
 .hover-service-content .post_content {
     opacity: 0.7;
 }
-body .minimal-dark .esg-navigationbutton:hover, 
-body .minimal-dark .esg-filterbutton:hover, 
-body .minimal-dark .esg-sortbutton:hover, 
-body .minimal-dark .esg-sortbutton-order:hover, 
+body .minimal-dark .esg-navigationbutton:hover,
+body .minimal-dark .esg-filterbutton:hover,
+body .minimal-dark .esg-sortbutton:hover,
+body .minimal-dark .esg-sortbutton-order:hover,
 body .minimal-dark .esg-filterbutton.selected {
     background: rgba(224, 224, 224, 0.5) none repeat scroll 0 0;
     border-color: rgba(255, 255, 255, 0.2);
     box-shadow: none;
 }
-body .minimal-dark .esg-filterbutton, 
-body .minimal-dark .esg-navigationbutton, 
+body .minimal-dark .esg-filterbutton,
+body .minimal-dark .esg-navigationbutton,
 body .minimal-dark .esg-sortbutton {
     background: rgba(224, 224, 224, 1) none repeat scroll 0 0;
     border: 1px solid rgba(178, 178, 178, 0.1);
@@ -4215,7 +4221,7 @@ body .minimal-dark .esg-sortbutton {
 
 /**
  * Style 2
- * 
+ *
  * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
  * down to center and transform into an "x".
  */
@@ -4455,15 +4461,15 @@ form#login .submit_button {
     color: #ffffff;
 }
 .btn.btn-info {
-    background-color: #03C2FF; 
+    background-color: #03C2FF;
     color: #ffffff;
 }
 .btn.btn-warning {
-    background-color: #FFBA41;  
+    background-color: #FFBA41;
     color: #ffffff;
-} 
+}
 .btn.btn-danger {
-    background-color: #e74c3c;  
+    background-color: #e74c3c;
     color: #ffffff;
 }
 /*Hover Effects
@@ -4784,7 +4790,7 @@ button[data-toggle="modal"]:hover {
 .woocommerce ul.products li.product .price del {
     display: inline;
 }
-.woocommerce ul.products li.product, 
+.woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
     clear: none !important;
     margin: 0 0 50px !important;
@@ -4827,12 +4833,12 @@ body.woocommerce ul.products li.product .onsale {
     text-align: center;
     top: 0;
 }
-#add_payment_method table.cart td.actions .coupon .input-text, 
-.woocommerce-cart table.cart td.actions .coupon .input-text, 
+#add_payment_method table.cart td.actions .coupon .input-text,
+.woocommerce-cart table.cart td.actions .coupon .input-text,
 .woocommerce-checkout table.cart td.actions .coupon .input-text {
     width: auto;
 }
-.woocommerce form .form-row .input-text, 
+.woocommerce form .form-row .input-text,
 .woocommerce-page form .form-row .input-text {
     padding: 7px;
 }
@@ -5064,7 +5070,7 @@ body .urbanpointwp_preloader_holder {
 }
 ::-moz-selection {
     /* Code for Firefox */
-    
+
     color: #ffffff;
     background: #009dde;
 }
@@ -5269,7 +5275,7 @@ body .button[type='submit'],
 .header_mini_cart .remove:after{
     content: "" !important;
 }
-.header_mini_cart .woocommerce .widget_shopping_cart .total, 
+.header_mini_cart .woocommerce .widget_shopping_cart .total,
 .header_mini_cart .woocommerce.widget_shopping_cart .total {
     border-top: 1px solid;
     margin: 0;
@@ -5296,13 +5302,13 @@ body .shop_cart > a {
     padding: 20px 12px !important;
     padding-right: 0px !important;
 }
-.header_mini_cart .woocommerce ul.cart_list li a.remove, 
-.header_mini_cart .woocommerce ul.cart_list li a.remove::before, 
+.header_mini_cart .woocommerce ul.cart_list li a.remove,
+.header_mini_cart .woocommerce ul.cart_list li a.remove::before,
 .header_mini_cart .woocommerce ul.cart_list li a.remove::after{
     transition: all 0ms !important;
     -webkit-transition: all 0ms !important;
 }
-.header_mini_cart .woocommerce .widget_shopping_cart .cart_list li.empty, 
+.header_mini_cart .woocommerce .widget_shopping_cart .cart_list li.empty,
 .header_mini_cart .woocommerce.widget_shopping_cart .cart_list li.empty{
     margin: 0;
     padding: 0;
@@ -5607,6 +5613,16 @@ body.archive,
     position: relative;
     bottom: -2px;
 }
+@media only screen and (max-width: 768px) {
+  .mt_car--important-features .car_number_passengers_value,
+  .mt_car--important-features .car_luggage_value,
+  .mt_car--important-features .car_gearbox_value {
+    margin-left: 0;
+    margin-top: 10px;
+    bottom: 0;
+
+  }
+}
 .mt_car--important-features .car_number_passengers,
 .mt_car--important-features .car_luggage,
 .mt_car--important-features .car_gearbox {
@@ -5633,6 +5649,8 @@ body.archive,
     border-radius: 10px;
     margin-top: 12px !important;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 .mt_car .car_separator {
     height: 1px;

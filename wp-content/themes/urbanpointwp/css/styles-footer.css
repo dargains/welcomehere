@@ -44,6 +44,7 @@ footer .contact-details {
   flex-direction: row;
   justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
 }
 footer .widget_urbanpointwp_recent_entries_with_thumbnail li a{
     color: white;
