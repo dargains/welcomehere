@@ -10,7 +10,7 @@
  *
  */
 
-get_header(); 
+get_header();
 
 $class_row = "col-md-12";
 if ( urbanpointwp_redux('mt_blog_layout') == 'mt_blog_fullwidth' ) {
@@ -41,7 +41,7 @@ $sidebar = urbanpointwp_redux('mt_blog_layout_sidebar');
                 <?php if ( have_posts() ) : ?>
                     <div class="row">
                         <?php /* Start the Loop */ ?>
-                        
+
                         <?php $j = 0; ?>
                         <?php while ( have_posts() ) : the_post(); ?>
                         <?php
@@ -60,7 +60,7 @@ $sidebar = urbanpointwp_redux('mt_blog_layout_sidebar');
                             <?php } ?>
                             </div>
 
-                        <?php } else { 
+                        <?php } else {
                             $class = "odd-post clear_both_class";
                         ?>
                             <div class='<?php echo esc_attr($class); ?>'>
@@ -72,10 +72,10 @@ $sidebar = urbanpointwp_redux('mt_blog_layout_sidebar');
                             <?php } ?>
                             </div>
                         <?php } ?>
-                        
+
                         <?php endwhile; ?>
-                        <div class="modeltheme-pagination-holder col-md-12">             
-                            <div class="modeltheme-pagination pagination">             
+                        <div class="modeltheme-pagination-holder col-md-12">
+                            <div class="modeltheme-pagination pagination">
                                 <?php urbanpointwp_pagination(); ?>
                             </div>
                         </div>
