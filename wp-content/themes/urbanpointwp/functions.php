@@ -22,7 +22,7 @@ function urbanpointwp_redux($redux_meta_name1,$redux_meta_name2 = ''){
     }elseif(isset($redux_meta_name1) && empty($redux_meta_name2)){
         $html = $urbanpointwp_redux[$redux_meta_name1];
     }
-    
+
     return $html;
 
 }
@@ -102,13 +102,13 @@ function urbanpointwp_widgets_init() {
             }
         }
     }
-    
+
     // FOOTER ROW 1
     if (isset($urbanpointwp_redux['mt_footer_row_1_layout'])) {
         $footer_row_1 = $urbanpointwp_redux['mt_footer_row_1_layout'];
         $nr1 = array("1", "2", "3", "4", "5", "6");
         if (in_array($footer_row_1, $nr1)) {
-            for ($i=1; $i <= $footer_row_1 ; $i++) { 
+            for ($i=1; $i <= $footer_row_1 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 1 - Sidebar ','urbanpointwp').$i,
                     'id'            => 'footer_row_1_'.$i,
@@ -121,7 +121,7 @@ function urbanpointwp_widgets_init() {
             }
         }elseif ($footer_row_1 == 'column_half_sub_half' || $footer_row_1 == 'column_sub_half_half') {
             $footer_row_1 = '3';
-            for ($i=1; $i <= $footer_row_1 ; $i++) { 
+            for ($i=1; $i <= $footer_row_1 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 1 - Sidebar ', 'urbanpointwp' ) . esc_attr($i),
                     'id'            => 'footer_row_1_'.esc_attr($i),
@@ -134,7 +134,7 @@ function urbanpointwp_widgets_init() {
             }
         }elseif ($footer_row_1 == 'column_sub_fourth_third' || $footer_row_1 == 'column_third_sub_fourth') {
             $footer_row_1 = '5';
-            for ($i=1; $i <= $footer_row_1 ; $i++) { 
+            for ($i=1; $i <= $footer_row_1 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 1 - Sidebar ','urbanpointwp').esc_attr($i),
                     'id'            => 'footer_row_1_'.esc_attr($i),
@@ -147,7 +147,7 @@ function urbanpointwp_widgets_init() {
             }
         }elseif ($footer_row_1 == 'column_sub_third_half' || $footer_row_1 == 'column_half_sub_third') {
             $footer_row_1 = '4';
-            for ($i=1; $i <= $footer_row_1 ; $i++) { 
+            for ($i=1; $i <= $footer_row_1 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 1 - Sidebar ','urbanpointwp').esc_attr($i),
                     'id'            => 'footer_row_1_'.esc_attr($i),
@@ -166,7 +166,7 @@ function urbanpointwp_widgets_init() {
         $footer_row_2 = $urbanpointwp_redux['mt_footer_row_2_layout'];
         $nr2 = array("1", "2", "3", "4", "5", "6");
         if (in_array($footer_row_2, $nr2)) {
-            for ($i=1; $i <= $footer_row_2 ; $i++) { 
+            for ($i=1; $i <= $footer_row_2 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 2 - Sidebar ','urbanpointwp').esc_attr($i),
                     'id'            => 'footer_row_2_'.esc_attr($i),
@@ -179,7 +179,7 @@ function urbanpointwp_widgets_init() {
             }
         }elseif ($footer_row_2 == 'column_half_sub_half' || $footer_row_2 == 'column_sub_half_half') {
             $footer_row_2 = '3';
-            for ($i=1; $i <= $footer_row_2 ; $i++) { 
+            for ($i=1; $i <= $footer_row_2 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 2 - Sidebar ','urbanpointwp').esc_attr($i),
                     'id'            => 'footer_row_2_'.esc_attr($i),
@@ -192,7 +192,7 @@ function urbanpointwp_widgets_init() {
             }
         }elseif ($footer_row_2 == 'column_sub_fourth_third' || $footer_row_2 == 'column_third_sub_fourth') {
             $footer_row_2 = '5';
-            for ($i=1; $i <= $footer_row_2 ; $i++) { 
+            for ($i=1; $i <= $footer_row_2 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 2 - Sidebar ','urbanpointwp').esc_attr($i),
                     'id'            => 'footer_row_2_'.esc_attr($i),
@@ -205,7 +205,7 @@ function urbanpointwp_widgets_init() {
             }
         }elseif ($footer_row_2 == 'column_sub_third_half' || $footer_row_2 == 'column_half_sub_third') {
             $footer_row_2 = '4';
-            for ($i=1; $i <= $footer_row_2 ; $i++) { 
+            for ($i=1; $i <= $footer_row_2 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 2 - Sidebar ','urbanpointwp').esc_attr($i),
                     'id'            => 'footer_row_2_'.esc_attr($i),
@@ -224,7 +224,7 @@ function urbanpointwp_widgets_init() {
         $footer_row_3 = $urbanpointwp_redux['mt_footer_row_3_layout'];
         $nr3 = array("1", "2", "3", "4", "5", "6");
         if (in_array($footer_row_3, $nr3)) {
-            for ($i=1; $i <= $footer_row_3 ; $i++) { 
+            for ($i=1; $i <= $footer_row_3 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 3 - Sidebar ', 'urbanpointwp').esc_attr($i),
                     'id'            => 'footer_row_3_'.esc_attr($i),
@@ -237,7 +237,7 @@ function urbanpointwp_widgets_init() {
             }
         }elseif ($footer_row_3 == 'column_half_sub_half' || $footer_row_3 == 'column_sub_half_half') {
             $footer_row_3 = '3';
-            for ($i=1; $i <= $footer_row_3 ; $i++) { 
+            for ($i=1; $i <= $footer_row_3 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 3 - Sidebar ','urbanpointwp').esc_attr($i),
                     'id'            => 'footer_row_3_'.esc_attr($i),
@@ -250,7 +250,7 @@ function urbanpointwp_widgets_init() {
             }
         }elseif ($footer_row_3 == 'column_sub_fourth_third' || $footer_row_3 == 'column_third_sub_fourth') {
             $footer_row_3 = '5';
-            for ($i=1; $i <= $footer_row_3 ; $i++) { 
+            for ($i=1; $i <= $footer_row_3 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 3 - Sidebar ','urbanpointwp').esc_attr($i),
                     'id'            => 'footer_row_3_'.esc_attr($i),
@@ -263,7 +263,7 @@ function urbanpointwp_widgets_init() {
             }
         }elseif ($footer_row_3 == 'column_sub_third_half' || $footer_row_3 == 'column_half_sub_third') {
             $footer_row_3 = '4';
-            for ($i=1; $i <= $footer_row_3 ; $i++) { 
+            for ($i=1; $i <= $footer_row_3 ; $i++) {
                 register_sidebar( array(
                     'name'          => esc_html__( 'Footer Row 3 - Sidebar ','urbanpointwp').esc_attr($i),
                     'id'            => 'footer_row_3_'.esc_attr($i),
@@ -305,7 +305,7 @@ function urbanpointwp_scripts() {
     wp_enqueue_style( "js_composer", get_template_directory_uri().'/css/js_composer.css' );
 
     //SCRIPTS
-    
+
     wp_enqueue_script( 'modernizr-custom', get_template_directory_uri() . '/js/modernizr.custom.js', array('jquery'), '2.6.2', true );
     wp_enqueue_script( 'classie', get_template_directory_uri() . '/js/classie.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script( 'jquery-form', get_template_directory_uri() . '/js/jquery.form.js', array('jquery'), '3.51.0', true );
@@ -366,7 +366,7 @@ function urbanpointwp_enqueue_front_css_foreever() {
 ||-> Enqueue css to redux
 */
 function urbanpointwp_register_fontawesome_to_redux() {
-    wp_register_style( 'font-awesome', get_template_directory_uri().'/css/font-awesome.min.css', array(), time(), 'all' );  
+    wp_register_style( 'font-awesome', get_template_directory_uri().'/css/font-awesome.min.css', array(), time(), 'all' );
     wp_enqueue_style( 'font-awesome' );
 }
 add_action( 'redux/page/redux_demo/enqueue', 'urbanpointwp_register_fontawesome_to_redux' );
@@ -430,7 +430,7 @@ function urbanpointwp_excerpt_limit($string, $word_limit) {
 ||-> BREADCRUMBS
 */
 function urbanpointwp_breadcrumb() {
-    
+
     global  $urbanpointwp_redux;
 
     if ( !$urbanpointwp_redux['mt_enable_breadcrumbs'] ) {
@@ -448,7 +448,7 @@ function urbanpointwp_breadcrumb() {
             global  $post;
             $home = esc_url(home_url('/'));
             $html .= '<li><a href="' . esc_url($home) . '">' . esc_attr($name) . '</a></li> ' . esc_attr($delimiter) . '';
-        
+
         if (is_category()) {
             global  $wp_query;
             $cat_obj = $wp_query->get_queried_object();
@@ -563,10 +563,10 @@ if ( ! function_exists( 'urbanpointwp_pagination' ) ) {
             global  $wp_query;
             $query = $wp_query;
         }
-        
+
         $big = 999999999; // need an unlikely integer
         $current = (get_query_var('paged')) ? get_query_var('paged') : ((get_query_var('page')) ? get_query_var('page') : '1');
-        echo paginate_links( 
+        echo paginate_links(
             array(
                 'base'          => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
                 'format'        => '?paged=%#%',
@@ -645,9 +645,25 @@ function urbanpointwp_RemoveDemoModeLink() { // Be sure to rename this function 
         remove_filter( 'plugin_row_meta', array( ReduxFrameworkPlugin::get_instance(), 'plugin_metalinks'), null, 2 );
     }
     if ( class_exists('ReduxFrameworkPlugin') ) {
-        remove_action('admin_notices', array( ReduxFrameworkPlugin::get_instance(), 'admin_notices' ) );    
+        remove_action('admin_notices', array( ReduxFrameworkPlugin::get_instance(), 'admin_notices' ) );
     }
 }
 add_action('init', 'urbanpointwp_RemoveDemoModeLink');
 
+// -> CUSTOM STRINGS
+add_action('init', function() {
+  pll_register_string('mytheme-hello', 'Especificações');
+  pll_register_string('mytheme-hello', 'Facilidades');
+  pll_register_string('mytheme-hello', 'Localização');
+  pll_register_string('mytheme-hello', 'Outros apartamentos');
+  pll_register_string('mytheme-hello', 'Ano de construção');
+  pll_register_string('mytheme-hello', 'Casas de banho');
+  pll_register_string('mytheme-hello', 'Lugares de parque');
+  pll_register_string('mytheme-hello', 'Área útil');
+  pll_register_string('mytheme-hello', 'Quartos');
+  pll_register_string('mytheme-hello', 'Cozinhas');
+  pll_register_string('mytheme-hello', 'Salas');
+  pll_register_string('mytheme-hello', 'Varandas');
+  pll_register_string('mytheme-hello', 'Lotação');
+});
 ?>

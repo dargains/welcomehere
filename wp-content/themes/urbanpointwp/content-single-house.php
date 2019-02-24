@@ -105,8 +105,7 @@ if($thumbnail_src_featured) { ?>
             <!-- POST CONTENT -->
             <div class="<?php echo esc_attr($cols); ?> main_stickit main-content">
 <h1 class="post-title" style="margin-bottom:20px;margin-top:0;">
-                        <?php echo get_the_title(); ?> <!-- /
-                        <div class="mt_car--tax-type"><?php echo get_the_term_list( get_the_ID(), 'mt-house-type', '', ' ' ); ?></div> -->
+                        <?php echo get_the_title(); ?>
                     </h1>
 
 
@@ -131,7 +130,7 @@ if($thumbnail_src_featured) { ?>
                     <div class="mt_car--features-group post-specifications">
 
                         <!-- POST Specifications -->
-                        <h4 class="content-car-heading"><?php echo esc_html__('Especificações','urbanpointwp'); ?></h4>
+                        <h4 class="content-car-heading"><?php echo pll_e('Especificações') ?></h4>
                         <div class="row">
                             <?php
                             $mt_car_parking = get_post_meta( get_the_ID(), 'mt_car_parking', true );
@@ -151,31 +150,31 @@ if($thumbnail_src_featured) { ?>
 
 
                             if(isset($mt_built_year)){
-                                echo '<div class="col-md-4 features_items"><p>'.esc_html__('Ano de construção: ','urbanpointwp').'<strong>'.esc_attr($mt_built_year).'</strong></p></div>';
+                                echo '<div class="col-md-4 features_items"><p>'.pll__('Ano de Construção').': <strong>'.esc_attr($mt_built_year).'</strong></p></div>';
                             }
                             if(isset($mt_square_areas)){
-                                echo '<div class="col-md-4 features_items"><p>'.esc_html__('Área útil: ','urbanpointwp').'<strong>'.esc_attr($mt_square_areas).'</strong></p></div>';
+                                echo '<div class="col-md-4 features_items"><p>'.pll__('Área útil').': <strong>'.esc_attr($mt_square_areas).'m<sup>2</sup></strong></p></div>';
                             }
                             if(isset($mt_living_rooms)){
-                                echo '<div class="col-md-4 features_items"><p>'.esc_html__('Salas: ','urbanpointwp').'<strong>'.esc_attr($mt_living_rooms).'</strong></p></div>';
+                                echo '<div class="col-md-4 features_items"><p>'.pll__('Salas').': <strong>'.esc_attr($mt_living_rooms).'</strong></p></div>';
                             }
                             if(isset($mt_bathrooms)){
-                                echo '<div class="col-md-4 features_items"><p>'.esc_html__('Casas de banho: ','urbanpointwp').'<strong>'.esc_attr($mt_bathrooms).'</strong></p></div>';
+                                echo '<div class="col-md-4 features_items"><p>'.pll__('Casas de banho').': <strong>'.esc_attr($mt_bathrooms).'</strong></p></div>';
                             }
                             if(isset($mt_bedrooms)){
-                                echo '<div class="col-md-4 features_items"><p>'.esc_html__('Quartos: ','urbanpointwp').'<strong>'.esc_attr($mt_bedrooms).'</strong></p></div>';
+                                echo '<div class="col-md-4 features_items"><p>'.pll__('Quartos').': <strong>'.esc_attr($mt_bedrooms).'</strong></p></div>';
                             }
                             if(isset($mt_balcony)){
-                                echo '<div class="col-md-4 features_items"><p>'.esc_html__('Varandas: ','urbanpointwp').'<strong>'.esc_attr($mt_balcony).'</strong></p></div>';
+                                echo '<div class="col-md-4 features_items"><p>'.pll__('Varandas').': <strong>'.esc_attr($mt_balcony).'</strong></p></div>';
                             }
                             if(isset($mt_car_parking)){
-                                echo '<div class="col-md-4 features_items"><p>'.esc_html__('Lugares de parque: ','urbanpointwp').'<strong>'.esc_attr($mt_car_parking).'</strong></p></div>';
+                                echo '<div class="col-md-4 features_items"><p>'.pll__('Lugares de parque').': <strong>'.esc_attr($mt_car_parking).'</strong></p></div>';
                             }
                             // if(isset($mt_total_floors)){
                             //     echo '<div class="col-md-4 features_items"><p>'.esc_html__('Total Floors: ','urbanpointwp').'<strong>'.esc_attr($mt_total_floors).'</strong></p></div>';
                             // }
                             if(isset($mt_kitchens)){
-                                echo '<div class="col-md-4 features_items"><p>'.esc_html__('Cozinhas: ','urbanpointwp').'<strong>'.esc_attr($mt_kitchens).'</strong></p></div>';
+                                echo '<div class="col-md-4 features_items"><p>'.pll__('Cozinhas').': <strong>'.esc_attr($mt_kitchens).'</strong></p></div>';
                             }
                             //if(isset($mt_garages)){
                                 //echo '<div class="col-md-4 features_items"><p>'.esc_html__('Garagens: ','urbanpointwp').'<strong>'.esc_attr($mt_garages).'</strong></p></div>';
@@ -184,7 +183,7 @@ if($thumbnail_src_featured) { ?>
                             //     echo '<div class="col-md-4 features_items"><p>'.esc_html__('Pools: ','urbanpointwp').'<strong>'.esc_attr($mt_pools).'</strong></p></div>';
                             // }
                             if(isset($mt_people)){
-                                echo '<div class="col-md-4 features_items"><p>'.esc_html__('Lotação: ','urbanpointwp').'<strong>'.esc_attr($mt_people).'</strong></p></div>';
+                                echo '<div class="col-md-4 features_items"><p>'.pll__('Lotação').': <strong>'.esc_attr($mt_people).'</strong></p></div>';
                             }
                         ?>
                         </div>
@@ -193,15 +192,21 @@ if($thumbnail_src_featured) { ?>
 
                     <div class="mt_car--features-group post-features">
                         <!-- POST FEATURES -->
-                        <h4 class="content-car-heading"><?php echo esc_html__('Facilidades','urbanpointwp'); ?></h4>
-                        <?php echo get_the_term_list( get_the_ID(), 'mt-house-features', '<div class="single-post-tags row"><div class="col-md-4 features_items"><i class="fa fa-check-square-o"></i> ', '</div><div class="col-md-4 features_items"><i class="fa fa-check-square-o"></i> ', '</div></div>' ); ?>
+                        <h4 class="content-car-heading"><?php echo esc_html__(pll_e('Facilidades'),'urbanpointwp'); ?></h4>
+                        <?php echo get_the_term_list(
+                          get_the_ID(),
+                          'mt-house-features',
+                          '<div class="single-post-tags row"><div class="col-md-4 features_items"><i class="fa fa-check-square-o"></i> ',
+                          '</div><div class="col-md-4 features_items"><i class="fa fa-check-square-o"></i> ',
+                          '</div></div>'
+                        ); ?>
                     </div>
 
                     <?php if(urbanpointwp_plugin_active('modeltheme-framework/modeltheme-framework.php')){ ?>
 
                     <!-- MAP LOCATION -->
                     <div class="mt_listing_map_location">
-                        <h4 class="content-car-heading">Localização</h4>
+                        <h4 class="content-car-heading"><?php pll_e('Localização') ?></h4>
                         <?php
                             $mt_map_coordinates = get_post_meta( get_the_ID(), 'mt_map_coordinates', true );
                             if (isset($mt_map_coordinates) && !empty($mt_map_coordinates)) {
@@ -341,6 +346,7 @@ if($thumbnail_src_featured) { ?>
                 <div class="mt_car--booking-form">
                     <?php
                         if(!empty($mt_house_price_day) or !empty($mt_house_price_month) ){
+                          // echo do_shortcode('[cf7form cf7key="formulario-alquilar" title="Forumlário Alquilar" html_class="rent_contact_form"]')
                             echo do_shortcode('[contact-form-7 id="7711" title="Rent Booking Form" html_class="rent_contact_form"]');
                         } else {
                             echo do_shortcode('[contact-form-7 id="7954" title="Sale Booking Form" html_class="sale_contact_form"]');
