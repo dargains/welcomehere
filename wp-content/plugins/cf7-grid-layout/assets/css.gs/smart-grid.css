@@ -25,6 +25,8 @@
     clear: both
 }
 
+.cf7-smart-grid .row {
+}
 @media (min-width: 481px) {
     .cf7sg-container .cf7-smart-grid.has-grid .columns {
         float: left;

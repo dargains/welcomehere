@@ -144,7 +144,7 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
 	                        if(!empty($mt_bedrooms)) {
 	                        	echo '<span class="col-md-4 text-center car_luggage">';
 		                        	echo '<img src="'.esc_url($bedrooms_icon).'" alt="luggage" height=25" width="25">';
-		                        		echo '<span class="car_luggage_value">'.esc_attr($mt_bedrooms).' Quartos</span>';
+		                        		echo '<span class="car_luggage_value">'.esc_attr($mt_bedrooms).' '.pll__('Quartos').'</span>';
 	                        	echo '</span>';
 
 	                        }
@@ -152,7 +152,7 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
 	                        if(!empty($mt_bathrooms)) {
 	                        	echo '<span class="col-md-4 text-center car_gearbox">';
 		                        	echo '<img src="'.esc_url($bathrooms_icon).'" alt="gearbox" height="25" width="25">';
-		                        		echo '<span class="car_gearbox_value">'.esc_attr($mt_bathrooms).' Casas de banho</span>';
+		                        		echo '<span class="car_gearbox_value">'.esc_attr($mt_bathrooms).' '.pll__('Casas de banho').'</span>';
 	                        	echo '</span>';
 
 	                        }
