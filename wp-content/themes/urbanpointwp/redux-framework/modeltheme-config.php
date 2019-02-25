@@ -241,7 +241,7 @@
             ),
             array(
                 'id'       => 'mt_enable_breadcrumbs',
-                'type'     => 'switch', 
+                'type'     => 'switch',
                 'title'    => esc_html__('Breadcrumbs', 'urbanpointwp'),
                 'subtitle' => esc_html__('Enable or disable breadcrumbs', 'urbanpointwp'),
                 'default'  => false,
@@ -254,7 +254,7 @@
                 'desc'     => esc_html__('This is the description field, again good for additional info.', 'urbanpointwp'),
                 'default'  => '/'
             ),
-         
+
         ),
     ));
     // Back to Top
@@ -265,15 +265,15 @@
         'fields'     => array(
             array(
                 'id'       => 'mt_backtotop_status',
-                'type'     => 'switch', 
+                'type'     => 'switch',
                 'title'    => esc_html__('Back to Top Button Status', 'urbanpointwp'),
                 'subtitle' => esc_html__('Enable or disable "Back to Top Button"', 'urbanpointwp'),
                 'default'  => true,
             ),
-            array(         
+            array(
                 'id'       => 'mt_backtotop_bg_color',
                 'type'     => 'background',
-                'title'    => esc_html__('Back to Top Button Status Backgrond', 'urbanpointwp'), 
+                'title'    => esc_html__('Back to Top Button Status Backgrond', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: transparent', 'urbanpointwp'),
                 'default'  => array(
                     'background-color' => 'transparent',
@@ -299,7 +299,7 @@
             ),
             array(
                 'id'       => 'mt_preloader_status',
-                'type'     => 'switch', 
+                'type'     => 'switch',
                 'title'    => esc_html__('Enable Page Preloader', 'urbanpointwp'),
                 'subtitle' => esc_html__('Enable or disable page preloader', 'urbanpointwp'),
                 'default'  => false,
@@ -310,10 +310,10 @@
                 'class' => 'mt_divider',
                 'desc' => wp_kses_post( '<h3>Page Preloader Styling</h3>' )
             ),
-            array(         
+            array(
                 'id'       => 'mt_preloader_bg_color',
                 'type'     => 'background',
-                'title'    => esc_html__('Page Preloader Backgrond', 'urbanpointwp'), 
+                'title'    => esc_html__('Page Preloader Backgrond', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #009dde', 'urbanpointwp'),
                 'default'  => array(
                     'background-color' => '#009dde',
@@ -325,7 +325,7 @@
             array(
                 'id'       => 'mt_preloader_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Preloader color:', 'urbanpointwp'), 
+                'title'    => esc_html__('Preloader color:', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #ffffff', 'urbanpointwp'),
                 'default'  => '#ffffff',
                 'validate' => 'color',
@@ -339,7 +339,7 @@
             array(
                 'id'       => 'mt_preloader_animation',
                 'type'     => 'radio',
-                'title'    => esc_html__('Preloader Animation', 'urbanpointwp'), 
+                'title'    => esc_html__('Preloader Animation', 'urbanpointwp'),
                 'subtitle' => esc_html__('Select Preloader Animation', 'urbanpointwp'),
                 //Must provide key => value pairs for radio options
                 'options'  => array(
@@ -353,7 +353,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>', 
+                                            </div>',
 
                     'v2_ball_pulse' => '<div class="urbanpointwp_preloader v2_ball_pulse">
                                             <div class="loaders">
@@ -612,7 +612,7 @@
             )
         ),
     ));
-    
+
 
     /**
     ||-> SECTION: Styling Settings
@@ -637,7 +637,7 @@
                 'id'       => 'mt_google_fonts_select',
                 'type'     => 'select',
                 'multi'    => true,
-                'title'    => esc_html__('Import Google Font Globally', 'urbanpointwp'), 
+                'title'    => esc_html__('Import Google Font Globally', 'urbanpointwp'),
                 'subtitle' => esc_html__('Select one or multiple fonts', 'urbanpointwp'),
                 'desc'     => esc_html__('Importing fonts made easy', 'urbanpointwp'),
                 'options'  => $google_fonts_list,
@@ -679,7 +679,7 @@
             array(
                 'id'       => 'mt_style_main_texts_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Main texts color', 'urbanpointwp'), 
+                'title'    => esc_html__('Main texts color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #009dde', 'urbanpointwp'),
                 'default'  => '#009dde',
                 'validate' => 'color',
@@ -687,7 +687,7 @@
             array(
                 'id'       => 'mt_style_main_backgrounds_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Main backgrounds color', 'urbanpointwp'), 
+                'title'    => esc_html__('Main backgrounds color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #009dde', 'urbanpointwp'),
                 'default'  => '#009dde',
                 'validate' => 'color',
@@ -695,7 +695,7 @@
             array(
                 'id'       => 'mt_style_main_backgrounds_color_hover',
                 'type'     => 'color',
-                'title'    => esc_html__('Main backgrounds color (hover)', 'urbanpointwp'), 
+                'title'    => esc_html__('Main backgrounds color (hover)', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #252525', 'urbanpointwp'),
                 'default'  => '#252525',
                 'validate' => 'color',
@@ -723,7 +723,7 @@
             array(
                 'id'       => 'mt_text_selection_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Text selection color', 'urbanpointwp'), 
+                'title'    => esc_html__('Text selection color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #ffffff', 'urbanpointwp'),
                 'default'  => '#ffffff',
                 'validate' => 'color',
@@ -731,7 +731,7 @@
             array(
                 'id'       => 'mt_text_selection_background_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Text selection background color', 'urbanpointwp'), 
+                'title'    => esc_html__('Text selection background color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #009dde', 'urbanpointwp'),
                 'default'  => '#009dde',
                 'validate' => 'color',
@@ -753,7 +753,7 @@
             array(
                 'id'       => 'mt_nav_menu_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Nav Menu Text Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Nav Menu Text Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #252525', 'urbanpointwp'),
                 'default'  => '#252525',
                 'validate' => 'color',
@@ -767,7 +767,7 @@
             array(
                 'id'       => 'mt_nav_menu_hover_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Nav Menu Hover Text Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Nav Menu Hover Text Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #009dde', 'urbanpointwp'),
                 'default'  => '#009dde',
                 'validate' => 'color',
@@ -784,7 +784,7 @@
             array(
                 'id'       => 'mt_nav_submenu_background',
                 'type'     => 'color',
-                'title'    => esc_html__('Nav Submenu Background Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Nav Submenu Background Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #f7f7f7', 'urbanpointwp'),
                 'default'  => '#f7f7f7',
                 'validate' => 'color',
@@ -795,7 +795,7 @@
             array(
                 'id'       => 'mt_nav_submenu_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Nav Submenu Text Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Nav Submenu Text Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #252525', 'urbanpointwp'),
                 'default'  => '#252525',
                 'validate' => 'color',
@@ -806,7 +806,7 @@
             array(
                 'id'       => 'mt_nav_submenu_hover_background_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Nav Submenu Hover Background Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Nav Submenu Hover Background Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: transparent', 'urbanpointwp'),
                 'default'  => 'transparent',
                 'validate' => 'color',
@@ -817,7 +817,7 @@
             array(
                 'id'       => 'mt_nav_submenu_hover_text_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Nav Submenu Hover Background Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Nav Submenu Hover Background Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #009dde', 'urbanpointwp'),
                 'default'  => '#009dde',
                 'validate' => 'color',
@@ -840,9 +840,9 @@
             ),
             array(
                 'id'          => 'mt_body_typography',
-                'type'        => 'typography', 
+                'type'        => 'typography',
                 'title'       => esc_html__('Body Font family', 'urbanpointwp'),
-                'google'      => true, 
+                'google'      => true,
                 'font-backup' => true,
                 'color'       => false,
                 'text-align'  => false,
@@ -857,7 +857,7 @@
                 ),
                 'units'       =>'px',
                 'default'     => array(
-                    'font-family' => 'Ubuntu', 
+                    'font-family' => 'Ubuntu',
                     'google'      => true
                 ),
             ),
@@ -869,9 +869,9 @@
             ),
             array(
                 'id'          => 'mt_heading_h1',
-                'type'        => 'typography', 
+                'type'        => 'typography',
                 'title'       => esc_html__('Heading H1 Font family', 'urbanpointwp'),
-                'google'      => true, 
+                'google'      => true,
                 'font-backup' => true,
                 'color'       => false,
                 'text-align'  => false,
@@ -884,16 +884,16 @@
                 'output'      => array('h1', 'h1 span'),
                 'units'       =>'px',
                 'default'     => array(
-                    'font-family' => 'Ubuntu', 
-                    'font-size' => '36px', 
+                    'font-family' => 'Ubuntu',
+                    'font-size' => '36px',
                     'google'      => true
                 ),
             ),
             array(
                 'id'          => 'mt_heading_h2',
-                'type'        => 'typography', 
+                'type'        => 'typography',
                 'title'       => esc_html__('Heading H2 Font family', 'urbanpointwp'),
-                'google'      => true, 
+                'google'      => true,
                 'font-backup' => true,
                 'color'       => false,
                 'text-align'  => false,
@@ -906,16 +906,16 @@
                 'output'      => array('h2'),
                 'units'       =>'px',
                 'default'     => array(
-                    'font-family' => 'Ubuntu', 
-                    'font-size' => '30px', 
+                    'font-family' => 'Ubuntu',
+                    'font-size' => '30px',
                     'google'      => true
                 ),
             ),
             array(
                 'id'          => 'mt_heading_h3',
-                'type'        => 'typography', 
+                'type'        => 'typography',
                 'title'       => esc_html__('Heading H3 Font family', 'urbanpointwp'),
-                'google'      => true, 
+                'google'      => true,
                 'font-backup' => true,
                 'color'       => false,
                 'text-align'  => false,
@@ -928,16 +928,16 @@
                 'output'      => array('h3'),
                 'units'       =>'px',
                 'default'     => array(
-                    'font-family' => 'Ubuntu', 
-                    'font-size' => '24px', 
+                    'font-family' => 'Ubuntu',
+                    'font-size' => '24px',
                     'google'      => true
                 ),
             ),
             array(
                 'id'          => 'mt_heading_h4',
-                'type'        => 'typography', 
+                'type'        => 'typography',
                 'title'       => esc_html__('Heading H4 Font family', 'urbanpointwp'),
-                'google'      => true, 
+                'google'      => true,
                 'font-backup' => true,
                 'color'       => false,
                 'text-align'  => false,
@@ -950,16 +950,16 @@
                 'output'      => array('h4'),
                 'units'       =>'px',
                 'default'     => array(
-                    'font-family' => 'Ubuntu', 
-                    'font-size' => '18px', 
+                    'font-family' => 'Ubuntu',
+                    'font-size' => '18px',
                     'google'      => true
                 ),
             ),
             array(
                 'id'          => 'mt_heading_h5',
-                'type'        => 'typography', 
+                'type'        => 'typography',
                 'title'       => esc_html__('Heading H5 Font family', 'urbanpointwp'),
-                'google'      => true, 
+                'google'      => true,
                 'font-backup' => true,
                 'color'       => false,
                 'text-align'  => false,
@@ -972,16 +972,16 @@
                 'output'      => array('h5'),
                 'units'       =>'px',
                 'default'     => array(
-                    'font-family' => 'Ubuntu', 
-                    'font-size' => '14px', 
+                    'font-family' => 'Ubuntu',
+                    'font-size' => '14px',
                     'google'      => true
                 ),
             ),
             array(
                 'id'          => 'mt_heading_h6',
-                'type'        => 'typography', 
+                'type'        => 'typography',
                 'title'       => esc_html__('Heading H6 Font family', 'urbanpointwp'),
-                'google'      => true, 
+                'google'      => true,
                 'font-backup' => true,
                 'color'       => false,
                 'text-align'  => false,
@@ -994,8 +994,8 @@
                 'output'      => array('h6'),
                 'units'       =>'px',
                 'default'     => array(
-                    'font-family' => 'Ubuntu', 
-                    'font-size' => '12px', 
+                    'font-family' => 'Ubuntu',
+                    'font-size' => '12px',
                     'google'      => true
                 ),
             ),
@@ -1007,9 +1007,9 @@
             ),
             array(
                 'id'                => 'mt_inputs_typography',
-                'type'              => 'typography', 
+                'type'              => 'typography',
                 'title'             => esc_html__('Inputs Font family', 'urbanpointwp'),
-                'google'            => true, 
+                'google'            => true,
                 'font-backup'       => true,
                 'color'             => false,
                 'text-align'        => false,
@@ -1023,7 +1023,7 @@
                 'units'             =>'px',
                 'subtitle'          => esc_html__('Font family for inputs and textareas', 'urbanpointwp'),
                 'default'           => array(
-                    'font-family'       => 'Ubuntu', 
+                    'font-family'       => 'Ubuntu',
                     'google'            => true
                 ),
             ),
@@ -1035,9 +1035,9 @@
             ),
             array(
                 'id'                => 'mt_buttons_typography',
-                'type'              => 'typography', 
+                'type'              => 'typography',
                 'title'             => esc_html__('Buttons Font family', 'urbanpointwp'),
-                'google'            => true, 
+                'google'            => true,
                 'font-backup'       => true,
                 'color'             => false,
                 'text-align'        => false,
@@ -1053,7 +1053,7 @@
                 'units'             =>'px',
                 'subtitle'          => esc_html__('Font family for buttons', 'urbanpointwp'),
                 'default'           => array(
-                    'font-family'       => 'Ubuntu', 
+                    'font-family'       => 'Ubuntu',
                     'google'            => true
                 ),
             ),
@@ -1112,7 +1112,7 @@
             ),
             array(
                 'id'       => 'mt_is_nav_sticky',
-                'type'     => 'switch', 
+                'type'     => 'switch',
                 'title'    => esc_html__('Sticky Navigation Menu?', 'urbanpointwp'),
                 'subtitle' => esc_html__('Enable or disable "sticky positioned navigation menu".', 'urbanpointwp'),
                 'default'  => false,
@@ -1127,7 +1127,7 @@
             ),
             array(
                 'id'       => 'mt_header_is_search',
-                'type'     => 'switch', 
+                'type'     => 'switch',
                 'title'    => esc_html__('Search Icon Status', 'urbanpointwp'),
                 'subtitle' => esc_html__('Enable or Disable Search Icon".', 'urbanpointwp'),
                 'default'  => false,
@@ -1169,9 +1169,9 @@
                 'title'    => esc_html__('Icon for Header Info 1', 'urbanpointwp'),
                 'options'  => $icons,
                 'default'  => 'fa fa-phone',
-                'required' => array( 
-                    array('mt_divider_header_info_1_status', '=', '1'), 
-                    array('mt_divider_header_info_1_media_type','=','font_awesome') 
+                'required' => array(
+                    array('mt_divider_header_info_1_status', '=', '1'),
+                    array('mt_divider_header_info_1_media_type','=','font_awesome')
                 ),
             ),
             array(
@@ -1180,9 +1180,9 @@
                 'url' => true,
                 'title' => esc_html__('Upload Image Icon', 'urbanpointwp'),
                 'compiler' => 'true',
-                'required' => array( 
-                    array('mt_divider_header_info_1_status', '=', '1'), 
-                    array('mt_divider_header_info_1_media_type','=','media_image') 
+                'required' => array(
+                    array('mt_divider_header_info_1_status', '=', '1'),
+                    array('mt_divider_header_info_1_media_type','=','media_image')
                 ),
                 'default' => array('url' => esc_url(get_template_directory_uri().'/images/working_time1.png')),
             ),
@@ -1192,10 +1192,10 @@
                 'title' => esc_html__('Title for Header Info 1', 'urbanpointwp'),
                 'subtitle' => esc_html__('Type title for Header Info 1', 'urbanpointwp'),
                 'default' => 'Call Us:',
-                'required' => array( 
-                    array('mt_divider_header_info_1_status', '=', '1'), 
-                    array('mt_divider_header_info_1_media_type','=','text_title') 
-                ), 
+                'required' => array(
+                    array('mt_divider_header_info_1_status', '=', '1'),
+                    array('mt_divider_header_info_1_media_type','=','text_title')
+                ),
             ),
             array(
                 'id' => 'mt_divider_header_info_1_heading1',
@@ -1240,9 +1240,9 @@
                 'title'    => esc_html__('Icon for Header Info 2', 'urbanpointwp'),
                 'options'  => $icons,
                 'default'  => 'fa fa-envelope',
-                'required' => array( 
-                    array('mt_divider_header_info_2_status', '=', '1'), 
-                    array('mt_divider_header_info_2_media_type','=','font_awesome') 
+                'required' => array(
+                    array('mt_divider_header_info_2_status', '=', '1'),
+                    array('mt_divider_header_info_2_media_type','=','font_awesome')
                 ),
             ),
             array(
@@ -1251,9 +1251,9 @@
                 'url' => true,
                 'title' => esc_html__('Upload Image Icon', 'urbanpointwp'),
                 'compiler' => 'true',
-                'required' => array( 
-                    array('mt_divider_header_info_2_status', '=', '1'), 
-                    array('mt_divider_header_info_2_media_type','=','media_image') 
+                'required' => array(
+                    array('mt_divider_header_info_2_status', '=', '1'),
+                    array('mt_divider_header_info_2_media_type','=','media_image')
                 ),
                 'default' => array('url' => esc_url(get_template_directory_uri().'/images/working_location1.png')),
             ),
@@ -1263,10 +1263,10 @@
                 'title' => esc_html__('Title for Header Info 2', 'urbanpointwp'),
                 'subtitle' => esc_html__('Type title for Header Info 2', 'urbanpointwp'),
                 'default' => 'Address:',
-                'required' => array( 
-                    array('mt_divider_header_info_2_status', '=', '1'), 
-                    array('mt_divider_header_info_2_media_type','=','text_title') 
-                ), 
+                'required' => array(
+                    array('mt_divider_header_info_2_status', '=', '1'),
+                    array('mt_divider_header_info_2_media_type','=','text_title')
+                ),
             ),
             array(
                 'id' => 'mt_divider_header_info_2_heading1',
@@ -1311,9 +1311,9 @@
                 'title'    => esc_html__('Icon for Header Info 3', 'urbanpointwp'),
                 'options'  => $icons,
                 'default'  => 'fa fa-clock-o',
-                'required' => array( 
-                    array('mt_divider_header_info_3_status', '=', '1'), 
-                    array('mt_divider_header_info_3_media_type','=','font_awesome') 
+                'required' => array(
+                    array('mt_divider_header_info_3_status', '=', '1'),
+                    array('mt_divider_header_info_3_media_type','=','font_awesome')
                 ),
             ),
             array(
@@ -1322,9 +1322,9 @@
                 'url' => true,
                 'title' => esc_html__('Upload Image Icon', 'urbanpointwp'),
                 'compiler' => 'true',
-                'required' => array( 
-                    array('mt_divider_header_info_3_status', '=', '1'), 
-                    array('mt_divider_header_info_3_media_type','=','media_image') 
+                'required' => array(
+                    array('mt_divider_header_info_3_status', '=', '1'),
+                    array('mt_divider_header_info_3_media_type','=','media_image')
                 ),
                 'default' => array('url' => esc_url(get_template_directory_uri().'/images/working_phone.png')),
             ),
@@ -1334,10 +1334,10 @@
                 'title' => esc_html__('Title for Header Info 3', 'urbanpointwp'),
                 'subtitle' => esc_html__('Type title for Header Info 3', 'urbanpointwp'),
                 'default' => 'Schedule:',
-                'required' => array( 
-                    array('mt_divider_header_info_3_status', '=', '1'), 
-                    array('mt_divider_header_info_3_media_type','=','text_title') 
-                ), 
+                'required' => array(
+                    array('mt_divider_header_info_3_status', '=', '1'),
+                    array('mt_divider_header_info_3_media_type','=','text_title')
+                ),
             ),
             array(
                 'id' => 'mt_divider_header_info_3_heading1',
@@ -1410,7 +1410,7 @@
                 'class' => 'mt_divider',
                 'desc' => wp_kses_post( '<h3>Main Header Options</h3>' )
             ),
-            array(         
+            array(
                 'id'       => 'mt_header_main_background',
                 'type'     => 'background',
                 'title'    => esc_html__('Header (main-header) - background', 'urbanpointwp'),
@@ -1423,7 +1423,7 @@
             array(
                 'id'       => 'mt_header_main_text_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Main Header texts color', 'urbanpointwp'), 
+                'title'    => esc_html__('Main Header texts color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default color: #FFFFFF', 'urbanpointwp'),
                 'default'  => '#FFFFFF',
                 'validate' => 'color',
@@ -1491,12 +1491,12 @@
                     'use_extended_classes'      => true,
                     'palette'                   => null,  // show default
                     'input_text'                => 'Select Color'
-                ),                        
+                ),
             ),
             array(
                 'id'       => 'mt_header_fixed_sidebar_menu_text_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Texts Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Texts Color', 'urbanpointwp'),
                 'default'  => '#000000',
                 'validate' => 'color'
             ),
@@ -1529,7 +1529,7 @@
     /**
 
     ||-> SECTION: Footer Settings
-    
+
     */
     Redux::setSection( $opt_name, array(
         'title' => esc_html__( 'Footer Settings', 'urbanpointwp' ),
@@ -1549,7 +1549,7 @@
                 'class' => 'mt_divider',
                 'desc' => wp_kses_post( '<h3>Footer Top Rows</h3>' )
             ),
-            array(         
+            array(
                 'id'       => 'mt_footer_top_background',
                 'type'     => 'background',
                 'title'    => esc_html__('Footer (top) - background', 'urbanpointwp'),
@@ -1586,7 +1586,7 @@
                     'use_extended_classes'      => true,
                     'palette'                   => null,  // show default
                     'input_text'                => 'Select Color'
-                ),                        
+                ),
             ),
             array(
                 'id'   => 'mt_divider_footer_row1',
@@ -1672,9 +1672,9 @@
                 'subtitle'       => esc_html__('Choose the spacing for the first row from footer.', 'urbanpointwp'),
                 'required' => array( 'mt_footer_row_1', '=', '1' ),
                 'default'            => array(
-                    'padding-top'     => '90px', 
-                    'padding-bottom'  => '90px', 
-                    'units'          => 'px', 
+                    'padding-top'     => '20px',
+                    'padding-bottom'  => '20px',
+                    'units'          => 'px',
                 )
             ),
             array(
@@ -1688,12 +1688,12 @@
                 'subtitle'       => esc_html__('Choose the margin for the first row from footer.', 'urbanpointwp'),
                 'required' => array( 'mt_footer_row_1', '=', '1' ),
                 'default'            => array(
-                    'margin-top'     => '0px', 
-                    'margin-bottom'  => '0px', 
-                    'units'          => 'px', 
+                    'margin-top'     => '0px',
+                    'margin-bottom'  => '0px',
+                    'units'          => 'px',
                 )
             ),
-            array( 
+            array(
                 'id'       => 'mt_footer_row_1border',
                 'type'     => 'border',
                 'title'    => esc_html__('Footer Row #1 - Borders', 'urbanpointwp'),
@@ -1702,11 +1702,11 @@
                 'all'      => false,
                 'required' => array( 'mt_footer_row_1', '=', '1' ),
                 'default'  => array(
-                    'border-color'  => '#515b5e', 
-                    'border-style'  => 'solid', 
-                    'border-top'    => '0', 
-                    'border-right'  => '0', 
-                    'border-bottom' => '0', 
+                    'border-color'  => '#515b5e',
+                    'border-style'  => 'solid',
+                    'border-top'    => '0',
+                    'border-right'  => '0',
+                    'border-bottom' => '0',
                     'border-left'   => '0'
                 )
             ),
@@ -1795,9 +1795,9 @@
                 'subtitle'       => esc_html__('Choose the spacing for the second row from footer.', 'urbanpointwp'),
                 'required' => array( 'mt_footer_row_2', '=', '1' ),
                 'default'            => array(
-                    'padding-top'     => '0px', 
-                    'padding-bottom'  => '40px', 
-                    'units'          => 'px', 
+                    'padding-top'     => '0px',
+                    'padding-bottom'  => '40px',
+                    'units'          => 'px',
                 )
             ),
             array(
@@ -1811,12 +1811,12 @@
                 'subtitle'       => esc_html__('Choose the margin for the first row from footer.', 'urbanpointwp'),
                 'required' => array( 'mt_footer_row_2', '=', '1' ),
                 'default'            => array(
-                    'margin-top'     => '0px', 
-                    'margin-bottom'  => '40px', 
-                    'units'          => 'px', 
+                    'margin-top'     => '0px',
+                    'margin-bottom'  => '40px',
+                    'units'          => 'px',
                 )
             ),
-            array( 
+            array(
                 'id'       => 'mt_footer_row_2border',
                 'type'     => 'border',
                 'title'    => esc_html__('Footer Row #2 - Borders', 'urbanpointwp'),
@@ -1825,11 +1825,11 @@
                 'all'      => false,
                 'required' => array( 'mt_footer_row_2', '=', '1' ),
                 'default'  => array(
-                    'border-color'  => '#515b5e', 
-                    'border-style'  => 'solid', 
-                    'border-top'    => '0', 
-                    'border-right'  => '0', 
-                    'border-bottom' => '2', 
+                    'border-color'  => '#515b5e',
+                    'border-style'  => 'solid',
+                    'border-top'    => '0',
+                    'border-right'  => '0',
+                    'border-bottom' => '2',
                     'border-left'   => '0'
                 )
             ),
@@ -1918,9 +1918,9 @@
                 'subtitle'       => esc_html__('Choose the spacing for the third row from footer.', 'urbanpointwp'),
                 'required' => array( 'mt_footer_row_3', '=', '1' ),
                 'default'            => array(
-                    'padding-top'     => '0px', 
-                    'padding-bottom'  => '40px', 
-                    'units'          => 'px', 
+                    'padding-top'     => '0px',
+                    'padding-bottom'  => '40px',
+                    'units'          => 'px',
                 )
             ),
             array(
@@ -1934,12 +1934,12 @@
                 'subtitle'       => esc_html__('Choose the margin for the first row from footer.', 'urbanpointwp'),
                 'required' => array( 'mt_footer_row_3', '=', '1' ),
                 'default'            => array(
-                    'margin-top'     => '0px', 
-                    'margin-bottom'  => '20px', 
-                    'units'          => 'px', 
+                    'margin-top'     => '0px',
+                    'margin-bottom'  => '20px',
+                    'units'          => 'px',
                 )
             ),
-            array( 
+            array(
                 'id'       => 'mt_footer_row_3border',
                 'type'     => 'border',
                 'title'    => esc_html__('Footer Row #3 - Borders', 'urbanpointwp'),
@@ -1948,11 +1948,11 @@
                 'all'      => false,
                 'required' => array( 'mt_footer_row_3', '=', '1' ),
                 'default'  => array(
-                    'border-color'  => '#515b5e', 
-                    'border-style'  => 'solid', 
-                    'border-top'    => '0', 
-                    'border-right'  => '0', 
-                    'border-bottom' => '2', 
+                    'border-color'  => '#515b5e',
+                    'border-style'  => 'solid',
+                    'border-top'    => '0',
+                    'border-right'  => '0',
+                    'border-bottom' => '2',
                     'border-left'   => '0'
                 )
             )
@@ -1972,7 +1972,7 @@
                 'title' => esc_html__('Footer Text', 'urbanpointwp'),
                 'default' => 'Copyright 2017 by ModelTheme. All Rights Reserved.',
             ),
-            array(         
+            array(
                 'id'       => 'mt_footer_bottom_background',
                 'type'     => 'background',
                 'title'    => esc_html__('Footer (bottom) - background', 'urbanpointwp'),
@@ -2017,7 +2017,7 @@
                     'use_extended_classes'      => true,
                     'palette'                   => null,  // show default
                     'input_text'                => 'Select Color'
-                ),                        
+                ),
             ),
         ),
     ));
@@ -2027,7 +2027,7 @@
     /**
 
     ||-> SECTION: Contact Settings
-    
+
     */
     Redux::setSection( $opt_name, array(
         'title' => esc_html__( 'Contact Settings', 'urbanpointwp' ),
@@ -2065,7 +2065,7 @@
             )
         ),
     ));
-    
+
     // MAILCHIMP
     Redux::setSection( $opt_name, array(
         'title'      => esc_html__( 'Mailchimp', 'urbanpointwp' ),
@@ -2122,7 +2122,7 @@
                 'id'       => 'mt_cars_settings_currency',
                 'type'     => 'select',
                 'multi'    => false,
-                'title'    => esc_html__('Currency', 'urbanpointwp'), 
+                'title'    => esc_html__('Currency', 'urbanpointwp'),
                 'subtitle' => esc_html__('Select currency', 'urbanpointwp'),
                 'options'  => $currencies_list,
                 'default'  => array(
@@ -2133,7 +2133,7 @@
                 'id'       => 'mt_cars_settings_currency_position',
                 'type'     => 'select',
                 'multi'    => false,
-                'title'    => esc_html__('Currency Sign Position', 'urbanpointwp'), 
+                'title'    => esc_html__('Currency Sign Position', 'urbanpointwp'),
                 'subtitle' => esc_html__('Select currency Sign Position', 'urbanpointwp'),
                 'options'  => array(
                     'left'             => esc_html__( 'Left', 'urbanpointwp' ),
@@ -2155,7 +2155,7 @@
         'fields'     => array(
             array(
                 'id'       => 'mt_enable_related_cars',
-                'type'     => 'switch', 
+                'type'     => 'switch',
                 'title'    => esc_html__('Related Houses', 'urbanpointwp'),
                 'subtitle' => esc_html__('Enable or disable related Houses', 'urbanpointwp'),
                 'default'  => true,
@@ -2249,7 +2249,7 @@
             ),
             array(
                 'id'       => 'mt_enable_sticky',
-                'type'     => 'switch', 
+                'type'     => 'switch',
                 'title'    => esc_html__('Sticky Posts', 'urbanpointwp'),
                 'subtitle' => esc_html__('Enable or disable "sticky posts" section on blog page', 'urbanpointwp'),
                 'default'  => true,
@@ -2322,10 +2322,10 @@
             ),
             array(
                 'id'          => 'mt_single_post_typography',
-                'type'        => 'typography', 
+                'type'        => 'typography',
                 'title'       => esc_html__('Blog Post Font family', 'urbanpointwp'),
                 'subtitle'    => esc_html__( 'Default color: #454646; Font-size: 18px; Line-height: 29px;', 'urbanpointwp' ),
-                'google'      => true, 
+                'google'      => true,
                 'font-size'   => true,
                 'line-height' => true,
                 'color'       => true,
@@ -2338,10 +2338,10 @@
                 'output'      => array('.single article .article-content p'),
                 'units'       =>'px',
                 'default'     => array(
-                    'color' => '#454646', 
-                    'font-size' => '18px', 
-                    'line-height' => '29px', 
-                    'font-family' => 'Ubuntu', 
+                    'color' => '#454646',
+                    'font-size' => '18px',
+                    'line-height' => '29px',
+                    'font-family' => 'Ubuntu',
                     'google'      => true
                 ),
             ),
@@ -2353,28 +2353,28 @@
             ),
             array(
                 'id'       => 'mt_post_featured_image',
-                'type'     => 'switch', 
+                'type'     => 'switch',
                 'title'    => esc_html__('Single post featured image.', 'urbanpointwp'),
                 'subtitle' => esc_html__('Show or Hide the featured image from blog post page.".', 'urbanpointwp'),
                 'default'  => true,
             ),
             array(
                 'id'       => 'mt_enable_related_posts',
-                'type'     => 'switch', 
+                'type'     => 'switch',
                 'title'    => esc_html__('Related Posts', 'urbanpointwp'),
                 'subtitle' => esc_html__('Enable or disable related posts', 'urbanpointwp'),
                 'default'  => true,
             ),
             array(
                 'id'       => 'mt_enable_post_navigation',
-                'type'     => 'switch', 
+                'type'     => 'switch',
                 'title'    => esc_html__('Post Navigation', 'urbanpointwp'),
                 'subtitle' => esc_html__('Enable or disable post navigation', 'urbanpointwp'),
                 'default'  => true,
             ),
             array(
                 'id'       => 'mt_enable_authorbio',
-                'type'     => 'switch', 
+                'type'     => 'switch',
                 'title'    => esc_html__('About Author', 'urbanpointwp'),
                 'subtitle' => esc_html__('Enable or disable "About author" section on single post', 'urbanpointwp'),
                 'default'  => false,
@@ -2389,14 +2389,14 @@
                 'subtitle' => esc_html__('Use the upload button to import media.', 'urbanpointwp'),
                 'default' => array('url' => 'http://placehold.it/128x128'),
             ),
-            array( 
+            array(
                 'id'       => 'mt_opt_raw',
                 'type'     => 'raw',
                 'title'    => esc_html__('Post Formats Icons', 'urbanpointwp'),
             ),
         ),
     ));
-    
+
 
      /**
     ||-> SECTION: Error 404 Page Settings
@@ -2414,7 +2414,7 @@
             array(
                 'id'       => 'mt_404_page',
                 'type'     => 'select',
-                'title'    => esc_html__('Select page', 'urbanpointwp'), 
+                'title'    => esc_html__('Select page', 'urbanpointwp'),
                 'data'     => 'page'
             )
         ),
@@ -2442,7 +2442,7 @@
             array(
                 'id'       => 'mt_elements_tabs_normal_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Tabs Text Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Tabs Text Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #666666', 'urbanpointwp'),
                 'output'   => array( '.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active > a' ),
                 'default'  => '#666666',
@@ -2450,7 +2450,7 @@
             array(
                 'id'       => 'mt_elements_tabs_background',
                 'type'     => 'color',
-                'title'    => esc_html__('Tabs Background Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Tabs Background Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #f8f8f8', 'urbanpointwp'),
                 'output'    => array(
                     'background-color' => '.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels,
@@ -2461,11 +2461,11 @@
             array(
                 'id'       => 'mt_elements_tabs_border',
                 'type'     => 'color',
-                'title'    => esc_html__('Tabs Border Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Tabs Border Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #f0f0f0', 'urbanpointwp'),
                 'output'    => array(
-                    'border-color' => '.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels, 
-                                        .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels::after, 
+                    'border-color' => '.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels,
+                                        .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels::after,
                                         .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels::before,
                                         .vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active > a'
                 ),
@@ -2480,25 +2480,25 @@
             array(
                 'id'       => 'mt_elements_hover_tabs_normal_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Active and Hover Tabs Text Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Active and Hover Tabs Text Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #666666', 'urbanpointwp'),
                 'output'   => array( '.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab > a' ),
                 'default'  => '#666666',
             ),
-            array(         
+            array(
                 'id'       => 'mt_elements_hover_tabs_background',
                 'type'     => 'color',
-                'title'    => esc_html__('Active and Hover Tabs Background', 'urbanpointwp'), 
+                'title'    => esc_html__('Active and Hover Tabs Background', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #ebebeb', 'urbanpointwp'),
                 'default'  => '#ebebeb',
                 'output' => array(
                     'background-color' => '.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab > a'
                 )
             ),
-            array(         
+            array(
                 'id'       => 'mt_elements_hover_tabs_border',
                 'type'     => 'color',
-                'title'    => esc_html__('Active and Hover Tabs Border Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Active and Hover Tabs Border Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #e3e3e3', 'urbanpointwp'),
                 'default'  => '#e3e3e3',
                 'output' => array(
@@ -2521,17 +2521,17 @@
             array(
                 'id'       => 'mt_elements_blockquotes_background',
                 'type'     => 'color',
-                'title'    => esc_html__('Blockquotes Background Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Blockquotes Background Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #f6f6f6', 'urbanpointwp'),
                 'output'    => array(
                     'background-color' => 'blockquote',
                 ),
                 'default'  => '#f6f6f6',
             ),
-            array(         
+            array(
                 'id'       => 'mt_elements_blockquotes_border',
                 'type'     => 'color',
-                'title'    => esc_html__('Blockquotes Border Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Blockquotes Border Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #009dde', 'urbanpointwp'),
                 'default'  => '#009dde',
                 'output' => array(
@@ -2554,7 +2554,7 @@
             array(
                 'id'       => 'mt_elements_accordions_normal_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Accordions Text Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Accordions Text Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #666666', 'urbanpointwp'),
                 'output'   => array( '.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-title > a' ),
                 'default'  => '#666666',
@@ -2562,7 +2562,7 @@
             array(
                 'id'       => 'mt_elements_accordions_background',
                 'type'     => 'color',
-                'title'    => esc_html__('Accordions Background Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Accordions Background Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #f8f8f8', 'urbanpointwp'),
                 'output'    => array(
                     'background-color' => '.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-heading',
@@ -2572,7 +2572,7 @@
             array(
                 'id'       => 'mt_elements_accordions_border',
                 'type'     => 'color',
-                'title'    => esc_html__('Accordions Border Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Accordions Border Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #f0f0f0', 'urbanpointwp'),
                 'output'    => array(
                     'border-color' => '.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-heading'
@@ -2588,7 +2588,7 @@
             array(
                 'id'       => 'mt_elements_accordions_hover_color',
                 'type'     => 'color',
-                'title'    => esc_html__('Active and Hover Tabs Text Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Active and Hover Tabs Text Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #666666', 'urbanpointwp'),
                 'output'   => array( '.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active > a' ),
                 'default'  => '#666666',
@@ -2596,12 +2596,12 @@
             array(
                 'id'       => 'mt_elements_accordions_hover_background',
                 'type'     => 'color',
-                'title'    => esc_html__('Active and Hover Tabs Background Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Active and Hover Tabs Background Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #f8f8f8', 'urbanpointwp'),
                 'output'    => array(
                     'background-color' => '.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-heading,
                                             .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body,
-                                            .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-heading:focus, 
+                                            .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-heading:focus,
                                             .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-heading:hover',
                 ),
                 'default'  => '#f8f8f8',
@@ -2609,12 +2609,12 @@
             array(
                 'id'       => 'mt_elements_accordions_hover_border',
                 'type'     => 'color',
-                'title'    => esc_html__('Active and Hover Tabs Border Color', 'urbanpointwp'), 
+                'title'    => esc_html__('Active and Hover Tabs Border Color', 'urbanpointwp'),
                 'subtitle' => esc_html__('Default: #f0f0f0', 'urbanpointwp'),
                 'output'    => array(
                     'border-color' => '.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-heading,
-                                        .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body, 
-                                        .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body::after, 
+                                        .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body,
+                                        .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body::after,
                                         .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body::before'
                 ),
                 'default'  => '#f0f0f0',

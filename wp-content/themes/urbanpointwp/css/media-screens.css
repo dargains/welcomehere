@@ -78,7 +78,7 @@ URL:        http://urbanpointwp.modeltheme.com/
         float: left;
         margin-bottom: 80px;
     }
-    .tp-leftarrow.default, 
+    .tp-leftarrow.default,
     .tp-rightarrow.default{
         display: none;
     }
@@ -376,7 +376,7 @@ URL:        http://urbanpointwp.modeltheme.com/
     }
     .latest-posts .single-post .vc_col-md-3.text-center {
         display: none;
-    }    
+    }
     footer nav.menu {
         float: left;
     }
@@ -421,7 +421,7 @@ URL:        http://urbanpointwp.modeltheme.com/
     .widget_recent_entries_with_thumbnail .post-details {
         padding: 0;
     }
-    body .navbar-default .navbar-collapse, 
+    body .navbar-default .navbar-collapse,
     body .navbar-default .navbar-form {
         border-color: rgba(0, 0, 0, 0);
     }
@@ -571,7 +571,7 @@ URL:        http://urbanpointwp.modeltheme.com/
         padding: 10px 0;
         padding-left: 10px;
     }
-    body .theme_header_slider .tp-leftarrow.default::after, 
+    body .theme_header_slider .tp-leftarrow.default::after,
     body .theme_header_slider .tp-rightarrow.default::after {
         font-size: 50px;
         line-height: 60%;
@@ -882,10 +882,10 @@ URL:        http://urbanpointwp.modeltheme.com/
     }
     .navbar-collapse.collapse.vc_col-md-9 {
         width: 100%;
-    }    
+    }
     .prev.page-numbers {
         border-left: 1px solid rgba(0, 0, 0, 0.1);
-    }    
+    }
     .sidebar-content {
         margin-top: 30px;
     }
@@ -905,9 +905,9 @@ URL:        http://urbanpointwp.modeltheme.com/
     }
     .latest-posts .single-post .vc_col-md-3.text-center {
         display: none;
-    }    
-    .component.add-to-cart, 
-    .component.wishlist, 
+    }
+    .component.add-to-cart,
+    .component.wishlist,
     .component.compare {
         clear: both;
         display: block;
@@ -972,7 +972,7 @@ URL:        http://urbanpointwp.modeltheme.com/
         padding: 20px 0 20px;
         margin: 0;
     }
-    body .theme_header_slider .tp-leftarrow.default::after, 
+    body .theme_header_slider .tp-leftarrow.default::after,
     body .theme_header_slider .tp-rightarrow.default::after {
         font-size: 50px;
         line-height: 60%;
@@ -1024,9 +1024,7 @@ URL:        http://urbanpointwp.modeltheme.com/
     body #modeltheme-main-head{
         padding: 0;
     }
-    footer{
-        padding: 0 15px;
-    }
+
     footer .social-links {
         text-align: center;
     }
@@ -1115,7 +1113,7 @@ URL:        http://urbanpointwp.modeltheme.com/
         width: 85% !important;
     }
 
-    
+
     /* Add new rules for this interval below */
 
 
@@ -1125,9 +1123,9 @@ URL:        http://urbanpointwp.modeltheme.com/
 
 /*--- 17. Responsive Min_1025 Max_1367px ---*/
 @media only screen and (min-width: 1025px) and (max-width: 1367px) {
-    body #navbar .menu-item.mega1column > a::after, 
-    body #navbar .menu-item.mega2columns > a::after, 
-    body #navbar .menu-item.mega3columns > a::after, 
+    body #navbar .menu-item.mega1column > a::after,
+    body #navbar .menu-item.mega2columns > a::after,
+    body #navbar .menu-item.mega3columns > a::after,
     body #navbar .menu-item.menu-item-has-children > a::after{
         right: 0;
     }
