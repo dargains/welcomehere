@@ -665,5 +665,10 @@ add_action('init', function() {
   pll_register_string('mytheme-hello', 'Salas');
   pll_register_string('mytheme-hello', 'Varandas');
   pll_register_string('mytheme-hello', 'Lotação');
+  pll_register_string('mytheme-hello', 'por mês');
+  pll_register_string('mytheme-hello', 'por dia');
+  pll_register_string('mytheme-hello', 'ver galeria');
+  pll_register_string('mytheme-hello', 'fotos');
+
 });
 ?>

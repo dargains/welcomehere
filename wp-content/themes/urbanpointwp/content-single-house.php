@@ -36,9 +36,9 @@ if($thumbnail_src_featured) { ?>
                         <!-- FEATURED IMAGE -->
                         <a class="mt_car--single-gallery mt_car--featured-single-gallery" href="<?php echo esc_url($thumbnail_src_featured_full[0]); ?>">
                             <i class="fa fa-camera-retro" aria-hidden="true"></i>
-                            <?php echo esc_html__('Ver galeria de imagens - ','urbanpointwp'); ?>
-                            <?php echo esc_attr($final_photos_number); ?>
-                            <?php echo esc_html__(' fotos','urbanpointwp'); ?>
+                            <?php echo pll__('ver galeria'); ?>
+                            <?php echo ' - '.esc_attr($final_photos_number); ?>
+                            <?php echo pll__('fotos'); ?>
                         </a>
                         <!-- EXTRA POST IMAGES -->
                         <?php
@@ -150,7 +150,7 @@ if($thumbnail_src_featured) { ?>
 
 
                             if(isset($mt_built_year)){
-                                echo '<div class="col-md-4 features_items"><p>'.pll__('Ano de Construção').': <strong>'.esc_attr($mt_built_year).'</strong></p></div>';
+                                echo '<div class="col-md-4 features_items"><p>'.pll__('Ano de construção').': <strong>'.esc_attr($mt_built_year).'</strong></p></div>';
                             }
                             if(isset($mt_square_areas)){
                                 echo '<div class="col-md-4 features_items"><p>'.pll__('Área útil').': <strong>'.esc_attr($mt_square_areas).'m<sup>2</sup></strong></p></div>';
@@ -290,7 +290,7 @@ if($thumbnail_src_featured) { ?>
                                             }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'left_with_space') {
                                                 echo urbanpointwp_get_currency_symbol() . ' ';
                                             }
-                                            echo esc_attr($mt_house_price_day) . '</span>' . esc_html__(' por dia', 'urbanpointwp');
+                                            echo esc_attr($mt_house_price_day) . '</span> ' . pll__('por dia');
                                             if (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right') {
                                                 echo urbanpointwp_get_currency_symbol();
                                             }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right_with_space') {
@@ -309,7 +309,7 @@ if($thumbnail_src_featured) { ?>
                                             }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'left_with_space') {
                                                 echo urbanpointwp_get_currency_symbol() . ' ';
                                             }
-                                            echo esc_attr($mt_house_price_month) . '</span>' . esc_html__(' por mês', 'urbanpointwp');
+                                            echo esc_attr($mt_house_price_month) . '</span> ' . pll__('por mês');
                                             if (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right') {
                                                 echo urbanpointwp_get_currency_symbol();
                                             }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right_with_space') {
@@ -346,7 +346,7 @@ if($thumbnail_src_featured) { ?>
                 <div class="mt_car--booking-form">
                     <?php
                         if(!empty($mt_house_price_day) or !empty($mt_house_price_month) ){
-                          // echo do_shortcode('[cf7form cf7key="formulario-alquilar" title="Forumlário Alquilar" html_class="rent_contact_form"]')
+                            // echo do_shortcode('[cf7form cf7key="form-alquilar"]')
                             echo do_shortcode('[contact-form-7 id="7711" title="Rent Booking Form" html_class="rent_contact_form"]');
                         } else {
                             echo do_shortcode('[contact-form-7 id="7954" title="Sale Booking Form" html_class="sale_contact_form"]');

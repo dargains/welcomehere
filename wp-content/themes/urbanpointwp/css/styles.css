@@ -5451,6 +5451,7 @@ input.wpcf7-form-control.wpcf7-submit:hover {
     color: #ffffff;
     font-size: 12px;
     line-height: normal;
+    background-color: #009ddc;
     padding: 6px 10px;
     transition: all 250ms ease-in-out 0s;
     -o-transition: all 250ms ease-in-out 0s;
@@ -5459,8 +5460,8 @@ input.wpcf7-form-control.wpcf7-submit:hover {
     -ms-transition: all 250ms ease-in-out 0s;
 }
 .mt_car--single-gallery.mt_car--featured-single-gallery:hover{
-  color: #000 !important;
-  border-color: #000 !important;
+  /* color: #000 !important; */
+  /* border-color: #000 !important; */
 }
 .contact_insert_input .wpcf7-date {
     padding: 1em 2em !important;
