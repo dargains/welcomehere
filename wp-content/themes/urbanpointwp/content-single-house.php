@@ -373,7 +373,7 @@ if($thumbnail_src_featured) { ?>
                     $orig_post = $post;
                     ?>
 
-                    <h2 class="heading-bottom"><?php esc_html_e('Outros apartamentos', 'urbanpointwp'); ?></h2>
+                    <h2 class="heading-bottom"><?php pll_e('outros apartamentos'); ?></h2>
                     <div class="row">
                         <?php
                         $args=array(

@@ -669,6 +669,7 @@ add_action('init', function() {
   pll_register_string('mytheme-hello', 'por dia');
   pll_register_string('mytheme-hello', 'ver galeria');
   pll_register_string('mytheme-hello', 'fotos');
+  pll_register_string('mytheme-hello', 'outros apartamentos');
 
 });
 ?>

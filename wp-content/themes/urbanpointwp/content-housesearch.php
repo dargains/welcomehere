@@ -70,7 +70,7 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
                                 }
                                 ?>
                                 <span class="car_price"><?php echo esc_attr($mt_house_price_day); ?></span>
-                                <span class="car_per"><?php echo esc_html__(' Por dia', 'urbanpointwp');?></span><?php
+                                <span class="car_per"><?php echo pll__('por dia')?></span><?php
                                 if (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right') {
                                     ?><span class="car_currency"><?php echo urbanpointwp_get_currency_symbol(); ?></span><?php
                                 }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right_with_space') {
