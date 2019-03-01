@@ -1578,11 +1578,26 @@ img.mfp-img {
   float: left;
   font-style: normal;
   font-weight: bold;
-  padding: 15px;
+  padding: 14px 20px;
   width: 30%;
   border-radius: 30px;
   font-family: "Ubuntu";
   font-size: 18px;
+}
+
+@media (max-width: 768px) and (min-width: 0) {
+  .subscribe {
+        text-align: center;
+  }
+  .subscribe>input[type="text"] {
+    width: 100%;
+    float: none;
+    margin-bottom: 18px;
+  }
+  .subscribe>button[type="submit"] {
+    width: auto;
+    float: none;
+  }
 }
 
 .subscribe_title {
