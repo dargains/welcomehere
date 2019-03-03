@@ -1,6 +1,6 @@
 /*Navbar*/
 header .navbar-toggle {
-    border: 3px solid #ffffff;
+    border: 0;
     border-radius: 0;
     margin-top: 35px;
 }

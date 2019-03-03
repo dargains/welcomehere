@@ -470,7 +470,7 @@ URL:        http://urbanpointwp.modeltheme.com/
         margin: 15px 0;
     }
     .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle {
-        border: 2px solid #fff;
+        /* border: 2px solid #fff; */
         margin: 30px 5px !important;
         transition: all 300ms ease-in-out;
         -o-transition: all 300ms ease-in-out;
