@@ -1578,10 +1578,11 @@ img.mfp-img {
   float: left;
   font-style: normal;
   font-weight: bold;
-  padding: 14px 20px;
-  width: 30%;
+  padding: 14px 30px;
+  /* width: 30%; */
+  min-width: 150px;
   border-radius: 30px;
-  font-family: "Ubuntu";
+  /*font-family: "Ubuntu";*/
   font-size: 18px;
 }
 
@@ -1595,7 +1596,7 @@ img.mfp-img {
     margin-bottom: 18px;
   }
   .subscribe>button[type="submit"] {
-    width: auto;
+    /* width: auto; */
     float: none;
   }
 }

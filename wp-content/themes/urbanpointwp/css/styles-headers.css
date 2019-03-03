@@ -1405,6 +1405,8 @@ nav {
 }
 .menu .menu-item {
     display: inline-block;
+    font-family: "Josefin Sans",'Arial Black', sans-serif;
+    text-transform: uppercase;
 }
 .navbar-header .logo > a:hover,
 .navbar-header .logo > a {
