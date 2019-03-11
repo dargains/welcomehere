@@ -346,7 +346,8 @@ if($thumbnail_src_featured) { ?>
                 <div class="mt_car--booking-form">
                     <?php
                         if(!empty($mt_house_price_day) or !empty($mt_house_price_month) ){
-                            // echo do_shortcode('[cf7form cf7key="form-alquilar"]')
+                            echo do_shortcode('[contact-form-7 id="7711" title="Rent Booking Form" html_class="rent_contact_form"]')
+                            // TODO: form de acordo com a lingua
                             echo do_shortcode('[contact-form-7 id="7711" title="Rent Booking Form" html_class="rent_contact_form"]');
                         } else {
                             echo do_shortcode('[contact-form-7 id="7954" title="Sale Booking Form" html_class="sale_contact_form"]');
