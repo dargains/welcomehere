@@ -1127,7 +1127,7 @@ URL:        http://urbanpointwp.modeltheme.com/
     body #navbar .menu-item.mega2columns > a::after,
     body #navbar .menu-item.mega3columns > a::after,
     body #navbar .menu-item.menu-item-has-children > a::after{
-        right: 0;
+        right: 20px;
     }
     body header .header-nav-actions{
         padding: 0;

@@ -4725,7 +4725,7 @@ button[data-toggle="modal"]:hover {
 }
 /*DESIGN FALLBACK*/
 .navbar-default {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 .no-menu {
     display: inline-table;

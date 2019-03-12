@@ -30,6 +30,7 @@ header .navbar-toggle {
     padding-top: 80px;
 }
 .navbar-default{
+  background-color: #ffffff;
     border: 0 none;
 }
 header .love-it-wrapper {
@@ -91,11 +92,11 @@ header .love-it-wrapper {
 #navbar .menu-item.menu-item-has-children > a::after {
     content: "";
     font-family: "simple-line-icons";
-    font-size: 7px;
+    font-size: 8px;
     opacity: 1;
     position: absolute;
     right: 6px;
-    top: 30px;
+    top: 23px;
 }
 #navbar .menu-item.mega1column .sub-menu li > a::after,
 #navbar .menu-item.mega2columns .sub-menu li > a::after,
@@ -1381,7 +1382,7 @@ header#one-page-header {
     z-index: 999;
     width: 100%;
     top: 0;
-    background: rgba(0,0,0,0.2);
+    /* background: rgba(0,0,0,0.2); */
 }
 .navbar-header .logo {
     margin: 18px 0;
@@ -1408,6 +1409,7 @@ nav {
     font-family: "Josefin Sans",'Arial Black', sans-serif;
     text-transform: uppercase;
 }
+
 .navbar-header .logo > a:hover,
 .navbar-header .logo > a {
     color: #000;
@@ -1431,7 +1433,7 @@ nav {
     opacity: 0;
     position: absolute;
     /*width: 300px;*/
-    width: 190px;
+    width: 90px;
     top: 150%;
     transition: all 250ms ease-in-out;
     -webkit-transition: all 250ms ease-in-out;
@@ -1442,10 +1444,13 @@ nav {
     display: block;
     font-size: 16px;
     font-weight: bold;
-    line-height: 34px;
-    padding: 29px 18px;
+    line-height: 30px;
+    padding: 22px 18px;
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out 0s;
+}
+#navbar .menu-item > a span {
+  display: none;
 }
 #navbar .menu-item:hover .sub-menu {
     opacity: 1;
@@ -1916,7 +1921,7 @@ header.header9 #mt-nav-burger span {
     font-weight: 900 !important;
 }
 header {
-    background-color: #009dde;
+    background-color: #fff;
 }
 .header-info-group {
     margin-top: 6px;
@@ -1952,10 +1957,6 @@ header {
     padding-left: 0;
 }
 
-
-nav ul li:last-child a {
-    padding-right: 0px !important;
-}
 /*header social icons*/
 header .social-links {
     float: right;

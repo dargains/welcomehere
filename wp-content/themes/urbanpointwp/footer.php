@@ -42,7 +42,7 @@
             <div class="container footer">
                 <div class="col-md-4">
 
-                	<p class="copyright text-left"><?php echo urbanpointwp_redux('mt_footer_text'); ?></p>
+                	<p class="copyright text-left"><?php echo date("Y"); ?><?php echo urbanpointwp_redux('mt_footer_text'); ?></p>
                 </div>
                 <div class="col-md-4">
 
