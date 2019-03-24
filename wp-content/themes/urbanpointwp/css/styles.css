@@ -746,6 +746,16 @@ textarea.form-control {
     clear: both;
     border: 0 none;
 }
+
+#modeltheme-main-head .container .row {
+  display: flex;
+align-items: center;
+}
+@media only screen and (max-width: 990px) {
+  #modeltheme-main-head .container .row {
+    flex-direction: column;
+  }
+}
 .portfolio-posts .main-content {
     margin: 0;
 }

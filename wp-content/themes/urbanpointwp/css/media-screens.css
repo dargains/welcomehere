@@ -248,8 +248,8 @@ URL:        http://urbanpointwp.modeltheme.com/
     }
     header #navbar .sub-menu {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-        display: block;
-        opacity: 1;
+        /* display: block; */
+        /* opacity: 1; */
         padding: 0;
         position: relative;
         visibility: visible;
@@ -257,7 +257,7 @@ URL:        http://urbanpointwp.modeltheme.com/
         width: 100%;
     }
 	header #navbar .sub-menu .menu-item > a {
-		margin-left: 15px;
+		/* margin-left: 15px; */
 	}
 	header #navbar .sub-menu .sub-menu .menu-item > a {
 		margin-left: 30px;
@@ -265,6 +265,10 @@ URL:        http://urbanpointwp.modeltheme.com/
 	header #navbar .sub-menu .sub-menu .sub-menu .menu-item > a {
 		margin-left: 45px;
 	}
+  .navbar-collapse.collapse.in .menu .menu-item {
+    width: auto !important;
+    display: block;
+  }
     .navbar-collapse .menu .menu-item {
         text-align: left;
     }
@@ -587,8 +591,8 @@ URL:        http://urbanpointwp.modeltheme.com/
 	.expand {
 	    padding: 0 20px;
 	    position: absolute;
-	    right: 0px;
-	    top: 11px;
+	    left: 6px;
+	    top: 6px;
 	}
 	.action-expand::after {
 	    color: #009ddc;
@@ -601,6 +605,7 @@ URL:        http://urbanpointwp.modeltheme.com/
 	}
 	nav #navbar ul li:last-child a {
 	    padding: 3px 13px !important;
+      text-align: left;
 	}
 	#navbar .menu-item-has-children .expand a {
 	    padding: 3px 13px;
@@ -645,7 +650,7 @@ URL:        http://urbanpointwp.modeltheme.com/
 /*--- 8. Responsive Min_768px Max_990px ---*/
 @media only screen and (min-width: 768px) and (max-width: 990px) {
     #navbar .menu > .menu-item:first-child > a {
-        padding: 18px 18px !important;
+        /* padding: 18px 18px !important; */
     }
     header.header1  .header-nav-actions {
     }
@@ -748,6 +753,7 @@ URL:        http://urbanpointwp.modeltheme.com/
 
 
 /*--- 11. Responsive Max_990px ---*/
+
 @media only screen and (max-width: 990px) {
     .mt-car-search .select2.select2-container.select2-container--default {
         width: 100% !important;
@@ -1011,6 +1017,7 @@ URL:        http://urbanpointwp.modeltheme.com/
     }
     body .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         width: 100%;
+        margin: 10px 0;
     }
     #navbar .menu-item.mega1column > a::after, #navbar .menu-item.mega2columns > a::after, #navbar .menu-item.mega3columns > a::after, #navbar .menu-item.menu-item-has-children > a::after {
         top: 6% !important;
