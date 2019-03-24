@@ -346,12 +346,20 @@ if($thumbnail_src_featured) { ?>
                 <div class="mt_car--booking-form">
                     <?php
                         if(!empty($mt_house_price_day) or !empty($mt_house_price_month) ){
-                            echo do_shortcode('[contact-form-7 id="7711" title="Rent Booking Form" html_class="rent_contact_form"]')
-                            // TODO: form de acordo com a lingua
-                            echo do_shortcode('[contact-form-7 id="7711" title="Rent Booking Form" html_class="rent_contact_form"]');
-                        } else {
-                            echo do_shortcode('[contact-form-7 id="7954" title="Sale Booking Form" html_class="sale_contact_form"]');
+                          // echo get_user_locale();
+                          if (get_user_locale() == 'en_GB') {
+                            echo do_shortcode('[contact-form-7 id="8515" title="Rent Booking Form" html_class="rent_contact_form"]'); //en
+                          }
+                          if (get_user_locale() == 'pt_PT') {
+                            echo do_shortcode('[contact-form-7 id="8516" title="Rent Booking Form" html_class="rent_contact_form"]'); //pt
+                          }
+                          if (get_user_locale() == 'es_ES') {
+                            echo do_shortcode('[contact-form-7 id="8517" title="Rent Booking Form" html_class="rent_contact_form"]'); //es
+                          }
                         }
+                        // else {
+                        //     echo do_shortcode('[contact-form-7 id="7954" title="Sale Booking Form" html_class="sale_contact_form"]');
+                        // }
                     ?>
                 </div>
             </div>
@@ -359,7 +367,14 @@ if($thumbnail_src_featured) { ?>
         </div>
     </div>
 </article>
-
+<script type="text/javascript">
+  window.onload = function() {
+    var aptName = document.querySelector('.post-title').innerText;
+    var inputEl = document.querySelector('input[name="apartamento"]')
+    inputEl.value = aptName;
+    inputEl.closest('.container').style.display = 'none';
+  }
+</script>
 
 <div class="row post-details-bottom">
     <div class="container">
