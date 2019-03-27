@@ -1241,54 +1241,54 @@ $line_icons_font_i = array(
             'show_names' => true, // Show field names on the left
             'fields'     => array(
                   array(
-                        'name'    => __( 'Member position', 'modeltheme' ),
+                        'name'    => __( 'Posição', 'modeltheme' ),
                         'desc'    => __( 'Set the member position', 'modeltheme' ),
                         'id'      => $prefix . 'member_position',
                         'type'    => 'text',
                         'default' => 'Director'
                   ),
                   array(
-                        'name'    => __( 'Member email', 'modeltheme' ),
+                        'name'    => __( 'Email', 'modeltheme' ),
                         'desc'    => __( 'Set the member email', 'modeltheme' ),
                         'id'      => $prefix . 'member_email',
                         'type'    => 'text',
                         'default' => 'Email@email.com'
                   ),
                   array(
-                        'name'    => __( 'Member phone', 'modeltheme' ),
+                        'name'    => __( 'Telefone', 'modeltheme' ),
                         'desc'    => __( 'Set the member phone', 'modeltheme' ),
                         'id'      => $prefix . 'member_phone',
                         'type'    => 'text',
                         'default' => '+1 234 567 890'
                   ),
-                                    array(
-                        'name'    => __( 'Facebook profile', 'modeltheme' ),
-                        'desc'    => __( 'Set the facebook URL', 'modeltheme' ),
-                        'id'      => $prefix . 'facebook_profile',
-                        'type'    => 'text',
-                        'default' => 'https://www.facebook.com/modeltheme/'
-                  ),
-                  array(
-                        'name'    => __( 'Twitter profile', 'modeltheme' ),
-                        'desc'    => __( 'Set the twitter profile', 'modeltheme' ),
-                        'id'      => $prefix . 'twitter_profile',
-                        'type'    => 'text',
-                        'default' => 'envato'
-                  ),
-                  array(
-                        'name'    => __( 'Linkedin profile', 'modeltheme' ),
-                        'desc'    => __( 'Set the linkedin URL', 'modeltheme' ),
-                        'id'      => $prefix . 'linkedin_profile',
-                        'type'    => 'text',
-                        'default' => 'https://www.linkedin.com/'
-                  ),
-                  array(
-                        'name'    => __( 'Vimeo', 'modeltheme' ),
-                        'desc'    => __( 'Set the vimeo URL', 'modeltheme' ),
-                        'id'      => $prefix . 'vimeo_url',
-                        'type'    => 'text',
-                        'default' => 'https://vimeo.com/'
-                  )
+                  //                   array(
+                  //       'name'    => __( 'Facebook profile', 'modeltheme' ),
+                  //       'desc'    => __( 'Set the facebook URL', 'modeltheme' ),
+                  //       'id'      => $prefix . 'facebook_profile',
+                  //       'type'    => 'text',
+                  //       'default' => 'https://www.facebook.com/modeltheme/'
+                  // ),
+                  // array(
+                  //       'name'    => __( 'Twitter profile', 'modeltheme' ),
+                  //       'desc'    => __( 'Set the twitter profile', 'modeltheme' ),
+                  //       'id'      => $prefix . 'twitter_profile',
+                  //       'type'    => 'text',
+                  //       'default' => 'envato'
+                  // ),
+                  // array(
+                  //       'name'    => __( 'Linkedin profile', 'modeltheme' ),
+                  //       'desc'    => __( 'Set the linkedin URL', 'modeltheme' ),
+                  //       'id'      => $prefix . 'linkedin_profile',
+                  //       'type'    => 'text',
+                  //       'default' => 'https://www.linkedin.com/'
+                  // ),
+                  // array(
+                  //       'name'    => __( 'Vimeo', 'modeltheme' ),
+                  //       'desc'    => __( 'Set the vimeo URL', 'modeltheme' ),
+                  //       'id'      => $prefix . 'vimeo_url',
+                  //       'type'    => 'text',
+                  //       'default' => 'https://vimeo.com/'
+                  // )
             ),
       );
 
@@ -1666,32 +1666,22 @@ $line_icons_font_i = array(
                         'default' => ''
                   ),
 
-
-
-
                   array(
-                        'name' => __( 'Video Tour', 'modeltheme' ),
-                        'desc' => __( 'Escolha um link de youtube', 'modeltheme' ),
-                        'id'   => 'mt_video_tour',
-                        'type' => 'oembed',
-                  ),
-
-                  array(
-                        'name'    => __( 'Parque:', 'modeltheme' ),
+                        'name'    => __( 'Parque', 'modeltheme' ),
                         'desc'    => __( 'Escolha a quantidade de lugares de parque', 'modeltheme' ),
                         'id'      => 'mt_car_parking',
                         'type'    => 'text_medium',
                         'default' => ''
                   ),
                   array(
-                        'name'    => __( 'Ano de construção:', 'modeltheme' ),
+                        'name'    => __( 'Ano de construção', 'modeltheme' ),
                         'desc'    => __( 'Escolher o ano de construção', 'modeltheme' ),
                         'id'      => 'mt_built_year',
                         'type'    => 'text_medium',
                         'default' => ''
                   ),
                   array(
-                        'name'    => __( 'Sala:', 'modeltheme' ),
+                        'name'    => __( 'Salas', 'modeltheme' ),
                         'desc'    => __( 'Escolher a quantidade de salas', 'modeltheme' ),
                         'id'      => 'mt_living_rooms',
                         'type'    => 'text_medium',
@@ -1704,41 +1694,13 @@ $line_icons_font_i = array(
                         'type'    => 'text_small',
                         'default' => ''
                   ),
-                  // array(
-                  //       'name'    => __( 'Andares', 'modeltheme' ),
-                  //       'desc'    => __( 'Escolher a quantidade de andares', 'modeltheme' ),
-                  //       'id'      => 'mt_total_floors',
-                  //       'type'    => 'text_small',
-                  //       'default' => ''
-                  // ),
                   array(
                         'name'    => __( 'Cozinhas', 'modeltheme' ),
                         'desc'    => __( 'Escolher a quantidade de cozinhas', 'modeltheme' ),
                         'id'      => 'mt_kitchens',
                         'type'    => 'text_small',
                         'default' => ''
-                  ),
-                  // array(
-                  //       'name'    => __( 'Garagens', 'modeltheme' ),
-                  //       'desc'    => __( 'Escolher a quantidade de garagens', 'modeltheme' ),
-                  //       'id'      => 'mt_garages',
-                  //       'type'    => 'text_small',
-                  //       'default' => ''
-                  // ),
-                  // array(
-                  //       'name'    => __( 'Piscinas', 'modeltheme' ),
-                  //       'desc'    => __( 'Escolher a quantidade de piscinas', 'modeltheme' ),
-                  //       'id'      => 'mt_pools',
-                  //       'type'    => 'text_small',
-                  //       'default' => ''
-                  // ),
-                  array(
-                        'name'    => __( 'Seguro', 'modeltheme' ),
-                        'desc'    => __( 'Há seguro?', 'modeltheme' ),
-                        'id'      => 'mt_insurance',
-                        'type'    => 'text_small',
-                        'default' => ''
-                  ),
+                  )
 
 
             ),

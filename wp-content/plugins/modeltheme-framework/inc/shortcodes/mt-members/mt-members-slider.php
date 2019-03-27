@@ -87,10 +87,10 @@ function mt_shortcode_members01($params, $content) {
                 $metabox_member_email = get_post_meta( $member->ID, 'smartowl_member_email', true );
                 $metabox_member_phone = get_post_meta( $member->ID, 'smartowl_member_phone', true );
 
-                $metabox_facebook_profile = get_post_meta( $member->ID, 'smartowl_facebook_profile', true );
-                $metabox_twitter_profile  = get_post_meta( $member->ID, 'smartowl_twitter_profile', true );
-                $metabox_linkedin_profile = get_post_meta( $member->ID, 'smartowl_linkedin_profile', true );
-                $metabox_vimeo_url = get_post_meta( $member->ID, 'smartowl_vimeo_url', true );
+                // $metabox_facebook_profile = get_post_meta( $member->ID, 'smartowl_facebook_profile', true );
+                // $metabox_twitter_profile  = get_post_meta( $member->ID, 'smartowl_twitter_profile', true );
+                // $metabox_linkedin_profile = get_post_meta( $member->ID, 'smartowl_linkedin_profile', true );
+                // $metabox_vimeo_url = get_post_meta( $member->ID, 'smartowl_vimeo_url', true );
 
                 $member_title = get_the_title( $member->ID );
 
@@ -102,21 +102,21 @@ function mt_shortcode_members01($params, $content) {
                 #thumbnail
                 $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $member->ID ),'full' );
 
-                if($metabox_facebook_profile) {
-                    $profil_fb = '<a target="_new" href="'. $metabox_facebook_profile .'" class="member01_profile-facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a> ';
-                }
-
-                if($metabox_twitter_profile) {
-                    $profil_tw = '<a target="_new" href="https://twitter.com/'. $metabox_twitter_profile .'" class="member01_profile-twitter"> <i class="fa fa-twitter" aria-hidden="true"></i></a> ';
-                }
-
-                if($metabox_linkedin_profile) {
-                    $profil_in = '<a target="_new" href="'. $metabox_linkedin_profile .'" class="member01_profile-linkedin"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a> ';
-                }
-
-                if($metabox_vimeo_url) {
-                    $profil_vi = '<a target="_new" href="'. $metabox_vimeo_url .'" class="member01_vimeo_url"> <i class="fa fa-vimeo" aria-hidden="true"></i> </a> ';
-                }
+                // if($metabox_facebook_profile) {
+                //     $profil_fb = '<a target="_new" href="'. $metabox_facebook_profile .'" class="member01_profile-facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a> ';
+                // }
+                //
+                // if($metabox_twitter_profile) {
+                //     $profil_tw = '<a target="_new" href="https://twitter.com/'. $metabox_twitter_profile .'" class="member01_profile-twitter"> <i class="fa fa-twitter" aria-hidden="true"></i></a> ';
+                // }
+                //
+                // if($metabox_linkedin_profile) {
+                //     $profil_in = '<a target="_new" href="'. $metabox_linkedin_profile .'" class="member01_profile-linkedin"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a> ';
+                // }
+                //
+                // if($metabox_vimeo_url) {
+                //     $profil_vi = '<a target="_new" href="'. $metabox_vimeo_url .'" class="member01_vimeo_url"> <i class="fa fa-vimeo" aria-hidden="true"></i> </a> ';
+                // }
 
                 $html.='
                     <div class="col-md-12 relative">
@@ -140,8 +140,7 @@ function mt_shortcode_members01($params, $content) {
                                             <h4>'.$metabox_member_position.'</h4>
                                             <div class="content-div-content">'. urbanpointwp_excerpt_limit($content,20) . '</div>
                                             <div><a href="mailto:'.$metabox_member_email.'">'.$metabox_member_email.'</a></div>
-                                            <div><a href="tel:'.$metabox_member_phone.'">'.$metabox_member_phone.'</div>
-                                            <div class="member01_social">' . $profil_fb . $profil_tw . $profil_in . $profil_vi . '</div>
+                                            <div><a href="tel:'.$metabox_member_phone.'">'.$metabox_member_phone.'</a></div>
                                         </div>
                                     </div>
                                 </div>
