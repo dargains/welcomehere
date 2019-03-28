@@ -1453,6 +1453,9 @@ nav {
 #navbar .menu-item > a span {
   display: none;
 }
+#navbar .menu-item-has-children > a {
+  padding: 23px 18px;
+}
 #navbar .menu-item:hover .sub-menu {
     opacity: 1;
     visibility: visible;

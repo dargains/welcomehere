@@ -42,7 +42,7 @@
             <div class="container footer">
                 <div class="col-md-4">
 
-                	<p class="copyright text-left"><?php echo date("Y"); ?><?php echo urbanpointwp_redux('mt_footer_text'); ?></p>
+                	<p class="copyright text-left"><?php echo date("Y"); ?> <?php echo urbanpointwp_redux('mt_footer_text'); ?> |<a href="https://welcome-here.com/wp-content/uploads/2019/03/termos_e_condicoes.pdf" target="_blank">Termos e condições</a></p> 
                 </div>
                 <div class="col-md-4">
 

@@ -1473,7 +1473,7 @@ article.single-post img {
   color: #252525;
 }
 .list-view .post-details .post-name a {
-  font-size: 26px;
+  font-size: 40px;
   line-height: normal;
   transition: all ease-in-out 0.3s;
 }
@@ -2164,6 +2164,9 @@ article.single-post img {
 .article-content {
     margin-bottom: 20px;
     padding-bottom: 20px;
+}
+.article-content div {
+  font-size: 16px;
 }
 .article-footer {
     overflow: hidden;
@@ -5184,7 +5187,7 @@ h2.heading-bottom:after,
 .wpcf7-form .wpcf7-submit,
 ul.ecs-event-list li span,
 #contact_form2 .solid-button.button,
-.navbar-default .navbar-toggle .icon-bar,
+
 .details-container > div.details-item .amount,
 .details-container > div.details-item ins,
 .modeltheme-search .search-submit,
@@ -5199,6 +5202,9 @@ footer .mc4wp-form-fields input[type="submit"],
 footer .footer-top .menu .menu-item a::before,
 .post-password-form input[type='submit'] {
     background: #009dde;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background: #343535 !important;
 }
 .modeltheme-search.modeltheme-search-open .modeltheme-icon-search,
 .no-js .modeltheme-search .modeltheme-icon-search,
@@ -5253,7 +5259,7 @@ body .button[type='submit'],
 .navbar-default .navbar-toggle:hover,
 .header_search_form,
 .navbar-default .navbar-toggle {
-    border-color: #009dde;
+    border-color: #343535;
     /*Color: Main blue */
 }
 
