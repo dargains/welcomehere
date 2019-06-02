@@ -42,7 +42,7 @@
             <div class="container footer">
                 <div class="col-md-4">
 
-                	<p class="copyright text-left"><?php echo date("Y"); ?> <?php echo urbanpointwp_redux('mt_footer_text'); ?> |<a href="https://welcome-here.com/wp-content/uploads/2019/03/termos_e_condicoes.pdf" target="_blank">Termos e condições</a></p> 
+                	<p class="copyright text-left"><?php echo date("Y"); ?> <?php echo urbanpointwp_redux('mt_footer_text'); ?> |<a href="https://welcome-here.com/wp-content/uploads/2019/03/termos_e_condicoes.pdf" target="_blank">Termos e condições</a></p>
                 </div>
                 <div class="col-md-4">
 
@@ -66,16 +66,16 @@
                 <div class="col-md-4">
                     <ul class="social-links">
                         <?php if ( urbanpointwp_redux('mt_social_fb') && urbanpointwp_redux('mt_social_fb') != '' ) { ?>
-                            <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_fb') ) ?>"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_fb') ) ?>" title="Facebook" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                         <?php } ?>
                         <?php if ( urbanpointwp_redux('mt_social_tw') && urbanpointwp_redux('mt_social_tw') != '' ) { ?>
-                            <li><a href="https://twitter.com/<?php echo esc_attr( urbanpointwp_redux('mt_social_tw') ) ?>"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://twitter.com/<?php echo esc_attr( urbanpointwp_redux('mt_social_tw') ) ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
                         <?php } ?>
                         <?php if ( urbanpointwp_redux('mt_social_gplus') && urbanpointwp_redux('mt_social_gplus') != '' ) { ?>
                             <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_gplus') ) ?>"><i class="fa fa-google-plus"></i></a></li>
                         <?php } ?>
                         <?php if ( urbanpointwp_redux('mt_social_youtube') && urbanpointwp_redux('mt_social_youtube') != '' ) { ?>
-                            <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_youtube') ) ?>"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_youtube') ) ?>" target="_blank"><i class="fa fa-youtube"></i></a></li>
                         <?php } ?>
                         <?php if ( urbanpointwp_redux('mt_social_pinterest') && urbanpointwp_redux('mt_social_pinterest') != '' ) { ?>
                             <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_pinterest') ) ?>"><i class="fa fa-pinterest"></i></a></li>
@@ -87,7 +87,7 @@
                             <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_skype') ) ?>"><i class="fa fa-skype"></i></a></li>
                         <?php } ?>
                         <?php if ( urbanpointwp_redux('mt_social_instagram') && urbanpointwp_redux('mt_social_instagram') != '' ) { ?>
-                            <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_instagram') ) ?>"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_instagram') ) ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
                         <?php } ?>
                         <?php if ( urbanpointwp_redux('mt_social_dribbble') && urbanpointwp_redux('mt_social_dribbble') != '' ) { ?>
                             <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_dribbble') ) ?>"><i class="fa fa-dribbble"></i></a></li>
