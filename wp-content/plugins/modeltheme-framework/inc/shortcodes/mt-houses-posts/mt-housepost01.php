@@ -51,6 +51,7 @@ function modeltheme_shortcode_housepost01($params, $content) {
 
         $house_bedrooms = get_post_meta( $blogpost->ID, 'mt_bedrooms', true );
         $house_bathrooms = get_post_meta( $blogpost->ID, 'mt_bathrooms', true );
+        $house_capacity = get_post_meta( $blogpost->ID, 'mt_house_people', true );
         $house_area = get_post_meta( $blogpost->ID, 'mt_square_areas', true);
         $mt_house_price_day = get_post_meta( $blogpost->ID, 'mt_house_price_day', true );
         $mt_house_price_month = get_post_meta( $blogpost->ID, 'mt_house_price_month', true );
@@ -62,7 +63,7 @@ function modeltheme_shortcode_housepost01($params, $content) {
                             <div>
                               <h2>'.$blogpost->post_title.'</h2>
                               <p>'.$house_bedrooms.' '.pll__('Quartos').'</p>
-                              <p>'.$house_bathrooms.' '.pll__('Casas de banho').'</p>
+                              <p>'.$house_capacity.' '.pll__('Lotação').'</p>
                               <p>'.$house_area.'m<sup>2</sup></p>
                             </div>
                           </figure>
@@ -96,7 +97,7 @@ function modeltheme_shortcode_housepost01($params, $content) {
 
                                 #prices
                                 if(!empty($mt_house_price_day)) {
-                                  $html .= '<p class="house_display_posts">'.$mt_house_price_day.urbanpointwp_get_currency_symbol().' '.pll__('por dia').'</p>';
+                                  $html .= '<p class="house_display_posts">'.pll__('por dia').' '.$mt_house_price_day.urbanpointwp_get_currency_symbol().'</p>';
 
                                 }
 

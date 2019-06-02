@@ -67,10 +67,9 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
                                     ?><span class="car_currency"><?php echo urbanpointwp_get_currency_symbol();?></span><?php
                                 }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'left_with_space') {
                                     ?><span class="car_currency"><?php echo urbanpointwp_get_currency_symbol() . ' ';?></span><?php
-                                }
-                                ?>
-                                <span class="car_price"><?php echo esc_attr($mt_house_price_day); ?></span>
-                                <span class="car_per"><?php echo pll__('por dia')?></span><?php
+                                } ?>
+                                <span class="car_per"><?php echo pll__('por dia')?></span>
+                                <span class="car_price"><?php echo esc_attr($mt_house_price_day); ?></span><?php
                                 if (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right') {
                                     ?><span class="car_currency"><?php echo urbanpointwp_get_currency_symbol(); ?></span><?php
                                 }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right_with_space') {
@@ -117,6 +116,8 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
                         // Bathrooms - meta
                         $mt_bathrooms = get_post_meta( get_the_ID(), 'mt_bathrooms', true );
 
+                        $mt_people = get_post_meta( get_the_ID(), 'mt_house_people', true );
+
                         // Square areas - icon
                         $square_area_icon = get_template_directory_uri() . '/images/theme_urbanpoint_icon1.png';
 
@@ -149,10 +150,10 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
 
 	                        }
 
-	                        if(!empty($mt_bathrooms)) {
+	                        if(!empty($mt_people)) {
 	                        	echo '<span class="col-md-4 text-center car_gearbox">';
-		                        	echo '<img src="'.esc_url($bathrooms_icon).'" alt="gearbox" height="25" width="25">';
-		                        		echo '<span class="car_gearbox_value">'.esc_attr($mt_bathrooms).' '.pll__('Casas de banho').'</span>';
+		                        	echo '<img src="'.esc_url($bedrooms_icon).'" alt="gearbox" height="25" width="25">';
+		                        		echo '<span class="car_gearbox_value">'.esc_attr($mt_people).' '.pll__('Lotação').'</span>';
 	                        	echo '</span>';
 
 	                        }
