@@ -670,6 +670,8 @@ add_action('init', function() {
   pll_register_string('mytheme-hello', 'ver galeria');
   pll_register_string('mytheme-hello', 'fotos');
   pll_register_string('mytheme-hello', 'outros apartamentos');
+  pll_register_string('mytheme-hello', 'Condições');
+  pll_register_string('mytheme-hello', 'Texto Condições');
 
 });
 // Dynamic Copyright Date

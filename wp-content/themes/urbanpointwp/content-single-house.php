@@ -260,6 +260,15 @@ if($thumbnail_src_featured) { ?>
 
                     <div class="clearfix"></div>
 
+                    <!-- CONDIÇÕES -->
+                    <div class="mt_car--features-group post-features">
+                        <!-- POST FEATURES -->
+                        <h4 class="content-car-heading"><?php echo esc_html__(pll_e('Condições'),'urbanpointwp'); ?></h4>
+                        <div class="article-content">
+                          <p><?php echo esc_html__(pll_e('Texto Condições'),'urbanpointwp'); ?></p>
+                        </div>
+                    </div>
+
                     <!-- COMMENTS -->
                     <?php
 
