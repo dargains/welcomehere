@@ -672,6 +672,7 @@ add_action('init', function() {
   pll_register_string('mytheme-hello', 'outros apartamentos');
   pll_register_string('mytheme-hello', 'Condições');
   pll_register_string('mytheme-hello', 'Texto Condições');
+  pll_register_string('mytheme-hello', 'Épocas');
 
 });
 // Dynamic Copyright Date

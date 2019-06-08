@@ -1599,7 +1599,7 @@ $line_icons_font_i = array(
       */
       $meta_boxes['cars_metaboxs'] = array(
             'id'         => 'cars_metaboxs',
-            'title'      => __( 'MT Cars Custom Options', 'modeltheme' ),
+            'title'      => __( 'Características da casa', 'modeltheme' ),
             'pages'      => array( 'mt_house' ), // Post type
             'context'    => 'normal',
             'priority'   => 'high',
@@ -1626,8 +1626,6 @@ $line_icons_font_i = array(
                         'type'    => 'text_small',
                         'default' => ''
                   ),
-
-
                   array(
                         'name'    => __( 'Área útil', 'modeltheme' ),
                         'desc'    => __( 'Escolher a área útil em metros quadrados', 'modeltheme' ),
@@ -1649,8 +1647,6 @@ $line_icons_font_i = array(
                         'type'    => 'text_small',
                         'default' => ''
                   ),
-
-
                   array(
                         'name'    => __( 'Morada', 'modeltheme' ),
                         'desc'    => __( 'Escolher a morada', 'modeltheme' ),
@@ -1665,7 +1661,6 @@ $line_icons_font_i = array(
                         'type'    => 'text_medium',
                         'default' => ''
                   ),
-
                   array(
                         'name'    => __( 'Parque', 'modeltheme' ),
                         'desc'    => __( 'Escolha a quantidade de lugares de parque', 'modeltheme' ),
