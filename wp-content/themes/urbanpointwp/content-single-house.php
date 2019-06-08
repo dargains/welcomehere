@@ -260,6 +260,24 @@ if($thumbnail_src_featured) { ?>
 
                     <div class="clearfix"></div>
 
+                    <!-- ÉPOCAS -->
+                    <div class="mt_car--features-group post-features">
+                        <!-- POST FEATURES -->
+                        <h4 class="content-car-heading"><?php echo esc_html__(pll_e('Épocas'),'urbanpointwp'); ?></h4>
+                        <div class="article-content">
+                          <p><?php echo esc_html__(pll_e('Texto Condições'),'urbanpointwp'); ?></p>
+                        </div>
+                    </div>
+
+                    <!-- CONDIÇÕES -->
+                    <div class="mt_car--features-group post-features">
+                        <!-- POST FEATURES -->
+                        <h4 class="content-car-heading"><?php echo esc_html__(pll_e('Condições'),'urbanpointwp'); ?></h4>
+                        <div class="article-content">
+                          <p><?php echo esc_html__(pll_e('Texto Épocas'),'urbanpointwp'); ?></p>
+                        </div>
+                    </div>
+
                     <!-- COMMENTS -->
                     <?php
 
@@ -347,13 +365,11 @@ if($thumbnail_src_featured) { ?>
                     <?php
                         if(!empty($mt_house_price_day) or !empty($mt_house_price_month) ){
                           // echo get_user_locale();
-                          if (get_user_locale() == 'en_GB') {
-                            echo do_shortcode('[contact-form-7 id="8515" title="Rent Booking Form" html_class="rent_contact_form"]'); //en
-                          }
                           if (get_user_locale() == 'pt_PT') {
                             echo do_shortcode('[contact-form-7 id="8516" title="Rent Booking Form" html_class="rent_contact_form"]'); //pt
-                          }
-                          if (get_user_locale() == 'es_ES') {
+                          } else if (get_user_locale() == 'en_GB') {
+                            echo do_shortcode('[contact-form-7 id="8515" title="Rent Booking Form" html_class="rent_contact_form"]'); //en
+                          } else if (get_user_locale() == 'es_ES') {
                             echo do_shortcode('[contact-form-7 id="8517" title="Rent Booking Form" html_class="rent_contact_form"]'); //es
                           }
                         }
