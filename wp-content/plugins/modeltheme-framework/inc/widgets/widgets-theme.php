@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 /**
-* 
+*
 * [Widgets]
-* 
+*
 **/
 
 
@@ -38,7 +38,7 @@ class urbanpointwp_address_social_icons extends WP_Widget {
                 <div class="contact-details">
                     <p><i class="fa fa-phone" aria-hidden="true"></i><?php echo esc_attr( urbanpointwp_redux('mt_contact_phone')); ?></p>
                     <p><i class="fa fa-envelope" aria-hidden="true"></i><?php echo esc_attr( urbanpointwp_redux('mt_contact_email')); ?></p>
-                    <p><i class="fa fa-map-marker" aria-hidden="true"></i><?php echo esc_attr( urbanpointwp_redux('mt_contact_address')); ?></p>
+                  
                 </div>
             <?php } ?>
 
@@ -92,7 +92,7 @@ class urbanpointwp_address_social_icons extends WP_Widget {
                 <?php } ?>
                 </ul>
             <?php } ?>
-            
+
         </div>
         <?php echo  $args['after_widget'];
     }
@@ -112,20 +112,20 @@ class urbanpointwp_address_social_icons extends WP_Widget {
         ?>
 
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id( 'widget_title' )); ?>"><?php esc_attr_e( 'Widget Title:','urbanpointwp' ); ?></label> 
+            <label for="<?php echo esc_attr($this->get_field_id( 'widget_title' )); ?>"><?php esc_attr_e( 'Widget Title:','urbanpointwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'widget_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'widget_title' )); ?>" type="text" value="<?php echo esc_attr( $widget_title ); ?>">
         </p>
         <p>
-            <input type="checkbox" <?php checked($instance['widget_contact_details'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('widget_contact_details')); ?>" name="<?php echo esc_attr($this->get_field_name('widget_contact_details')); ?>" /> 
+            <input type="checkbox" <?php checked($instance['widget_contact_details'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('widget_contact_details')); ?>" name="<?php echo esc_attr($this->get_field_name('widget_contact_details')); ?>" />
             <label for="<?php echo esc_attr($this->get_field_name('widget_contact_details')); ?>"><?php esc_attr_e( 'Show contact informations box','urbanpointwp' ); ?></label>
         </p>
         <p>
-            <input type="checkbox" <?php checked($instance['widget_social_icons'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('widget_social_icons')); ?>" name="<?php echo esc_attr($this->get_field_name('widget_social_icons')); ?>" /> 
+            <input type="checkbox" <?php checked($instance['widget_social_icons'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('widget_social_icons')); ?>" name="<?php echo esc_attr($this->get_field_name('widget_social_icons')); ?>" />
             <label for="<?php echo esc_attr($this->get_field_name('widget_social_icons')); ?>"><?php esc_attr_e( 'Show social icons','urbanpointwp' ); ?></label>
         </p>
 
-      
-      <?php   
+
+      <?php
   /*      <p>
             <input type="checkbox" name="widget_contact_details" id="widget_contact_details"> <label for="widget_contact_details">Show contact informations box</label><br>
             <input type="checkbox" name="widget_social_icons" id="widget_social_icons"> <label for="widget_social_icons">Show social icons</label><br>
@@ -133,7 +133,7 @@ class urbanpointwp_address_social_icons extends WP_Widget {
 */
         ?>
         <p><?php esc_attr_e( '* Social Network account must be set from MT - Theme Panel.','urbanpointwp' ); ?></p>
-        <?php 
+        <?php
     }
 
 
@@ -165,8 +165,8 @@ class urbanpointwp_address_social_icons extends WP_Widget {
 
 
 /* ========= Flickr_Feed_Widget ===================================== */
-class urbanpointwp_flickr extends WP_Widget { 
-    
+class urbanpointwp_flickr extends WP_Widget {
+
     function __construct() {
         $widget_ops = array('description' => esc_attr__('Display latest Flickr Feed','urbanpointwp') );
         $control_ops = array( 'width' => 60, 'height' => 60, 'id_base' => 'flickr' );
@@ -186,25 +186,25 @@ class urbanpointwp_flickr extends WP_Widget {
         $title = apply_filters('widget_title', $instance['title']);
         $username = $instance['username'];
         $pics = $instance['pics'];
-        
+
         echo  $before_widget;
         echo '<h1 class="widget-title">'.$title.'</h1>';
 
         echo '<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count='.$pics.'&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user='.$username.'"></script>';
         echo  $after_widget;
     }
-    
+
     // Update
-    function update( $new_instance, $old_instance ) {  
-        $instance = $old_instance; 
-        
+    function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+
         $instance['title'] = strip_tags( $new_instance['title'] );
         $instance['username'] = strip_tags( $new_instance['username'] );
         $instance['pics'] = strip_tags( $new_instance['pics'] );
 
         return $instance;
     }
-    
+
     /**
      * Back-end widget form.
      *
@@ -215,7 +215,7 @@ class urbanpointwp_flickr extends WP_Widget {
     function form($instance) {
         $defaults = array( 'title' => 'Flickr Widget', 'pics' => '9', 'username' => '49229574@N00' ); // Default Values
         $instance = wp_parse_args( (array) $instance, $defaults ); ?>
-        
+
         <p>
             <label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>"><?php esc_attr_e('Title of the Widget', 'urbanpointwp'); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title' )); ?>" value="<?php echo esc_attr($instance['title']); ?>" />
@@ -229,7 +229,7 @@ class urbanpointwp_flickr extends WP_Widget {
             <label for="<?php echo esc_attr($this->get_field_id( 'pics' )); ?>"><?php esc_attr_e('Number of Photos to show:', 'urbanpointwp'); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'pics' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'pics' )); ?>" value="<?php echo esc_attr($instance['pics']); ?>" />
         </p>
-        
+
     <?php }
 }
 
@@ -269,7 +269,7 @@ class urbanpointwp_recent_entries_with_thumbnail extends WP_Widget {
                 'orderby'          => 'post_date',
                 'order'            => 'DESC',
                 'post_type'        => 'post',
-                'post_status'      => 'publish' 
+                'post_status'      => 'publish'
                 );
 
         $recentposts = get_posts($args_recenposts);
@@ -310,7 +310,7 @@ class urbanpointwp_recent_entries_with_thumbnail extends WP_Widget {
      * @param array $instance Previously saved values from database.
      */
     public function form( $instance ) {
-        
+
         # Widget Title
         if ( isset( $instance[ 'recent_posts_title' ] ) ) {
             $recent_posts_title = $instance[ 'recent_posts_title' ];
@@ -328,14 +328,14 @@ class urbanpointwp_recent_entries_with_thumbnail extends WP_Widget {
         ?>
 
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_title' )); ?>"><?php esc_attr_e( 'Widget Title:','urbanpointwp' ); ?></label> 
+            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_title' )); ?>"><?php esc_attr_e( 'Widget Title:','urbanpointwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'recent_posts_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'recent_posts_title' )); ?>" type="text" value="<?php echo esc_attr( $recent_posts_title ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_number' )); ?>"><?php esc_attr_e( 'Number of posts:','urbanpointwp' ); ?></label> 
+            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_number' )); ?>"><?php esc_attr_e( 'Number of posts:','urbanpointwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'recent_posts_number' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'recent_posts_number' )); ?>" type="text" value="<?php echo esc_attr( $recent_posts_number ); ?>">
         </p>
-        <?php 
+        <?php
     }
 
     /**
@@ -356,7 +356,7 @@ class urbanpointwp_recent_entries_with_thumbnail extends WP_Widget {
         return $instance;
     }
 
-} 
+}
 
 
 
@@ -397,7 +397,7 @@ class urbanpointwp_popular_recent_tabs extends WP_Widget {
             'posts_per_page'   => $popular_posts_number,
             'orderby'          => 'rand',
             'post_type'        => 'post',
-            'post_status'      => 'publish' 
+            'post_status'      => 'publish'
         );
         $popularposts = get_posts($args_popularposts);
 
@@ -406,7 +406,7 @@ class urbanpointwp_popular_recent_tabs extends WP_Widget {
             'orderby'          => 'post_date',
             'order'            => 'DESC',
             'post_type'        => 'post',
-            'post_status'      => 'publish' 
+            'post_status'      => 'publish'
         );
         $recentposts = get_posts($args_recenposts);
 
@@ -441,7 +441,7 @@ class urbanpointwp_popular_recent_tabs extends WP_Widget {
                 foreach ($recentposts as $post) {
                     $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'urbanpointwp_post_pic700x450' );
                     $excerpt = get_post_field('post_content', $post->ID);
-                    
+
                     $myContent .= '<div class="popular-post">';
                         $myContent .= '<a href="'. get_permalink($post->ID) .'">';
                             if($thumbnail_src) { $myContent .= '<img src="'. $thumbnail_src[0] . '" alt="'. $post->post_title .'" />';
@@ -468,7 +468,7 @@ class urbanpointwp_popular_recent_tabs extends WP_Widget {
      * @param array $instance Previously saved values from database.
      */
     public function form( $instance ) {
-        
+
         # Widget Title
         if ( isset( $instance[ 'recent_posts_title' ] ) ) {
             $recent_posts_title = $instance[ 'recent_posts_title' ];
@@ -508,26 +508,26 @@ class urbanpointwp_popular_recent_tabs extends WP_Widget {
         ?>
 
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_title' )); ?>"><?php esc_attr_e( 'Widget Title:','urbanpointwp' ); ?></label> 
+            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_title' )); ?>"><?php esc_attr_e( 'Widget Title:','urbanpointwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'recent_posts_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'recent_posts_title' )); ?>" type="text" value="<?php echo esc_attr( $recent_posts_title ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id( 'title_first_tab' )); ?>"><?php esc_attr_e( 'Number of recent posts:','urbanpointwp' ); ?></label> 
+            <label for="<?php echo esc_attr($this->get_field_id( 'title_first_tab' )); ?>"><?php esc_attr_e( 'Number of recent posts:','urbanpointwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'title_first_tab' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title_first_tab' )); ?>" type="text" value="<?php echo esc_attr( $title_first_tab ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_number' )); ?>"><?php esc_attr_e( 'Number of recent posts:','urbanpointwp' ); ?></label> 
+            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_number' )); ?>"><?php esc_attr_e( 'Number of recent posts:','urbanpointwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'recent_posts_number' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'recent_posts_number' )); ?>" type="text" value="<?php echo esc_attr( $recent_posts_number ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id( 'title_second_tab' )); ?>"><?php esc_attr_e( 'Number of popular posts:','urbanpointwp' ); ?></label> 
+            <label for="<?php echo esc_attr($this->get_field_id( 'title_second_tab' )); ?>"><?php esc_attr_e( 'Number of popular posts:','urbanpointwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'title_second_tab' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title_second_tab' )); ?>" type="text" value="<?php echo esc_attr( $title_second_tab ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id( 'popular_posts_number' )); ?>"><?php esc_attr_e( 'Number of popular posts:','urbanpointwp' ); ?></label> 
+            <label for="<?php echo esc_attr($this->get_field_id( 'popular_posts_number' )); ?>"><?php esc_attr_e( 'Number of popular posts:','urbanpointwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'popular_posts_number' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'popular_posts_number' )); ?>" type="text" value="<?php echo esc_attr( $popular_posts_number ); ?>">
         </p>
-        <?php 
+        <?php
     }
 
     /**
@@ -551,7 +551,7 @@ class urbanpointwp_popular_recent_tabs extends WP_Widget {
         return $instance;
     }
 
-} 
+}
 
 
 
@@ -589,7 +589,7 @@ class urbanpointwp_post_thumbnails_slider extends WP_Widget {
                 'orderby'          => 'post_date',
                 'order'            => 'DESC',
                 'post_type'        => 'post',
-                'post_status'      => 'publish' 
+                'post_status'      => 'publish'
                 );
 
         $recentposts = get_posts($args_recenposts);
@@ -626,7 +626,7 @@ class urbanpointwp_post_thumbnails_slider extends WP_Widget {
      * @param array $instance Previously saved values from database.
      */
     public function form( $instance ) {
-        
+
         # Widget Title
         if ( isset( $instance[ 'recent_posts_title' ] ) ) {
             $recent_posts_title = $instance[ 'recent_posts_title' ];
@@ -644,14 +644,14 @@ class urbanpointwp_post_thumbnails_slider extends WP_Widget {
         ?>
 
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_title' )); ?>"><?php esc_attr_e( 'Widget Title:','urbanpointwp' ); ?></label> 
+            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_title' )); ?>"><?php esc_attr_e( 'Widget Title:','urbanpointwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'recent_posts_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'recent_posts_title' )); ?>" type="text" value="<?php echo esc_attr( $recent_posts_title ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_number' )); ?>"><?php esc_attr_e( 'Number of posts:','urbanpointwp' ); ?></label> 
+            <label for="<?php echo esc_attr($this->get_field_id( 'recent_posts_number' )); ?>"><?php esc_attr_e( 'Number of posts:','urbanpointwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'recent_posts_number' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'recent_posts_number' )); ?>" type="text" value="<?php echo esc_attr( $recent_posts_number ); ?>">
         </p>
-        <?php 
+        <?php
     }
 
     /**
@@ -672,7 +672,7 @@ class urbanpointwp_post_thumbnails_slider extends WP_Widget {
         return $instance;
     }
 
-} 
+}
 
 
 /* ========= urbanpointwp_social_share ===================================== */
@@ -753,7 +753,7 @@ class urbanpointwp_social_share extends WP_Widget {
                 <?php } ?>
             </ul>
         </div>
-        <?php 
+        <?php
         echo  $args['after_widget'];
     }
 
@@ -773,45 +773,45 @@ class urbanpointwp_social_share extends WP_Widget {
         ?>
 
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id( 'widget_title' )); ?>"><?php esc_attr_e( 'Widget Title:','urbanpointwp' ); ?></label> 
+            <label for="<?php echo esc_attr($this->get_field_id( 'widget_title' )); ?>"><?php esc_attr_e( 'Widget Title:','urbanpointwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'widget_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'widget_title' )); ?>" type="text" value="<?php echo esc_attr( $widget_title ); ?>">
         </p>
         <p><?php esc_attr_e( 'Check what Social SHARE Buttons do you want to display','urbanpointwp' ); ?></p>
         <p>
-            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-facebook'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-facebook')); ?>" name="<?php echo esc_attr($this->get_field_name('share-facebook')); ?>" /> 
+            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-facebook'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-facebook')); ?>" name="<?php echo esc_attr($this->get_field_name('share-facebook')); ?>" />
             <label for="<?php echo esc_attr($this->get_field_name('share-facebook')); ?>"><?php esc_attr_e( 'Facebook','urbanpointwp' ); ?></label>
         </p>
         <p>
-            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-twitter'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-twitter')); ?>" name="<?php echo esc_attr($this->get_field_name('share-twitter')); ?>" /> 
+            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-twitter'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-twitter')); ?>" name="<?php echo esc_attr($this->get_field_name('share-twitter')); ?>" />
             <label for="<?php echo esc_attr($this->get_field_name('share-twitter')); ?>"><?php esc_attr_e( 'Twitter','urbanpointwp' ); ?></label>
         </p>
         <p>
-            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-linkedin'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-linkedin')); ?>" name="<?php echo esc_attr($this->get_field_name('share-linkedin')); ?>" /> 
+            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-linkedin'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-linkedin')); ?>" name="<?php echo esc_attr($this->get_field_name('share-linkedin')); ?>" />
             <label for="<?php echo esc_attr($this->get_field_name('share-linkedin')); ?>"><?php esc_attr_e( 'Linkedin','urbanpointwp' ); ?></label>
         </p>
         <p>
-            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-googleplus'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-googleplus')); ?>" name="<?php echo esc_attr($this->get_field_name('share-googleplus')); ?>" /> 
+            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-googleplus'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-googleplus')); ?>" name="<?php echo esc_attr($this->get_field_name('share-googleplus')); ?>" />
             <label for="<?php echo esc_attr($this->get_field_name('share-googleplus')); ?>"><?php esc_attr_e( 'Google Plus','urbanpointwp' ); ?></label>
         </p>
         <p>
-            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-digg'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-digg')); ?>" name="<?php echo esc_attr($this->get_field_name('share-digg')); ?>" /> 
+            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-digg'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-digg')); ?>" name="<?php echo esc_attr($this->get_field_name('share-digg')); ?>" />
             <label for="<?php echo esc_attr($this->get_field_name('share-digg')); ?>"><?php esc_attr_e( 'Digg','urbanpointwp' ); ?></label>
         </p>
         <p>
-            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-pinterest'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-pinterest')); ?>" name="<?php echo esc_attr($this->get_field_name('share-pinterest')); ?>" /> 
+            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-pinterest'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-pinterest')); ?>" name="<?php echo esc_attr($this->get_field_name('share-pinterest')); ?>" />
             <label for="<?php echo esc_attr($this->get_field_name('share-pinterest')); ?>"><?php esc_attr_e( 'Pinterest','urbanpointwp' ); ?></label>
         </p>
         <p>
-            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-reddit'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-reddit')); ?>" name="<?php echo esc_attr($this->get_field_name('share-reddit')); ?>" /> 
+            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-reddit'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-reddit')); ?>" name="<?php echo esc_attr($this->get_field_name('share-reddit')); ?>" />
             <label for="<?php echo esc_attr($this->get_field_name('share-reddit')); ?>"><?php esc_attr_e( 'Reddit','urbanpointwp' ); ?></label>
         </p>
         <p>
-            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-stumbleupon'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-stumbleupon')); ?>" name="<?php echo esc_attr($this->get_field_name('share-stumbleupon')); ?>" /> 
+            <input class="checkboxsocial" type="checkbox" <?php checked($instance['share-stumbleupon'], 'on'); ?> id="<?php echo esc_attr($this->get_field_name('share-stumbleupon')); ?>" name="<?php echo esc_attr($this->get_field_name('share-stumbleupon')); ?>" />
             <label for="<?php echo esc_attr($this->get_field_name('share-stumbleupon')); ?>"><?php esc_attr_e( 'Stumbleupon','urbanpointwp' ); ?></label>
         </p>
-                
 
-        <?php 
+
+        <?php
     }
 
 
@@ -820,7 +820,7 @@ class urbanpointwp_social_share extends WP_Widget {
     public function update( $new_instance, $old_instance ) {
         $instance = array();
         $instance['widget_title'] = ( ! empty( $new_instance['widget_title'] ) ) ?  $new_instance['widget_title']  : '';
-        
+
         $instance['share-facebook'] = ( ! empty( $new_instance['share-facebook'] ) ) ?  $new_instance['share-facebook']  : '';
         $instance['share-twitter'] = ( ! empty( $new_instance['share-twitter'] ) ) ?  $new_instance['share-twitter']  : '';
         $instance['share-linkedin'] = ( ! empty( $new_instance['share-linkedin'] ) ) ?  $new_instance['share-linkedin']  : '';
