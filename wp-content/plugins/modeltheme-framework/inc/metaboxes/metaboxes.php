@@ -1606,16 +1606,30 @@ $line_icons_font_i = array(
             'show_names' => true, // Show field names on the left
             'fields'     => array(
                   array(
-                        'name'    => __( 'Preço (por dia)', 'modeltheme' ),
-                        'desc'    => __( 'Escolher o preço por dia', 'modeltheme' ),
+                        'name'    => __( 'Preço em alta temporada', 'modeltheme' ),
+                        'desc'    => __( 'Escolher o preço por dia na alta temporada', 'modeltheme' ),
                         'id'      => 'mt_house_price_day',
                         'type'    => 'text_small',
                         'default' => ''
                   ),
                   array(
-                        'name'    => __( 'Preço (por mês)', 'modeltheme' ),
-                        'desc'    => __( 'Escolher o preço por mês', 'modeltheme' ),
+                        'name'    => __( 'Preço em média temporada', 'modeltheme' ),
+                        'desc'    => __( 'Escolher o preço por dia na média temporada', 'modeltheme' ),
+                        'id'      => 'mt_house_price_medium',
+                        'type'    => 'text_small',
+                        'default' => ''
+                  ),
+                  array(
+                        'name'    => __( 'Preço em baixa temporada', 'modeltheme' ),
+                        'desc'    => __( 'Escolher o preço por dia na baixa temporada', 'modeltheme' ),
                         'id'      => 'mt_house_price_month',
+                        'type'    => 'text_small',
+                        'default' => ''
+                  ),
+                  array(
+                        'name'    => __( 'Preço em alta temporada de verão', 'modeltheme' ),
+                        'desc'    => __( 'Escolher o preço por dia na alta temporada de verão', 'modeltheme' ),
+                        'id'      => 'mt_house_price_summer',
                         'type'    => 'text_small',
                         'default' => ''
                   ),
