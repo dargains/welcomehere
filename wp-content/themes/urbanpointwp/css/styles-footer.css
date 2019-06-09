@@ -46,6 +46,9 @@ footer .contact-details {
   text-align: center;
   flex-wrap: wrap;
 }
+footer .contact-details .row .fa .fa-map-marker {
+  display: none !important;
+}
 footer .widget_urbanpointwp_recent_entries_with_thumbnail li a{
     color: white;
 }
@@ -67,7 +70,8 @@ footer .contact-details p {
     opacity: 1;
 }
 footer .contact-details p:nth-of-type(2) {
-  padding:0 20px;
+  /* padding:0 20px; */
+  padding: 0 0 0 20px;
 }
 
 .footer-logo {
