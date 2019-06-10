@@ -671,8 +671,20 @@ add_action('init', function() {
   pll_register_string('mytheme-hello', 'fotos');
   pll_register_string('mytheme-hello', 'outros apartamentos');
   pll_register_string('mytheme-hello', 'Condições');
-  pll_register_string('mytheme-hello', 'Texto Condições');
-  pll_register_string('mytheme-hello', 'Épocas');
+  pll_register_string('mytheme-hello', 'Condição 1');
+  pll_register_string('mytheme-hello', 'Condição 2');
+  pll_register_string('mytheme-hello', 'Condição 3');
+  pll_register_string('mytheme-hello', 'Condição 4');
+  pll_register_string('mytheme-hello', 'Época alta');
+  pll_register_string('mytheme-hello', 'Época alta 1');
+  pll_register_string('mytheme-hello', 'Época alta 2');
+  pll_register_string('mytheme-hello', 'Época alta 3');
+  pll_register_string('mytheme-hello', 'Época baixa');
+  pll_register_string('mytheme-hello', 'Época baixa 1');
+  pll_register_string('mytheme-hello', 'Época baixa 2');
+  pll_register_string('mytheme-hello', 'Época baixa 3');
+  pll_register_string('mytheme-hello', 'Época média');
+  pll_register_string('mytheme-hello', 'Época verão');
 
 });
 // Dynamic Copyright Date

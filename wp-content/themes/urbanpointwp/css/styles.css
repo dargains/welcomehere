@@ -5620,6 +5620,9 @@ body.archive,
   opacity: 1;
   color: #fff;
 }
+.mt_car--single-price .priceval small {
+  font-size: 60%;
+}
 .mt_cars--features-description .mt_car--price {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border-radius: 10px;
