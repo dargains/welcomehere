@@ -4,7 +4,11 @@
 <head>
     <meta charset="<?php esc_html(bloginfo( 'charset' )); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Welcome Here - High quality short-term rentals in Lisbon, Portugal</title>
+    <meta name="google-site-verification" content="7UPzggXUeO8zmw533UP1Bd9mcmUVQ891YzEUZ6ql8Ww" />
+    <meta name="description" content="Welcome Here - Apartments | Short Term Rent, Lisbon - Quality fully-city apartments with wi-fi, air-conditioning in Lisbon, Portugal near the tourist districts and major transport facilities">
+    <meta name="keywords" content="Apartamentos para alugar em Lisboa, casas para alugar em Lisboa, Casas de férias com fotos, Lisbon, Portugal, holidays in Lisbon, and short breaks" />
+    <meta name="robots" content="INDEX,FOLLOW">
     <?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
         <link rel="shortcut icon" href="<?php echo esc_attr(urbanpointwp_redux('mt_favicon', 'url')); ?>">
     <?php } ?>
@@ -15,15 +19,15 @@
 
 
     <?php
-       
+
         if (urbanpointwp_redux('mt_preloader_status')) {
             echo  '<div class="urbanpointwp_preloader_holder '.urbanpointwp_redux('mt_preloader_animation').'">'.urbanpointwp_loader_animation().'</div>';
-        } 
+        }
 
     ?>
 
 
-    <?php 
+    <?php
     $below_slider_headers = array('header8', 'header9');
     $normal_headers = array('header1', 'header2', 'header5',);
     $custom_header_options_status = get_post_meta( get_the_ID(), 'smartowl_custom_header_options_status', true );
@@ -62,7 +66,7 @@
                     <div class="left-side">
                         <h1 class="logo"><?php echo esc_attr(get_bloginfo()); ?></h1>
                         <?php if (is_active_sidebar( urbanpointwp_redux('mt_header_fixed_sidebar') )) {
-                            dynamic_sidebar( urbanpointwp_redux('mt_header_fixed_sidebar') ); 
+                            dynamic_sidebar( urbanpointwp_redux('mt_header_fixed_sidebar') );
                         } ?>
                     </div>
                 </div>
