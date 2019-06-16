@@ -97,7 +97,7 @@ function modeltheme_shortcode_housepost01($params, $content) {
 
                                 #prices
                                 if(!empty($mt_house_price_day)) {
-                                  $html .= '<p class="house_display_posts">'.pll__('por dia').' '.$mt_house_price_day.urbanpointwp_get_currency_symbol().'</p>';
+                                  $html .= '<p class="house_display_posts">'.pll__('desde').' '.$mt_house_price_day.urbanpointwp_get_currency_symbol().'</p>';
 
                                 }
 
