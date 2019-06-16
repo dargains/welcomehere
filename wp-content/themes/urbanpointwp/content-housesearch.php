@@ -57,7 +57,7 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
 
                     <?php
                         // Price per day - meta
-                        $mt_house_price_day = get_post_meta( get_the_ID(), 'mt_house_price_day', true );
+                        $mt_house_price_day = get_post_meta( get_the_ID(), 'mt_house_price_month', true );
                         $mt_house_price_for_sale = get_post_meta( get_the_ID(), 'mt_house_price_for_sale', true );
 
                         // Price per day

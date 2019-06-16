@@ -53,8 +53,7 @@ function modeltheme_shortcode_housepost01($params, $content) {
         $house_bathrooms = get_post_meta( $blogpost->ID, 'mt_bathrooms', true );
         $house_capacity = get_post_meta( $blogpost->ID, 'mt_house_people', true );
         $house_area = get_post_meta( $blogpost->ID, 'mt_square_areas', true);
-        $mt_house_price_day = get_post_meta( $blogpost->ID, 'mt_house_price_day', true );
-        $mt_house_price_month = get_post_meta( $blogpost->ID, 'mt_house_price_month', true );
+        $mt_house_price_day = get_post_meta( $blogpost->ID, 'mt_house_price_month', true );
 
         if ($thumbnail_src) {
             $post_img = '<div class="grid">
