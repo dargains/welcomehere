@@ -62,13 +62,13 @@ $thumbnail_src_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( g
 
                         // Price per day
                         if(!empty($mt_house_price_day)){
-                            echo '<div class="mt_car--price-day mt_car--price">';
+                            echo '<div class="mt_car--price-day mt_car--price">'; ?>
+                                <span class="car_per"><?php echo pll__('desde')?></span> <?php
                                 if (urbanpointwp_redux('mt_cars_settings_currency_position') == 'left') {
                                     ?><span class="car_currency"><?php echo urbanpointwp_get_currency_symbol();?></span><?php
                                 }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'left_with_space') {
                                     ?><span class="car_currency"><?php echo urbanpointwp_get_currency_symbol() . ' ';?></span><?php
                                 } ?>
-                                <span class="car_per"><?php echo pll__('por dia')?></span>
                                 <span class="car_price"><?php echo esc_attr($mt_house_price_day); ?></span><?php
                                 if (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right') {
                                     ?><span class="car_currency"><?php echo urbanpointwp_get_currency_symbol(); ?></span><?php
