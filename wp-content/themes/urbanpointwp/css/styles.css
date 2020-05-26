@@ -5462,6 +5462,13 @@ input.wpcf7-form-control.wpcf7-submit:hover {
   height: auto;
   max-width: 100%;
   width: 100%;
+  min-height: 500px;
+  object-fit: cover;
+}
+@media screen and (max-width: 800px) {
+  .mt_cars--single-main-pic img {
+    min-height: 200px;
+  }
 }
 .mt_car--booking-form div.wpcf7 {
   background-color: #fff !important;
