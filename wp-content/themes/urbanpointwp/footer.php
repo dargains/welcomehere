@@ -42,7 +42,11 @@
             <div class="container footer">
                 <div class="col-md-4">
 
-                	<p class="copyright text-left"><?php echo date("Y"); ?> <?php echo urbanpointwp_redux('mt_footer_text'); ?> |<a href="https://welcome-here.com/wp-content/uploads/2019/03/termos_e_condicoes.pdf" target="_blank">Termos e condições</a></p>
+                    <p class="copyright text-left"><?php echo date("Y"); ?> <?php echo urbanpointwp_redux('mt_footer_text'); ?> |<a href="https://welcome-here.com/wp-content/uploads/2019/03/termos_e_condicoes.pdf" target="_blank">Termos e condições</a></p>
+                    
+                    <a class="imageLeft" href="https://www.livroreclamacoes.pt/inicio" target="_blank" title="Livro de Reclamações">
+                            <img src="https://welcome-here.com/wp-content/uploads/2020/05/livro-reclamacoes.png" alt="Livro de Reclamações">
+                    </a>
                 </div>
                 <div class="col-md-4">
 
@@ -65,6 +69,7 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="social-links">
+                        <li>Follow us</li>
                         <?php if ( urbanpointwp_redux('mt_social_fb') && urbanpointwp_redux('mt_social_fb') != '' ) { ?>
                             <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_fb') ) ?>" title="Facebook" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                         <?php } ?>
