@@ -465,3 +465,18 @@ footer .social-links a {
     width: 100%;
     max-width: 110px;
 }
+
+@media only screen and (max-width: 500px) {
+    .footer-div-parent .footer {
+        flex-direction: column;
+    }
+
+    footer p.copyright {
+        padding-bottom: 15px;
+    }
+
+    .imageLeft {
+        text-align: center;
+        padding-bottom: 8px;
+    }
+}
