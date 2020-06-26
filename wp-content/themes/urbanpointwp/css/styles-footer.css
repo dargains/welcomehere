@@ -428,7 +428,7 @@ p.copyright {
 p.copyright a {
     text-decoration: underline;
     color: #fff;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 footer .social-links {
@@ -471,8 +471,17 @@ footer .social-links a {
         flex-direction: column;
     }
 
+    .footer .col-md-8 {
+        padding: 0;
+    }
+
     footer p.copyright {
         padding-bottom: 15px;
+    }
+
+    p.copyright a {
+        display: block;
+        margin-left: 0;
     }
 
     .imageLeft {

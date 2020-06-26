@@ -40,34 +40,33 @@
         <!-- FOOTER BOTTOM -->
         <div class="footer-div-parent">
             <div class="container footer">
-                <div class="col-md-4">
+                <div class="col-md-8">
 
-                    <p class="copyright text-left"><?php echo date("Y"); ?> <?php echo urbanpointwp_redux('mt_footer_text'); ?> |<a href="https://welcome-here.com/wp-content/uploads/2019/03/termos_e_condicoes.pdf" target="_blank">Termos e condições</a></p>
+                    <p class="copyright text-left"><?php echo date("Y"); ?> <?php echo urbanpointwp_redux('mt_footer_text'); ?>
+                    
+                        <?php
+                        $post = '9061';
+
+                        if (pll_current_language() == 'pt'):
+                            echo "<a href='https://welcome-here.com/termos-e-condicoes' title='Termos e condições'>Termos e condições</a>
+                            <a href='https://welcome-here.com/politica-de-privacidade' title='Política de Privacidade'>Política de Privacidade</a>
+                            </p>";
+                        elseif (pll_current_language() == 'en'):
+                            echo "<a href='https://welcome-here.com/terms-and-conditions' title='Terms and conditions'>Terms and conditions</a> 
+                            <a href='https://welcome-here.com/privacy-policy' title='Privacy Policy'>Privacy Policy</a>
+                            </p>";
+                        else:
+                            echo "<a href='https://welcome-here.com/terminos-y-condiciones' title='Términos y condiciones'>Términos y condiciones</a> 
+                            <a href='https://welcome-here.com/politica-de-privacidad' title='Política de privacidad'>Política de privacidad</a>
+                            </p>";
+                        endif;
+                        ?>
                     
                     <a class="imageLeft" href="https://www.livroreclamacoes.pt/inicio" target="_blank" title="Livro de Reclamações">
                             <img src="https://welcome-here.com/wp-content/uploads/2020/05/livro-reclamacoes.png" alt="Livro de Reclamações">
                     </a>
                 </div>
-                <div class="col-md-4">
-
-                	<?php if (!is_plugin_active('redux-framework/redux-framework.php')){ ?>
-				        <!-- BACK TO TOP BUTTON -->
-				        <a class="back-to-top modeltheme-is-visible modeltheme-fade-out" href="#0">
-				            <span></span>
-				        </a>
-				    <?php } else { ?>
-				        <?php if (urbanpointwp_redux('mt_backtotop_status') == true) { ?>
-				            <!-- BACK TO TOP BUTTON -->
-				            <a class="back-to-top modeltheme-is-visible modeltheme-fade-out" href="#0">
-				                <span></span>
-				            </a>
-				        <?php } ?>
-				    <?php } ?>
-
-
-
-                </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <ul class="social-links">
                         <li>Follow us</li>
                         <?php if ( urbanpointwp_redux('mt_social_fb') && urbanpointwp_redux('mt_social_fb') != '' ) { ?>
