@@ -50,8 +50,8 @@ input[type="checkbox"]:focus,
 input[type="radio"]:focus,
 select:focus,
 textarea:focus {
-	border-color: #5b9dd9;
-	box-shadow: 0 0 2px rgba(30, 140, 190, 0.8);
+	/* border-color: #5b9dd9;
+	box-shadow: 0 0 2px rgba(30, 140, 190, 0.8); */
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 }
@@ -90,7 +90,7 @@ input[type="radio"] {
 	transition: .05s border-color ease-in-out;
 }
 
-input[type="radio"]:checked + label:before {
+input[type="radio"]:checked+label:before {
 	color: #82878c;
 }
 
@@ -99,7 +99,7 @@ input[type="radio"]:checked + label:before {
 	color: #00a0d2;
 }
 
-td > input[type="checkbox"],
+td>input[type="checkbox"],
 .wp-admin p input[type="checkbox"],
 .wp-admin p input[type="radio"] {
 	margin-top: 0;
@@ -146,10 +146,11 @@ input[type="radio"]:checked:before {
 	height: 6px;
 	margin: 4px;
 	line-height: 16px;
-	background-color: #1e8cbe;
+	background-color: #009dde;
 }
 
 @-moz-document url-prefix() {
+
 	input[type="checkbox"],
 	input[type="radio"],
 	.form-table input.tog {
@@ -184,7 +185,8 @@ input,
 select {
 	font-size: 14px;
 	padding: 3px 5px;
-	border-radius: 0; /* Reset mobile webkit's default element styling */
+	border-radius: 0;
+	/* Reset mobile webkit's default element styling */
 }
 
 textarea {
@@ -352,9 +354,9 @@ p.submit {
 	text-align: right;
 }
 
-table.form-table + p.submit,
-table.form-table + input + p.submit,
-table.form-table + input + input + p.submit {
+table.form-table+p.submit,
+table.form-table+input+p.submit,
+table.form-table+input+input+p.submit {
 	border-top: none;
 	padding-top: 0;
 }
@@ -427,8 +429,8 @@ input[type="number"].tiny-text {
 	margin-left: 1em;
 }
 
-.wp-hide-pw > .dashicons,
-.wp-cancel-pw > .dashicons {
+.wp-hide-pw>.dashicons,
+.wp-cancel-pw>.dashicons {
 	position: relative;
 	top: 3px;
 }
@@ -438,12 +440,12 @@ input[type="number"].tiny-text {
 }
 
 label,
-#your-profile label + a {
+#your-profile label+a {
 	vertical-align: middle;
 }
 
 fieldset label,
-#your-profile label + a {
+#your-profile label+a {
 	vertical-align: middle;
 }
 
@@ -496,19 +498,23 @@ fieldset label,
 	opacity: 1;
 }
 
-#pass1.short, #pass1-text.short {
+#pass1.short,
+#pass1-text.short {
 	border-color: #e35b5b;
 }
 
-#pass1.bad, #pass1-text.bad {
+#pass1.bad,
+#pass1-text.bad {
 	border-color: #f78b53;
 }
 
-#pass1.good, #pass1-text.good {
+#pass1.good,
+#pass1-text.good {
 	border-color: #ffc733;
 }
 
-#pass1.strong, #pass1-text.strong {
+#pass1.strong,
+#pass1-text.strong {
 	border-color: #83c373;
 }
 
@@ -661,7 +667,8 @@ ul#add-to-blog-users {
 	font-weight: 600;
 }
 
-.form-table th.th-full, /* Not used by core. Back-compat for pre-4.8 */
+.form-table th.th-full,
+/* Not used by core. Back-compat for pre-4.8 */
 .form-table .td-full {
 	width: auto;
 	padding: 20px 10px 20px 0;
@@ -757,6 +764,7 @@ table.form-table td .updated p {
 	border-spacing: 0;
 	border-collapse: collapse;
 }
+
 .color-palette td {
 	height: 20px;
 	padding: 0;
@@ -1237,6 +1245,7 @@ table.form-table td .updated p {
 -------------------------------------------------------------- */
 
 @media screen and (max-width: 782px) {
+
 	/* Input Elements */
 	textarea {
 		-webkit-appearance: none;
@@ -1386,7 +1395,8 @@ table.form-table td .updated p {
 	input[type="number"].small-text,
 	.form-table input[type="text"].small-text {
 		width: auto;
-		max-width: 4.375em; /* 70px, enough for 4 digits to fit comfortably */
+		max-width: 4.375em;
+		/* 70px, enough for 4 digits to fit comfortably */
 		display: inline;
 		padding: 3px 6px;
 		margin: 0 3px;
@@ -1550,12 +1560,14 @@ table.form-table td .updated p {
 	.wp-list-table.privacy_requests.widefat thead td input {
 		margin-left: 5px;
 	}
+
 	.regular-text {
 		max-width: 100%;
 	}
 }
 
 @media only screen and (max-width: 768px) {
+
 	.form-field input[type="text"],
 	.form-field input[type="email"],
 	.form-field input[type="password"],
@@ -1569,7 +1581,9 @@ table.form-table td .updated p {
 	}
 }
 
-@media only screen and (max-height: 480px), screen and (max-width: 450px) {
+@media only screen and (max-height: 480px),
+screen and (max-width: 450px) {
+
 	/* Request Credentials / File Editor Warning */
 	.request-filesystem-credentials-dialog .notification-dialog,
 	.file-editor-warning .notification-dialog {
@@ -1585,6 +1599,7 @@ table.form-table td .updated p {
 
 /* Smartphone */
 @media screen and (max-width: 600px) {
+
 	/* Color Picker Options */
 	.color-option {
 		width: 49%;
@@ -1602,6 +1617,7 @@ table.form-table td .updated p {
 	0% {
 		transform: rotate(0deg);
 	}
+
 	100% {
 		transform: rotate(359deg);
 	}

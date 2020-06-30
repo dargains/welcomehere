@@ -301,7 +301,7 @@ if($thumbnail_src_featured) { ?>
                 </div>
             </div>
 
-            <div class="col-md-4 sidebar-content stickit_sidebar">
+            <div class="col-md-4 sidebar-content">
                 <?php //dynamic_sidebar( urbanpointwp_redux('mt_single_blog_layout_sidebar') ); ?>
                 <div class="mt_car--pricings">
                     <div class="">

@@ -263,6 +263,12 @@ p.subtitle {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .high-padding {
+    padding: 20px 0;
+  }
+}
+
 .medium-padding {
   padding: 50px 0;
 }
@@ -1369,9 +1375,8 @@ body.single-post {
   border: 1px solid rgba(37, 37, 37, 0.3);
   border-radius: 10px;
   font-weight: 600;
-  margin-bottom: 20px;
-  opacity: 0.9;
-  padding: 1em 1.5em;
+  margin-bottom: 24px;
+  padding: 0.5em;
   transition: all 0.3s ease-in-out 0s !important;
   width: 100%;
 }
@@ -2551,6 +2556,13 @@ article.single-post img {
 .article-content {
   margin-bottom: 20px;
   padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .article-content {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .article-content div {
@@ -5899,11 +5911,11 @@ body .urbanpointwp_preloader_holder {
 }
 
 .is_header_semitransparent .navbar-default {
-  background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+  /* background: rgba(255, 255, 255, 1) none repeat scroll 0 0; */
 }
 
 .is_header_semitransparent .sticky-wrapper.is-sticky .navbar-default {
-  background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+  /* background: rgba(255, 255, 255, 1) none repeat scroll 0 0; */
 }
 
 .breadcrumb a::after {
@@ -5913,6 +5925,8 @@ body .urbanpointwp_preloader_holder {
 .logo img,
 .navbar-header .logo img {
   max-width: 140px;
+  width: 100%;
+  height: auto;
 }
 
 ::selection {
@@ -6327,7 +6341,7 @@ input.wpcf7-form-control.wpcf7-submit:hover {
   background-color: #fff !important;
   border-radius: 0 0 10px 10px !important;
   margin: 0 !important;
-  padding: 25px 0 0 !important;
+  padding: 25px 10px 0 !important;
 }
 
 .mt_house--price-container {
@@ -6345,18 +6359,29 @@ input.wpcf7-form-control.wpcf7-submit:hover {
 }
 
 .mt_car--single-gallery.mt_car--featured-single-gallery {
-  border: 2px solid #fff;
+  font-family: "Josefin Sans", 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  /* border: 2px solid #fff; */
   border-radius: 2px;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 13px;
   line-height: normal;
   background-color: #009ddc;
-  padding: 6px 10px;
+  padding: 12px 12px;
   transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
   -moz-transition: all 250ms ease-in-out 0s;
   -webkit-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
+}
+
+@media only screen and (max-width: 767px) {
+  .mt_car--single-gallery.mt_car--featured-single-gallery {
+    position: relative;
+    top: 10px;
+    font-size: 12px;
+  }
 }
 
 .mt_car--single-gallery.mt_car--featured-single-gallery:hover {
@@ -6492,9 +6517,17 @@ body.archive,
 }
 
 .mt_car--single-price .priceval {
+  font-weight: 400;
+  font-family: "Josefin Sans", 'Arial Black', Gadget, sans-serif;
   font-size: 32px;
   opacity: 1;
   color: #fff;
+}
+
+@media only screen and (max-width: 990px) {
+  .mt_car--single-price .priceval {
+    font-size: 30px;
+  }
 }
 
 .mt_car--single-price .priceval small {
@@ -6641,3 +6674,5 @@ body.archive,
 .list-view.mt_car .blog_custom {
   background: transparent none repeat scroll 0 0 !important;
 }
+
+.mt_car--single-price .priceval
