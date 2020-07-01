@@ -6359,7 +6359,7 @@ input.wpcf7-form-control.wpcf7-submit:hover {
 }
 
 .mt_car--single-gallery.mt_car--featured-single-gallery {
-  font-family: "Josefin Sans", 'Arial Black', sans-serif;
+  font-family: "Josefin Sans", "Arial Black", sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   /* border: 2px solid #fff; */
@@ -6510,6 +6510,7 @@ body.archive,
   padding-bottom: 10px;
   padding-top: 10px;
   text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .mt_car--single-price-inner-day {
@@ -6518,7 +6519,7 @@ body.archive,
 
 .mt_car--single-price .priceval {
   font-weight: 400;
-  font-family: "Josefin Sans", 'Arial Black', Gadget, sans-serif;
+  font-family: "Josefin Sans", "Arial Black", Gadget, sans-serif;
   font-size: 32px;
   opacity: 1;
   color: #fff;
@@ -6675,4 +6676,10 @@ body.archive,
   background: transparent none repeat scroll 0 0 !important;
 }
 
-.mt_car--single-price .priceval
+.noPadding {
+  padding: 0 0 0 0 !important;
+}
+
+.paddingSmall {
+  padding: 0 5px !important;
+}
