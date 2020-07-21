@@ -328,7 +328,7 @@ function urbanpointwp_scripts() {
     wp_enqueue_script( 'loaders', get_template_directory_uri() . '/js/loaders.css.js', array('jquery'), '1.0.0', true );
     if (urbanpointwp_plugin_active('redux-framework/redux-framework.php')) {
         // if (urbanpointwp_redux('mt_cars_settings_maps_api_key') != '') {
-            wp_enqueue_script( 'urbanpointwp-gmaps-js', 'https://maps.googleapis.com/maps/api/js?key='.urbanpointwp_redux('mt_cars_settings_maps_api_key'), array('jquery'), '1.0.0', true );
+            wp_enqueue_script( 'urbanpointwp-gmaps-js', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAcMrGLpT5OAMiZHeXfWHWixU-Ds2p7Izw', array('jquery'), '1.0.0', true );
         // }
     }
     wp_enqueue_script( 'urbanpointwp-custom-js', get_template_directory_uri() . '/js/urbanpointwp-custom.js', array('jquery'), '1.0.0', true );
@@ -685,7 +685,13 @@ add_action('init', function() {
   pll_register_string('mytheme-hello', 'Época baixa 2');
   pll_register_string('mytheme-hello', 'Época baixa 3');
   pll_register_string('mytheme-hello', 'Época média');
+  pll_register_string('mytheme-hello', 'Época média 1');
+  pll_register_string('mytheme-hello', 'Época média 2');
+  pll_register_string('mytheme-hello', 'Época média 3');
   pll_register_string('mytheme-hello', 'Época verão');
+  pll_register_string('mytheme-hello', 'Época verão 1');
+  pll_register_string('mytheme-hello', 'Época verão 2');
+  pll_register_string('mytheme-hello', 'Época verão 3');
 
 });
 // Dynamic Copyright Date

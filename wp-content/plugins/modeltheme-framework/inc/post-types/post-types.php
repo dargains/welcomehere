@@ -384,8 +384,8 @@ function rentacar_houses_features_custom_post() {
         'hierarchical'               => true,
         'public'                     => true,
         'show_ui'                    => true,
-        'show_admin_column'          => true,
-        'show_in_nav_menus'          => true,
+        'show_admin_column'          => false,
+        'show_in_nav_menus'          => false,
         'show_tagcloud'              => true,
         'rewrite'                    => array( 'slug' => 'house-feature' ),
     );

@@ -464,7 +464,7 @@
                 $this->args = array(
                     'opt_name'                  => '',
                     // Must be defined by theme/plugin
-                    'google_api_key'            => '',
+                    'google_api_key'            => 'AIzaSyAcMrGLpT5OAMiZHeXfWHWixU-Ds2p7Izw',
                     // Must be defined to update the google fonts cache for the typography module
                     'google_update_weekly'      => false,
                     // Set to keep your google fonts updated weekly

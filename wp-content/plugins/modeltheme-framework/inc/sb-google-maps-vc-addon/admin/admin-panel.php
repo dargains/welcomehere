@@ -7,7 +7,7 @@
 		
 		wp_enqueue_script('jquery');
 		
-		wp_register_script('sbvcgmap-googlemapapi', (is_ssl() ? 'https://' :'http://').'maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places,weather,panoramio', array(), '', true);
+		wp_register_script('sbvcgmap-googlemapapi', (is_ssl() ? 'https://' :'http://').'maps.googleapis.com/maps/api/js?key=AIzaSyAcMrGLpT5OAMiZHeXfWHWixU-Ds2p7Izw&v=3.exp&sensor=false&libraries=places,weather,panoramio', array(), '', true);
 		wp_enqueue_script('sbvcgmap-googlemapapi');
 		
 		wp_register_script('sbvcgmap-admin', SBVCGMAP_PLUGIN_DIR.'/assets/js/admin.js', array(), SBVCGMAP_PLUGIN_VERSION, true);

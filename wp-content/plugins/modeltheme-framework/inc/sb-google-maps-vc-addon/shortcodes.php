@@ -119,7 +119,7 @@
 			
 			$output .= do_shortcode($marker_content);
 			if(trim($textfordirectionslink) != '') {
-				$output .= '<br /><a target="_blank" href="https://maps.google.com/?daddr='.$latitude.','.$longitude.'">'.$textfordirectionslink.'</a>';
+				$output .= '<br /><a target="_blank" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcMrGLpT5OAMiZHeXfWHWixU-Ds2p7Izw&daddr='.$latitude.','.$longitude.'">'.$textfordirectionslink.'</a>';
 			}
 			$output .= '</div>';
 		}
@@ -259,7 +259,7 @@
 		wp_enqueue_style('sbvcgmap-style', SBVCGMAP_PLUGIN_DIR.'/assets/css/style.css');
 		wp_enqueue_script('jquery');
 		
-		wp_register_script( 'sbvcgmap-googlemapapi', (is_ssl() ? 'https://' :'http://').'maps.googleapis.com/maps/api/js?key='.$sbvcgmap_apikey.'&libraries=places,weather,panoramio&language='.$language, array(), '', true );
+		wp_register_script( 'sbvcgmap-googlemapapi', (is_ssl() ? 'https://' :'http://').'maps.googleapis.com/maps/api/js?key=AIzaSyAcMrGLpT5OAMiZHeXfWHWixU-Ds2p7Izw&libraries=places,weather,panoramio&language='.$language, array(), '', true );
 		wp_enqueue_script('sbvcgmap-googlemapapi');
 		
 		wp_register_script('sbvcgmap-markerclusterer', SBVCGMAP_PLUGIN_DIR.'/assets/js/markerclusterer.js', array(), SBVCGMAP_PLUGIN_VERSION, true);		//Registering admin setting screen script

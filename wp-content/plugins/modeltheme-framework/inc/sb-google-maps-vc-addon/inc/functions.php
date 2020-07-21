@@ -306,7 +306,7 @@ function sbvcgmap_get_border_types() {
 
 //Getting latitude and longitude from address using geocode api
 function sbvcgmap_get_lat_lng_from_address($address) {
-	$url = "http://maps.googleapis.com/maps/api/geocode/json?address=".urlencode(trim($address))."&sensor=false";
+	$url = "http://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAcMrGLpT5OAMiZHeXfWHWixU-Ds2p7Izw&address=".urlencode(trim($address))."&sensor=false";
     $response = @wp_remote_get($url);
 	return $response['body'];
 }
