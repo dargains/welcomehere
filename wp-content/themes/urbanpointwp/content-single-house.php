@@ -264,17 +264,29 @@ if($thumbnail_src_featured) { ?>
                     <div class="mt_car--features-group post-features">
                         <!-- POST FEATURES -->
                         <h4 class="content-car-heading"><?php echo esc_html__(pll_e('Épocas'),'urbanpointwp'); ?></h4>
-                        <p><?php echo esc_html__(pll_e('Época alta'),'urbanpointwp'); ?></p>
-                        <ul class="article-content">
-                          <li><?php echo esc_html__(pll_e('Época alta 1'),'urbanpointwp'); ?></li>
-                          <li><?php echo esc_html__(pll_e('Época alta 2'),'urbanpointwp'); ?></li>
-                          <li><?php echo esc_html__(pll_e('Época alta 3'),'urbanpointwp'); ?></li>
-                        </ul>
                         <p><?php echo esc_html__(pll_e('Época baixa'),'urbanpointwp'); ?></p>
                         <ul class="article-content">
-                          <li><?php echo esc_html__(pll_e('Época baixa 1'),'urbanpointwp'); ?></li>
-                          <li><?php echo esc_html__(pll_e('Época baixa 2'),'urbanpointwp'); ?></li>
-                          <li><?php echo esc_html__(pll_e('Época baixa 3'),'urbanpointwp'); ?></li>
+                          <?php if(!empty(esc_html__(pll_e('Época baixa 1'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época baixa 1'),'urbanpointwp').'</li>';} ?>
+                          <?php if(!empty(esc_html__(pll_e('Época baixa 2'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época baixa 2'),'urbanpointwp').'</li>';} ?>
+                          <?php if(!empty(esc_html__(pll_e('Época baixa 3'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época baixa 3'),'urbanpointwp').'</li>';} ?>
+                        </ul>
+                        <p><?php echo esc_html__(pll_e('Época média'),'urbanpointwp'); ?></p>
+                        <ul class="article-content">
+                          <?php if(!empty(esc_html__(pll_e('Época média 1'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época média 1'),'urbanpointwp').'</li>';} ?>
+                          <?php if(!empty(esc_html__(pll_e('Época média 2'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época média 2'),'urbanpointwp').'</li>';} ?>
+                          <?php if(!empty(esc_html__(pll_e('Época média 3'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época média 3'),'urbanpointwp').'</li>';} ?>
+                        </ul>
+                        <p><?php echo esc_html__(pll_e('Época alta'),'urbanpointwp'); ?></p>
+                        <ul class="article-content">
+                          <?php if(!empty(esc_html__(pll_e('Época alt 1'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época alt 1'),'urbanpointwp').'</li>';} ?>
+                          <?php if(!empty(esc_html__(pll_e('Época alt 2'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época alt 2'),'urbanpointwp').'</li>';} ?>
+                          <?php if(!empty(esc_html__(pll_e('Época alt 3'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época alt 3'),'urbanpointwp').'</li>';} ?>
+                        </ul>
+                        <p><?php echo esc_html__(pll_e('Época verão'),'urbanpointwp'); ?></p>
+                        <ul class="article-content">
+                          <?php if(!empty(esc_html__(pll_e('Época verão 1'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época verão 1'),'urbanpointwp').'</li>';} ?>
+                          <?php if(!empty(esc_html__(pll_e('Época verão 2'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época verão 2'),'urbanpointwp').'</li>';} ?>
+                          <?php if(!empty(esc_html__(pll_e('Época verão 3'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época verão 3'),'urbanpointwp').'</li>';} ?>
                         </ul>
                     </div>
 
@@ -312,18 +324,18 @@ if($thumbnail_src_featured) { ?>
                                 $mt_house_price_medium = get_post_meta( get_the_ID(), 'mt_house_price_medium', true );
                                 $mt_house_price_summer = get_post_meta( get_the_ID(), 'mt_house_price_summer', true );
 
-                                // Price high season
-                                if(isset($mt_house_price_day) && !empty($mt_house_price_day)){
-                                    echo '<div class="mt_car--price-day mt_car--single-price">';
-                                        echo '<div class="mt_car--single-price-inner mt_car--single-price-inner-day">';
+                                // Price low season
+                                if(isset($mt_house_price_month) && !empty($mt_house_price_month)){
+                                    echo '<div class="mt_car--price-hour mt_car--single-price mt_car--single-price-inner-month">';
+                                        echo '<div class="mt_car--single-price-inner">';
                                             echo '<span class="priceval">';
-                                            echo '<small>' . pll__('Época alta') . ': </small>';
+                                            echo '<small>' . pll__('Época baixa') . ': </small>';
                                             if (urbanpointwp_redux('mt_cars_settings_currency_position') == 'left') {
                                                 echo urbanpointwp_get_currency_symbol();
                                             }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'left_with_space') {
                                                 echo urbanpointwp_get_currency_symbol() . ' ';
                                             }
-                                            echo esc_attr($mt_house_price_day) . '</span> ' . pll__('por dia');
+                                            echo esc_attr($mt_house_price_month) . '</span> ' . pll__('por dia');
                                             if (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right') {
                                                 echo urbanpointwp_get_currency_symbol();
                                             }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right_with_space') {
@@ -332,7 +344,7 @@ if($thumbnail_src_featured) { ?>
                                         echo '</div>';
                                     echo '</div>';
                                 }
-                                // Price meidum season
+                                // Price medium season
                                 if(isset($mt_house_price_medium) && !empty($mt_house_price_medium)){
                                     echo '<div class="mt_car--price-hour mt_car--single-price mt_car--single-price-inner-month">';
                                         echo '<div class="mt_car--single-price-inner">';
@@ -352,18 +364,18 @@ if($thumbnail_src_featured) { ?>
                                         echo '</div>';
                                     echo '</div>';
                                 }
-                                // Price low season
-                                if(isset($mt_house_price_month) && !empty($mt_house_price_month)){
-                                    echo '<div class="mt_car--price-hour mt_car--single-price mt_car--single-price-inner-month">';
-                                        echo '<div class="mt_car--single-price-inner">';
+                                // Price high season
+                                if(isset($mt_house_price_day) && !empty($mt_house_price_day)){
+                                    echo '<div class="mt_car--price-day mt_car--single-price">';
+                                        echo '<div class="mt_car--single-price-inner mt_car--single-price-inner-day">';
                                             echo '<span class="priceval">';
-                                            echo '<small>' . pll__('Época baixa') . ': </small>';
+                                            echo '<small>' . pll__('Época alta') . ': </small>';
                                             if (urbanpointwp_redux('mt_cars_settings_currency_position') == 'left') {
                                                 echo urbanpointwp_get_currency_symbol();
                                             }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'left_with_space') {
                                                 echo urbanpointwp_get_currency_symbol() . ' ';
                                             }
-                                            echo esc_attr($mt_house_price_month) . '</span> ' . pll__('por dia');
+                                            echo esc_attr($mt_house_price_day) . '</span> ' . pll__('por dia');
                                             if (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right') {
                                                 echo urbanpointwp_get_currency_symbol();
                                             }elseif (urbanpointwp_redux('mt_cars_settings_currency_position') == 'right_with_space') {
