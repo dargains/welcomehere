@@ -91,7 +91,7 @@
                             <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_skype') ) ?>"><i class="fa fa-skype"></i></a></li>
                         <?php } ?>
                         <?php if ( urbanpointwp_redux('mt_social_instagram') && urbanpointwp_redux('mt_social_instagram') != '' ) { ?>
-                            <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_instagram') ) ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_instagram') ) ?>" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
                         <?php } ?>
                         <?php if ( urbanpointwp_redux('mt_social_dribbble') && urbanpointwp_redux('mt_social_dribbble') != '' ) { ?>
                             <li><a href="<?php echo esc_url( urbanpointwp_redux('mt_social_dribbble') ) ?>"><i class="fa fa-dribbble"></i></a></li>
