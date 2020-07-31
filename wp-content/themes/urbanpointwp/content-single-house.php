@@ -264,12 +264,30 @@ if($thumbnail_src_featured) { ?>
                     <div class="mt_car--features-group post-features">
                         <!-- POST FEATURES -->
                         <h4 class="content-car-heading"><?php echo esc_html__(pll_e('Épocas'),'urbanpointwp'); ?></h4>
-                        <p><?php echo esc_html__(pll_e('Época baixa'),'urbanpointwp'); ?></p>
+                        <?php
+                          $b1 = esc_html__(pll__('Época baixa 1'),'urbanpointwp');
+                          $b2 = esc_html__(pll__('Época baixa 2'),'urbanpointwp');
+                          $b3 = esc_html__(pll__('Época baixa 3'),'urbanpointwp');
+                        ?>
+
+                        <?php if($b1 && $b2 && $b3) {echo '<p>'.esc_html__(pll__('Época baixa'),'urbanpointwp').'</p>';}?>
                         <ul class="article-content">
-                          <?php if(!empty(esc_html__(pll_e('Época baixa 1'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época baixa 1'),'urbanpointwp').'</li>';} ?>
-                          <?php if(!empty(esc_html__(pll_e('Época baixa 2'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época baixa 2'),'urbanpointwp').'</li>';} ?>
-                          <?php if(!empty(esc_html__(pll_e('Época baixa 3'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época baixa 3'),'urbanpointwp').'</li>';} ?>
+                          <?php
+                            if(!empty($b1)){ echo '<li>'.$b1.'</li>';}
+                            if(!empty($b2)){ echo '<li>'.$b2.'</li>';}
+                            if(!empty($b3)){ echo '<li>'.$b3.'</li>';}
+                          ?>
                         </ul>
+
+
+                        <?php
+                          $m1 = esc_html__(pll__('Época média 1'),'urbanpointwp');
+                          $m2 = esc_html__(pll__('Época média 2'),'urbanpointwp');
+                          $m3 = esc_html__(pll__('Época média 3'),'urbanpointwp');
+                        ?>
+
+                        <?php if($m1 && $m2 && $m3) {echo '<p>'.esc_html__(pll__('Época média'),'urbanpointwp').'</p>';}?>
+
                         <p><?php echo esc_html__(pll_e('Época média'),'urbanpointwp'); ?></p>
                         <ul class="article-content">
                           <?php if(!empty(esc_html__(pll_e('Época média 1'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época média 1'),'urbanpointwp').'</li>';} ?>
@@ -278,9 +296,9 @@ if($thumbnail_src_featured) { ?>
                         </ul>
                         <p><?php echo esc_html__(pll_e('Época alta'),'urbanpointwp'); ?></p>
                         <ul class="article-content">
-                          <?php if(!empty(esc_html__(pll_e('Época alt 1'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época alt 1'),'urbanpointwp').'</li>';} ?>
-                          <?php if(!empty(esc_html__(pll_e('Época alt 2'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época alt 2'),'urbanpointwp').'</li>';} ?>
-                          <?php if(!empty(esc_html__(pll_e('Época alt 3'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época alt 3'),'urbanpointwp').'</li>';} ?>
+                          <?php if(!empty(esc_html__(pll_e('Época alta 1'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época alta 1'),'urbanpointwp').'</li>';} ?>
+                          <?php if(!empty(esc_html__(pll_e('Época alta 2'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época alta 2'),'urbanpointwp').'</li>';} ?>
+                          <?php if(!empty(esc_html__(pll_e('Época alta 3'),'urbanpointwp'))){ echo '<li>'.esc_html__(pll_e('Época alta 3'),'urbanpointwp').'</li>';} ?>
                         </ul>
                         <p><?php echo esc_html__(pll_e('Época verão'),'urbanpointwp'); ?></p>
                         <ul class="article-content">
