@@ -18,7 +18,7 @@
 
             <?php if(urbanpointwp_redux('mt_logo','url')){ ?>
               <h1 class="logo">
-                  <a href="<?php echo get_site_url(); ?>">
+                  <a href="<?php echo get_site_url().'/' ?>">
                       <img src="<?php echo esc_attr(urbanpointwp_redux('mt_logo','url')); ?>" alt="<?php echo esc_attr(get_bloginfo()); ?>" />
                   </a>
               </h1>
@@ -64,3 +64,9 @@
     </div>
   </nav>
 </header>
+<script>
+  if (location.pathname.substr(0,3) === '/en')
+  document.querySelector('.logo a').href = location.origin + '/en'
+  if (location.pathname.substr(0,3) === '/es')
+  document.querySelector('.logo a').href = location.origin + '/es'
+  </script>

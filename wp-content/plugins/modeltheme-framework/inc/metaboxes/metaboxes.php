@@ -1634,6 +1634,13 @@ $line_icons_font_i = array(
                         'default' => ''
                   ),
                   array(
+                        'name'    => __( 'Preço em temporada evento', 'modeltheme' ),
+                        'desc'    => __( 'Escolher o preço por dia na temporada evento', 'modeltheme' ),
+                        'id'      => 'mt_house_price_event',
+                        'type'    => 'text_small',
+                        'default' => ''
+                  ),
+                  array(
                         'name'    => __( 'Lotação', 'modeltheme' ),
                         'desc'    => __( 'Escolher a lotação', 'modeltheme' ),
                         'id'      => 'mt_house_people',

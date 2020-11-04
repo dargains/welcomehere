@@ -46,6 +46,9 @@ if (urbanpointwp_plugin_active( 'modeltheme-framework/modeltheme-framework.php' 
                 
                 <!-- HEADER -->
                 <div class="article-header">
+                <h3 class="post-name row">
+                    <?php the_title() ?>
+                </h3>
                     <div class="article-details">
 
                         <?php $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'thermawp_1150x400' ); 

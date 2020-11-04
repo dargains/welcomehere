@@ -4,9 +4,9 @@
 <head>
     <meta charset="<?php esc_html(bloginfo( 'charset' )); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome Here - High quality short-term rentals in Lisbon, Portugal</title>
+    <title><?php echo esc_html__(pll__('Título'),'urbanpointwp') ?></title>
     <meta name="google-site-verification" content="7UPzggXUeO8zmw533UP1Bd9mcmUVQ891YzEUZ6ql8Ww" />
-    <meta name="description" content="Welcome Here - Apartments | Short Term Rent, Lisbon - Quality fully-city apartments with wi-fi, air-conditioning in Lisbon, Portugal near the tourist districts and major transport facilities">
+    <meta name="description" content="<?php echo esc_html__(pll__('Descrição'),'urbanpointwp') ?>">
     <meta name="keywords" content="Apartamentos para alugar em Lisboa, casas para alugar em Lisboa, Casas de férias com fotos, Lisbon, Portugal, holidays in Lisbon, and short breaks" />
     <meta name="robots" content="INDEX,FOLLOW">
     <?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>

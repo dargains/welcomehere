@@ -652,6 +652,8 @@ add_action('init', 'urbanpointwp_RemoveDemoModeLink');
 
 // -> CUSTOM STRINGS
 add_action('init', function() {
+  pll_register_string('mytheme-hello', 'Título');
+  pll_register_string('mytheme-hello', 'Descrição');
   pll_register_string('mytheme-hello', 'Especificações');
   pll_register_string('mytheme-hello', 'Facilidades');
   pll_register_string('mytheme-hello', 'Localização');

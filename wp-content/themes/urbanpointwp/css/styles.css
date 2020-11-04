@@ -1593,6 +1593,9 @@ nav.comment-navigation:last-of-type {
 .list-view .no-featured-image {
   padding: 30px !important;
 }
+.post-author {
+  display: none !important;
+}
 
 .list-view .post-details .post-category-comment-date .post-date a {
   color: #252525;
@@ -1647,7 +1650,7 @@ article.single-post img {
 .list-view .post-details .post-excerpt address,
 .list-view .post-details .post-excerpt li {
   color: #252525;
-  font-size: 17px;
+  /* font-size: 17px; */
   line-height: 140%;
 }
 
