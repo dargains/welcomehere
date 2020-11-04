@@ -65,7 +65,7 @@ if($thumbnail_src_featured) { ?>
                 </div>
             </div>
         </div>
-        <?php the_post_thumbnail( 'urbanpointwp_listing_single_featured', array('class' => 'class_name')); ?>
+        <?php echo '<img src="'.$thumbnail_src_featured_full[0].'" />' ?>
     </div>
 
 <?php } ?>
@@ -104,9 +104,9 @@ if($thumbnail_src_featured) { ?>
 
             <!-- POST CONTENT -->
             <div class="<?php echo esc_attr($cols); ?> main_stickit main-content">
-<h1 class="post-title" style="margin-bottom:20px;margin-top:0;">
-                        <?php echo get_the_title(); ?>
-                    </h1>
+            <h1 class="post-title" style="margin-bottom:20px;margin-top:0;">
+              <?php echo get_the_title(); ?>
+            </h1>
 
 
                 <!-- HEADER -->
