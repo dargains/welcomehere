@@ -694,6 +694,10 @@ add_action('init', function() {
   pll_register_string('mytheme-hello', 'Época verão 1');
   pll_register_string('mytheme-hello', 'Época verão 2');
   pll_register_string('mytheme-hello', 'Época verão 3');
+  pll_register_string('mytheme-hello', 'Época evento');
+  pll_register_string('mytheme-hello', 'Época evento 1');
+  pll_register_string('mytheme-hello', 'Época evento 2');
+  pll_register_string('mytheme-hello', 'Época evento 3');
 
 });
 // Dynamic Copyright Date
