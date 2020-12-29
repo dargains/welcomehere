@@ -460,11 +460,13 @@ if($thumbnail_src_featured) { ?>
                                         echo '</div>';
                                     echo '</div>';
                                 }
-                            ?>
+                              ?>
                         </div>
                     </div>
                 </div>
-
+                <?php
+                  echo '<p style="padding: 5px 10px; text-align:center; background-color: white; margin:0">'.esc_html__(pll__('Valor 2 pessoas'),'urbanpointwp').'</p>'
+                ?>
                 <!-- Booking Form -->
                 <div class="mt_car--booking-form">
                     <?php
@@ -478,6 +480,7 @@ if($thumbnail_src_featured) { ?>
                             echo do_shortcode('[contact-form-7 id="8517" title="Rent Booking Form" html_class="rent_contact_form"]'); //es
                           }
                         }
+
                         // else {
                         //     echo do_shortcode('[contact-form-7 id="7954" title="Sale Booking Form" html_class="sale_contact_form"]');
                         // }
